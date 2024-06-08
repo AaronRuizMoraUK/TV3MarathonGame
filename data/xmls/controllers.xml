@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<controllers>
+
+  AI CONTROLLERS
+  <ai_controller name="dopamina_sphere_random_walk"
+                 max_speed="3.0"
+                 max_think_time="10.0"
+                 rot_speed="2.0"
+                 acceleration="2.0"
+                 kick_distance="1.6"
+                 kick_angle="120.0"
+                 kick_radius="1.0"
+                 points_score_up="100"
+                 />
+
+  <ai_controller name="alucinacion_sphere_chase"
+                 radius_chase="7.5"
+                 radius_touch_player="0.7"
+                 walk_speed="2.5"
+                 run_speed="4.0"
+                 max_think_time="2.0"
+                 rot_speed="2.3"
+                 acceleration="5.0"
+                 points_hit_player="20.0"
+                 />
+
+  <ai_controller name = "follower"
+                 distance_player = "1.0"
+                 rot_speed = "5.0"
+                 acceleration = "25.0"
+                 radius_chase="1.5"
+                 radius_touch_player="1.7"
+                 walk_speed="3.5"
+                 run_speed="6.8"
+		             max_time="25"
+		             points_score_up="500"
+                 />
+
+  <ai_controller name="twister_chase"
+                 radius_chase="6.5"
+                 radius_touch_player="0.8"
+                 walk_speed="2.0"
+                 run_speed="3.0"
+                 max_think_time="2.0"
+                 rot_speed="2.3"
+                 acceleration="4.0"
+                 points_hit_player="20.0"
+                 />
+
+  <ai_controller name="dopamina_brain4"
+                 max_speed="3.0"
+                 max_think_time="10.0"
+                 rot_speed="2.0"
+                 acceleration="2.0"
+                 />
+
+  <ai_controller name="noradrenalina_brain4"
+                 max_speed="6.0"
+                 max_think_time="5.0"
+                 rot_speed="4.0"
+                 acceleration="4.0"
+                 />
+
+  <ai_controller name="powerup_life"
+                 type="LIFE" points="30"
+                 score_for_taking="100"
+                 radius="1.0"
+                 />
+
+  <ai_controller name="powerup_score"
+                 type="SCORE" points="250"
+                 score_for_taking="50"
+                 radius="1.0"
+                 />
+
+  ANIMATION CONTROLLERS
+  <animation_controller name="sky_rotation"
+                        rot_speed="0.015"
+                        />
+
+  PLAYER CONTROLLERS
+  <player_controller name="player_sphere"
+                     walk_speed="3.5"
+                     run_speed="7.0"
+                     hit_speed="5.0"
+                     rot_speed="20.0"
+                     acceleration="20.0"
+                     />
+
+  CAMERA CONTROLLERS
+  <camera_controller name="camera_sphere"
+                     target_speed="4.0"
+                     position_speed="1.4"
+                     distance_player="19.0"
+                     />
+
+</controllers>

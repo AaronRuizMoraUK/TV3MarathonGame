@@ -1,0 +1,243 @@
+<SYSTEM_DEFINITION name = "valve_hit">
+	<SUBSYSTEM max = "50" particleColorFactor = "1.0" >
+		<TEXTURE diffuse = "estela.dds" />
+		<SOURCE particle_rate = "25">
+			<DOMAIN type = "DISC" 
+				x0 = "0.0"
+				z0 = "0.0"
+				y0 = "0.2"
+				normalx = "0.0"
+			    normaly = "1.0" 
+				normalz = "0.0"
+
+				OuterRadius = "1.4"
+			    InnerRadius = "1.3"	/>
+
+			<VELOCITY>
+				<DOMAIN type = "CONE"
+					x0 = "0.0"
+					z0 = "0.0"
+					y0 = "0.0"
+					x1 = "0.0"
+					z1 = "0.0"
+					y1 = "0.5"					
+					OuterRadius = "0.6"
+				    InnerRadius = "0.1"	/>	       
+			</VELOCITY>
+			<COLOR>
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+			</COLOR>
+			<SIZE>
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+			</SIZE>
+		</SOURCE>
+		<GRAVITY>
+			<DOMAIN type = "POINT" 
+				x0 = "0.0"
+				z0 = "0.0"
+				y0 = "0.5" />
+		</GRAVITY>
+
+		<KILLOLDALPHA age_limit = "0.3" scale = "1.0" />
+		<FUNCTIONSIZE>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "2.0" />
+				<SAMPLE t = "0.15" v = "1.3" />
+				<SAMPLE t = "0.25" v = "0.5" />
+				<SAMPLE t = "0.3" v = "0.3" />
+			</FUNCTION>
+		</FUNCTIONSIZE>
+		<FUNCTIONCOLOR>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "0.0" />
+				<SAMPLE t = "0.3" v = "1.0" />
+			</FUNCTION>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v =  "0.0" />
+				<SAMPLE t = "0.15" v =  "0.5" />
+				<SAMPLE t = "0.3" v =  "1.0" />
+			</FUNCTION>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "0.0" />
+				<SAMPLE t = "0.3" v = "1.0" />
+			</FUNCTION>
+		</FUNCTIONCOLOR>
+		
+		<MOVE move_velocity = "true" move_rotational_velocity = "true" />
+	</SUBSYSTEM>
+	<SUBSYSTEM max = "10" particleColorFactor = "1.0" >
+		<TEXTURE diffuse = "fuze.dds" />
+		<SOURCE particle_rate = "10">
+			<DOMAIN type = "POINT" 
+				x0 = "0.3"
+				z0 = "1.6"
+				y0 = "0.4"
+				normalx = "0.0"
+			    normaly = "1.0" 
+				normalz = "0.0"
+				phase = "0.14"
+			/>
+			<VELOCITY>
+				<DOMAIN type = "POINT"
+					x0 = "0.0"
+					z0 = "0.0"
+					y0 = "0.0"
+					/>	       
+			</VELOCITY>
+			<COLOR>
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+			</COLOR>
+			<SIZE>
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+			</SIZE>
+		</SOURCE>
+		<GRAVITY>
+			<DOMAIN type = "POINT" 
+				x0 = "0.0"
+				z0 = "0.0"
+				y0 = "0.5" />
+		</GRAVITY>
+
+		<KILLOLDALPHA age_limit = "0.4" scale = "1.0" />
+		<FUNCTIONSIZE>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "0.0" />
+				<SAMPLE t = "0.2" v = "0.7" />
+				<SAMPLE t = "0.4" v = "0.0" />
+			</FUNCTION>
+		</FUNCTIONSIZE>
+		
+
+		<MOVE move_velocity = "true" move_rotational_velocity = "false" />
+	</SUBSYSTEM>
+	<SUBSYSTEM max = "10" particleColorFactor = "1.0" >
+		<TEXTURE diffuse = "fuze.dds" />
+		<SOURCE particle_rate = "10">
+			<DOMAIN type = "POINT" 
+				x0 = "-0.3"
+				z0 = "1.1"
+				y0 = "0.8"
+				normalx = "0.0"
+			    normaly = "1.0" 
+				normalz = "0.0"
+				phase = "0.14"
+			/>
+			<VELOCITY>
+				<DOMAIN type = "POINT"
+					x0 = "0.0"
+					z0 = "0.0"
+					y0 = "0.0"
+					/>	       
+			</VELOCITY>
+			<COLOR>
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+			</COLOR>
+			<SIZE>
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+			</SIZE>
+		</SOURCE>
+		<GRAVITY>
+			<DOMAIN type = "POINT" 
+				x0 = "0.0"
+				z0 = "0.0"
+				y0 = "0.5" />
+		</GRAVITY>
+
+		<KILLOLDALPHA age_limit = "0.4" scale = "1.0" />
+		<FUNCTIONSIZE>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "0.0" />
+				<SAMPLE t = "0.2" v = "0.7" />
+				<SAMPLE t = "0.4" v = "0.0" />
+			</FUNCTION>
+		</FUNCTIONSIZE>
+		
+
+		<MOVE move_velocity = "true" move_rotational_velocity = "false" />
+	</SUBSYSTEM>
+	<SUBSYSTEM max = "10" particleColorFactor = "1.0" >
+		<TEXTURE diffuse = "fuze.dds" />
+		<SOURCE particle_rate = "10">
+			<DOMAIN type = "POINT" 
+				x0 = "0.12"
+				z0 = "-1.25"
+				y0 = "1.3"
+				normalx = "0.0"
+			    normaly = "1.0" 
+				normalz = "0.0"
+				phase = "0.14"
+			/>
+			<VELOCITY>
+				<DOMAIN type = "POINT"
+					x0 = "0.0"
+					z0 = "0.0"
+					y0 = "0.0"
+					/>	       
+			</VELOCITY>
+			<COLOR>
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+			</COLOR>
+			<SIZE>
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+			</SIZE>
+		</SOURCE>
+		<GRAVITY>
+			<DOMAIN type = "POINT" 
+				x0 = "0.0"
+				z0 = "0.0"
+				y0 = "0.5" />
+		</GRAVITY>
+
+		<KILLOLDALPHA age_limit = "0.4" scale = "1.0" />
+		<FUNCTIONSIZE>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "0.0" />
+				<SAMPLE t = "0.2" v = "0.7" />
+				<SAMPLE t = "0.4" v = "0.0" />
+			</FUNCTION>
+		</FUNCTIONSIZE>
+		
+
+		<MOVE move_velocity = "true" move_rotational_velocity = "false" />
+	</SUBSYSTEM>
+</SYSTEM_DEFINITION>

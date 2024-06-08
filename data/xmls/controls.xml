@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<controls>
+<!-- Walk Up with Keyboard Action -->
+<control
+	action="walk_up"
+>
+<config
+	device="keyboard"
+	key="W"
+	/>
+<config
+	device="keyboard"
+	key="UP"
+	/>
+<config
+	device="xbox360_gamepad"
+	key="DPAD_UP"
+	/>
+</control>
+<!-- Walk Down with Keyboard Action -->
+<control
+	action="walk_down"
+>
+<config
+	device="keyboard"
+	key="S"
+	/>
+<config
+	device="keyboard"
+	key="DOWN"
+	/>
+<config
+	device="xbox360_gamepad"
+	key="DPAD_DOWN"
+	/>
+</control>
+<!-- Walk Right with Keyboard Action -->
+<control
+	action="walk_right"
+>
+<config
+	device="keyboard"
+	key="D"
+	/>
+<config
+	device="keyboard"
+	key="RIGHT"
+	/>
+<config
+	device="xbox360_gamepad"
+	key="DPAD_RIGHT"
+	/>
+</control>
+<!-- Walk Left with Keyboard Action -->
+<control
+	action="walk_left"
+>
+<config
+	device="keyboard"
+	key="A"
+	/>
+<config
+	device="keyboard"
+	key="LEFT"
+	/>
+<config
+	device="xbox360_gamepad"
+	key="DPAD_LEFT"
+	/>
+</control>
+<!-- Walk Slown Action -->
+<control
+	action="walk_slow"
+>
+<config
+	device="keyboard"
+	key="SHIFT"
+	/>
+<config
+	device="gamepad"
+	key="BUTTON1"
+	/>
+</control>
+<!-- Kick Action -->
+<control
+	action="kick"
+>
+<config
+	device="keyboard"
+	key="MOUSE1"
+	/>
+<config
+	device="gamepad"
+	key="BUTTON0"
+	/>
+<config
+	device="xbox360_gamepad"
+	key="A"
+	/>
+</control>
+<!-- Start -->
+<control
+	action="start"
+>
+<config
+	device="keyboard"
+	key="ENTER"
+	/>
+<config
+	device="gamepad"
+	key="BUTTON2"
+	/>
+<config
+	device="xbox360_gamepad"
+	key="START"
+	/>
+</control>
+<!-- Select Option -->
+<control
+	action="select_option"
+>
+<config
+	device="keyboard"
+	key="MOUSE1"
+	/>
+<config
+	device="gamepad"
+	key="BUTTON0"
+	/>
+<config
+	device="xbox360_gamepad"
+	key="A"
+	/>
+</control>
+<!-- Enter Options -->
+<control
+	action="enter_options"
+>
+<config
+	device="keyboard"
+	key="ENTER"
+	/>
+</control>
+<!-- Exit Options -->
+<control
+	action="exit_options"
+>
+<config
+	device="keyboard"
+	key="ESCAPE"
+	/>
+</control>
+</controls>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<expenders>
+
+  Expender Dopamina ------------------------------------------------------------------------
+  <expender position="3.90247 6.81081 23.6332" yaw_degrees="0.0"
+            mesh="valve.mesh"
+            texture="valve_green.dds" shader="shader.fx" technique="basic_tech"
+            enemy_type="dopamina_brain4" num_enemies_can_expel="8" recover_time="8.0" kick_radius="1.8" points_score_up="100"
+            collision_shape="CYLINDER" collision_bias="0.8"
+            />
+
+  <expender position="7.37246 16.6754 -2.6861" yaw_degrees="0.0"
+            mesh="valve.mesh"
+            texture="valve_green.dds" shader="shader.fx" technique="basic_tech"
+            enemy_type="dopamina_brain4" num_enemies_can_expel="8" recover_time="8.0" kick_radius="1.8" points_score_up="100"
+            collision_shape="CYLINDER" collision_bias="0.8"
+            />
+  
+  <expender position="0.691268 -4.98234 -27.9688" yaw_degrees="0.0"
+            mesh="valve.mesh"
+            texture="valve_green.dds" shader="shader.fx" technique="basic_tech"
+            enemy_type="dopamina_brain4" num_enemies_can_expel="8" recover_time="8.0" kick_radius="1.8" points_score_up="100"
+            collision_shape="CYLINDER" collision_bias="0.8"
+            />
+
+  <expender position="-17.0648 7.68672 -0.688177" yaw_degrees="0.0"
+            mesh="valve.mesh"
+            texture="valve_green.dds" shader="shader.fx" technique="basic_tech"
+            enemy_type="dopamina_brain4" num_enemies_can_expel="8" recover_time="8.0" kick_radius="1.8" points_score_up="100"
+            collision_shape="CYLINDER" collision_bias="0.8"
+            />
+
+  <expender position="-3.64014 16.643 11.0334" yaw_degrees="0.0"
+            mesh="valve.mesh"
+            texture="valve_green.dds" shader="shader.fx" technique="basic_tech"
+            enemy_type="dopamina_brain4" num_enemies_can_expel="8" recover_time="8.0" kick_radius="1.8" points_score_up="100"
+            collision_shape="CYLINDER" collision_bias="0.8"
+            />
+
+  Expender Noradrenalina -------------------------------------------------------------------
+  <expender position="-5.32497 -6.08875 19.232" yaw_degrees="180.0"
+            mesh="valve.mesh"
+            texture="valve_green.dds" shader="shader.fx" technique="basic_tech"
+            enemy_type="noradrenalina_brain4" num_enemies_can_expel="5" recover_time="4.0" kick_radius="1.8" points_score_up="100"
+            collision_shape="CYLINDER" collision_bias="0.8"
+            />
+
+  <expender position="-6.40238 -16.3029 -2.4969" yaw_degrees="180.0"
+            mesh="valve.mesh"
+            texture="valve_green.dds" shader="shader.fx" technique="basic_tech"
+            enemy_type="noradrenalina_brain4" num_enemies_can_expel="5" recover_time="4.0" kick_radius="1.8" points_score_up="100"
+            collision_shape="CYLINDER" collision_bias="0.8"
+            />
+  
+  <expender position="4.42929 -15.1626 9.6208" yaw_degrees="180.0"
+            mesh="valve.mesh"
+            texture="valve_green.dds" shader="shader.fx" technique="basic_tech"
+            enemy_type="noradrenalina_brain4" num_enemies_can_expel="5" recover_time="4.0" kick_radius="1.8" points_score_up="100"
+            collision_shape="CYLINDER" collision_bias="0.8"
+            />
+
+  <expender position="-1.38956 -16.1019 -13.6168" yaw_degrees="180.0"
+            mesh="valve.mesh"
+            texture="valve_green.dds" shader="shader.fx" technique="basic_tech"
+            enemy_type="noradrenalina_brain4" num_enemies_can_expel="5" recover_time="4.0" kick_radius="1.8" points_score_up="100"
+            collision_shape="CYLINDER" collision_bias="0.8"
+            />
+
+   <expender position="14.1899 -11.2322 -6.90633" yaw_degrees="180.0"
+            mesh="valve.mesh"
+            texture="valve_green.dds" shader="shader.fx" technique="basic_tech"
+            enemy_type="noradrenalina_brain4" num_enemies_can_expel="5" recover_time="4.0" kick_radius="1.8" points_score_up="100"
+            collision_shape="CYLINDER" collision_bias="0.8"
+            />
+
+</expenders>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<credits>
+
+  <image texture="credits_designers.dds"   fade_time="0.5" duration="5.0" />
+  <image texture="credits_tvcedicions.dds"   fade_time="0.5" duration="5.0" />
+  <image texture="credits_programmers.dds" fade_time="0.5" duration="7.0" />
+  <image texture="credits_artists.dds"     fade_time="0.5" duration="7.0" />
+  <image texture="title.dds"       fade_time="1.5" duration="5.0" />
+
+</credits>

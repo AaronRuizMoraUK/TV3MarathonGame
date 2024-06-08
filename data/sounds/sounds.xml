@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<sounds>
+
+  MENU
+  <ambient name="menu_background" file="ambient/menu_background.mp3"/>
+  <sample  name="option_movement" file="samples/menu_movement.wav"/>					
+  <sample  name="option_fixed"    file="samples/menu_fixed.wav"/>						
+  <sample  name="option_selected" file="samples/menu_option_selected.wav"/>				
+  <sample  name="score_recount"   file="samples/score_recount.wav"/>					
+
+  Player
+  <sample  name="player_go_brain" file="samples/player_expeled_by_ass_on_win.wav"/>		
+  <sample  name="player_kicking"  file="samples/player_kicking.wav"/>					
+  <sample  name="player_hit"      file="samples/player_hit_received_1.wav"/>			
+
+  Dinamic Text
+  <sample  name="dynamic_text_continue" file="samples/menu_fixed.wav" />				
+  <sample  name="dynamic_text_exit"     file="samples/menu_option_selected.wav" />		
+
+  Ambient Levels
+  <ambient name="first_level"  	 file="ambient/first_level.mp3"/>
+  <ambient name="second_level" 	 file="ambient/second_level.mp3"/>
+  <ambient name="third_level"  	 file="ambient/third_level.mp3"/>
+  <ambient name="fourth_level" 	 file="ambient/fourth_level.mp3"/>
+  <ambient name="game_won_music" file="ambient/game_won_music.mp3"/>
+  <ambient name="illness"     	 file="ambient/illness.mp3"/>
+  <ambient name="score_count"    file="ambient/score_count.mp3"/>
+  <ambient name="game_over"      file="ambient/gameover.mp3"/>
+
+  Dopamina
+  <sample name="dopamine_hit_received_1" file="samples/dopamine_hit_received_1.wav"/>		
+  <sample name="dopamine_hit_received_2" file="samples/dopamine_hit_received_2.wav"/>		
+  <sample name="dopamine_hit_received_3" file="samples/dopamine_hit_received_3.wav"/>	
+  <sample name="dopamine_hit_received_4" file="samples/dopamine_hit_received_4.wav"/>	
+  <sample name="dopamine_hit_received_5" file="samples/dopamine_hit_received_5.wav"/>	
+
+  Alucinacion
+  <sample name="alucinacion_chasing"    file="samples/alucinacion_chasing.wav"/>		
+  <sample name="alucinacion_hit_player" file="samples/alucinacion_hit_player.wav"/>		
+
+  Twister
+  <sample name="twister_hit_player"     file="samples/twister_hit_player.wav"/>
+
+  Palancas
+  <sample name="kick_lever"				       file="samples/kick_lever.wav" />
+  <sample name="lever_activated"		     file="samples/lever_activated.wav" />
+  <sample name="lever_deactivated"  	   file="samples/lever_deactivated.wav" />
+  <sample name="lever4brain_activated" 	 file="samples/lever4brain_activated.wav" />
+  <sample name="lever4brain_deactivated" file="samples/lever4brain_deactivated.wav" />
+
+  Bomba
+  <sample name="light_explosion_1" 	file="samples/light_explosion_1.wav"/>
+  <sample name="light_explosion_2" 	file="samples/light_explosion_2.wav"/>
+  <sample name="light_explosion_3" 	file="samples/light_explosion_3.wav"/>
+  <sample name="light_explosion_4" 	file="samples/light_explosion_4.wav"/>
+  <sample name="light_explosion_5" 	file="samples/light_explosion_5.wav"/>
+
+  <sample name="bomb_explosion"    	file="samples/explosion.wav"/>
+  <sample name="bomb_fuse"          file="samples/bomb_fuse.mp3"/>
+
+  Power ups
+  <sample name="power_up_picked_up"	file="samples/power_up_picked_up.wav"/>				
+
+  APARECE PORTAL
+  <sample name="new_portal"		file="samples/new_portal.mp3"/>
+  
+  ----------------------------------------------------------------------------------------------------------
+
+  Instructions - NO CAMBIAR LOS NAME A ESTOS SONIDOS
+  <sample name="init_first_level"	  	file="instructions/init_first_level.mp3"/>
+  <sample name="lose_first_level"	  	file="instructions/lose_first_level.mp3"/>
+  <sample name="init_second_level"		file="instructions/init_second_level.mp3"/>
+  <sample name="lose_second_level"		file="instructions/lose_second_level.mp3"/>
+  <sample name="init_third_level"	  	file="instructions/init_third_level.mp3"/>
+  <sample name="lose_third_level"	  	file="instructions/lose_third_level.mp3"/>
+  <sample name="init_fourth_level"		file="instructions/init_fourth_level.mp3"/>
+  <sample name="lose_fourth_level"		file="instructions/lose_fourth_level.mp3"/>
+  <sample name="game_won"	          	file="instructions/game_won.mp3"/> 
+
+</sounds>

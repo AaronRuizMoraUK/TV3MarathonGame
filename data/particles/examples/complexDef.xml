@@ -1,0 +1,149 @@
+<SYSTEM_DEFINITION name = "Complex">
+	<SUBSYSTEM max = "30" particleColorFactor = "1.0" >
+		<TEXTURE diffuse = "particula2.dds" />
+		<BEHAVIOUR initTime = "0.0" finishTime = "3.0f" >
+			<SOURCE particle_rate = "10">
+				<DOMAIN type = "SPHERE" 
+					x0 = "0.0"
+					z0 = "0.0"
+					y0 = "1.0"
+					normalx = "0.0"
+			   	        normaly = "1.0" 
+					normalz = "0.0"
+
+					OuterRadius = "0.2"
+				       	InnerRadius = "0.1"	/>
+	
+				<VELOCITY>
+					<DOMAIN type = "SPHERE"
+						x0 = "0.0"
+						z0 = "0.0"
+						y0 = "0.0"
+						x1 = "0.0"
+						z1 = "0.0"
+						y1 = "0.0"					
+						OuterRadius = "0.2"
+					       	InnerRadius = "0.1"	/>	       
+				</VELOCITY>
+				<COLOR>
+					<DOMAIN type = "POINT" 
+						x0 = "1.0"
+						z0 = "1.0"
+						y0 = "1.0" />
+					<DOMAIN type = "POINT" 
+						x0 = "1.0"
+						z0 = "1.0"
+						y0 = "1.0" />
+				</COLOR>
+				<SIZE>
+					<DOMAIN type = "POINT" 
+						x0 = "1.0"
+						z0 = "1.0"
+						y0 = "1.0" />
+				</SIZE>
+			</SOURCE>
+			<VORTEX tightnessExponent = "1.0" max_radius = "0.2" inSpeed = "0.0" upSpeed = "-0.8"  aroundSpeed = "10.0">
+				<DOMAIN type = "POINT" 
+					x0 = "0.0"
+					z0 = "0.0"
+					y0 = "0.0" />
+				<DOMAIN type = "POINT" 
+					x0 = "0.0"
+					z0 = "0.0"
+					y0 = "1.0" />
+			</VORTEX>
+		
+
+			<KILLOLDALPHA age_limit = "0.7" scale = "1.0" />
+			<FUNCTIONSIZE>
+				<FUNCTION>
+					<SAMPLE t = "0.0" v = "0.2" />
+					<SAMPLE t = "0.3" v = "1.0" />
+					<SAMPLE t = "0.5" v = "0.5" />
+				</FUNCTION>
+			</FUNCTIONSIZE>
+			<FUNCTIONCOLOR>
+				<FUNCTION>
+					<SAMPLE t = "1.0" v = "1.0" />
+					<SAMPLE t = "1.0" v = "1.0" />
+				</FUNCTION>
+				<FUNCTION>
+					<SAMPLE t = "0.0" v =  "0.3" />
+					<SAMPLE t = "0.0" v =  "0.3" />
+					<SAMPLE t = "0.0" v =  "0.3" />
+				</FUNCTION>
+				<FUNCTION>
+					<SAMPLE t = "0.0" v = "0.2" />
+					<SAMPLE t = "0.0" v = "0.2" />
+				</FUNCTION>
+			</FUNCTIONCOLOR>
+
+			<MOVE move_velocity = "true" move_rotational_velocity = "true" />
+		</BEHAVIOUR>
+
+		<BEHAVIOUR initTime = "5.0" finishTime = "10.0f" >
+			<SOURCE particle_rate = "30">
+				<DOMAIN type = "DISC" 
+					x0 = "0.0"
+					z0 = "0.0"
+					y0 = "0.0"
+					normalx = "0.0"
+					normaly = "1.0"
+					normalz = "0.0"					
+
+					OuterRadius = "0.3"
+				       	InnerRadius = "0.3"	/>
+	
+				<VELOCITY>
+					<DOMAIN type = "CYLINDER"
+						x0 = "0.0"
+						z0 = "0.0"
+						y0 = "0.5"
+						x1 = "0.0"
+						z1 = "0.0"
+						y1 = "1.0"					
+						OuterRadius = "0.0"
+					       	InnerRadius = "0.0"	/>	       
+				</VELOCITY>
+				<COLOR>
+					<DOMAIN type = "POINT" 
+						x0 = "1.0"
+						y0 = "0.0" 
+						z0 = "0.5" />
+					<DOMAIN type = "POINT" 
+						x0 = "1.0"
+						z0 = "1.0"
+						y0 = "1.0" />
+				</COLOR>
+				<SIZE>
+					<DOMAIN type = "POINT" 
+						x0 = "1.0"
+						z0 = "1.0"
+						y0 = "1.0" />
+				</SIZE>
+			</SOURCE>
+			<GRAVITY>
+				<DOMAIN type = "POINT" 
+					x0 = "0.0"
+					z0 = "0.0"
+					y0 = "0.0" />
+			</GRAVITY>
+	
+			<KILLOLDALPHA age_limit = "1.0" scale = "0.5" />
+			<FUNCTIONSIZE>
+				<FUNCTION>
+					<SAMPLE t = "0.0" v = "0.2" />
+					<SAMPLE t = "1.5" v = "0.05" />
+				</FUNCTION>
+			</FUNCTIONSIZE>
+			<MOVE move_velocity = "true" move_rotational_velocity = "false" />
+		</BEHAVIOUR>
+
+
+
+
+
+
+
+	</SUBSYSTEM>
+</SYSTEM_DEFINITION>

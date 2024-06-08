@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<valves>
+
+  Valvulas ------------------------------------------------------------------------
+  <valve position="9.80119 11.8825 8.73517" yaw_degrees="0.0"
+         mesh="valve.mesh"
+         texture="valve_green.dds" shader="shader.fx" technique="basic_tech"
+         initial_status="HIGH" good_status="LOW" time_to_desynchronize="35.0" kick_radius="1.7" points_score_up="100"
+         collision_shape="CYLINDER" collision_bias="0.8"
+         />
+
+  <valve position="8.88987 13.13 -6.10291" yaw_degrees="0.0"
+         mesh="valve.mesh"
+         texture="valve_green.dds" shader="shader.fx" technique="basic_tech"
+         initial_status="HIGH" good_status="MEDIUM" time_to_desynchronize="20.0" kick_radius="1.7" points_score_up="100"
+         collision_shape="CYLINDER" collision_bias="0.8"
+         />
+
+  <valve position="-9.9447 12.4408 -5.86451" yaw_degrees="0.0"
+         mesh="valve.mesh"
+         texture="valve_green.dds" shader="shader.fx" technique="basic_tech"
+         initial_status="HIGH" good_status="MEDIUM" time_to_desynchronize="18.0" kick_radius="1.7" points_score_up="100"
+         collision_shape="CYLINDER" collision_bias="0.8"
+         />
+
+  <valve position="-8.56922 12.2554 9.86316" yaw_degrees="0.0"
+         mesh="valve.mesh"
+         texture="valve_green.dds" shader="shader.fx" technique="basic_tech"
+         initial_status="MEDIUM" good_status="HIGH" time_to_desynchronize="30.0" kick_radius="1.7" points_score_up="100"
+         collision_shape="CYLINDER" collision_bias="0.8"
+         />
+
+  Carteles ------------------------------------------------------------------------
+  <cartel transform="0.683316 -0.669347 -0.29164 -0.00651369 0.393835 -0.919158 0.730094 0.629975 0.264754 12.5173 10.7182 9.79659"
+          mesh="valve_cartel.mesh"
+          texture="valve_cartel_1.dds" shader="shader.fx" technique="basic_tech"
+          />
+
+  <cartel transform="-0.148833 -0.0849791 -0.985204 -0.719683 0.692573 0.048983 0.678163 0.716325 -0.164236 11.9187 12.3457 -5.99135"
+          mesh="valve_cartel.mesh"
+          texture="valve_cartel_2.dds" shader="shader.fx" technique="basic_tech"
+          />
+
+  <cartel transform="0.00963035 0.230202 0.973095 0.718708 0.675009 -0.166798 -0.695245 0.700978 -0.158948 -12.7215 11.1914 -6.61177"
+          mesh="valve_cartel.mesh"
+          texture="valve_cartel_3.dds" shader="shader.fx" technique="basic_tech"
+          />
+
+  <cartel transform="0.429408 0.0777047 0.899761 0.642571 0.673783 -0.364854 -0.634595 0.734832 0.239397 -10.9439 12.6749 8.233"
+          mesh="valve_cartel.mesh"
+          texture="valve_cartel_4.dds" shader="shader.fx" technique="basic_tech"
+          />
+
+</valves>

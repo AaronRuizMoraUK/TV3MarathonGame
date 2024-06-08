@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<brains>
+  
+  Brain Level 1
+  <brain mesh="brain.mesh"
+         backside_frustum_radius="20.0" 
+         texture="brain.dds" shader="shader.fx" technique="normal_tech"
+         heightmap="brain_heightmap.bin"
+         normalmap="brain_normalmap.bin"
+         />
+
+  Brain Level 2
+  <brain mesh="brain.mesh"
+         backside_frustum_radius="20.0"
+         texture="brain.dds" shader="shader.fx" technique="normal_tech"
+         heightmap="brain_heightmap.bin"
+         normalmap="brain_normalmap.bin"
+         />
+
+  Brain Level 3
+  <brain mesh="brain.mesh"
+         backside_frustum_radius="20.0"
+         texture="brain3.dds" shader="shader.fx" technique="normal_tech"
+         heightmap="brain3_heightmap.bin"
+         normalmap="brain_normalmap.bin"
+         texturemap="brain3_texturemap.bin"
+         />
+
+  Brain Level 4
+  <brain mesh="brain.mesh"
+         backside_frustum_radius="20.0"
+         texture="brain4.dds" shader="shader.fx" technique="normal_tech"
+         heightmap="brain_heightmap.bin"
+         normalmap="brain_normalmap.bin"
+         />
+  
+</brains>

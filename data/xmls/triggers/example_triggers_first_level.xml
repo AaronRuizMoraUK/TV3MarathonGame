@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<triggers>
+
+  <logic_volume script="script" transform="1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0" width="1.0" height="1.0" length="1.0" />
+  <logic_volume script="script" center="0.0 0.0 0.0" radius="3.0" />
+  
+  <logic_timer  script="script"          time="1.0" type="SCRIPT"  />
+  <logic_timer  script="lua_command( )"  time="1.0" type="COMMAND" />
+
+</triggers>

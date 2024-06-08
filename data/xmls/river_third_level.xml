@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<river>
+
+  De mayor a menor
+  <speed value="0.5"/>
+  <speed value="0.35"/>
+  <speed value="0.25"/>
+  <speed value="0.1"/>
+
+  <river_elements mesh="dopamina.mesh"
+                  texture="dopamina.dds" shader="shader.fx" technique="basic_tech"
+                  roa_resource="river_way.xml"
+                  num_river_elements="50"
+                  />
+
+  <particles name="river_particles"
+             start_point="-1.28642 14.11 -10.7915"
+             end_point="2.91865 14.4549 -9.40614"
+             />
+
+</river>

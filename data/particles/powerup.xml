@@ -1,0 +1,82 @@
+﻿<SYSTEM_DEFINITION name = "powerup">
+	<SUBSYSTEM max = "50" particleColorFactor = "1.0" >
+		<TEXTURE diffuse = "estela.dds" />
+		<SOURCE particle_rate = "20">
+			<DOMAIN type = "DISC" 
+				x0 = "0.0"
+				z0 = "0.0"
+				y0 = "0.1"
+				normalx = "0.0"
+			    normaly = "1.0" 
+				normalz = "0.0"
+
+				OuterRadius = "0.7"
+			    InnerRadius = "0.6"	
+				rangAngle = "6.28"
+				phase = "3.14" />
+
+			<VELOCITY>
+				<DOMAIN type = "CONE"
+					x0 = "0.0"
+					z0 = "0.0"
+					y0 = "0.0"
+					x1 = "0.0"
+					z1 = "0.0"
+					y1 = "0.5"					
+					OuterRadius = "0.0"
+				       	InnerRadius = "0.0"	/>	       
+			</VELOCITY>
+
+			<COLOR>
+				<DOMAIN type = "POINT" 
+					x0 = "0.25"
+					z0 = "0.25"
+					y0 = "0.99" />
+				<DOMAIN type = "POINT" 
+					x0 = "0.25"
+					z0 = "0.25"
+					y0 = "0.99" />
+			</COLOR>
+			<SIZE>
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+			</SIZE>
+		</SOURCE>
+		<GRAVITY>
+			<DOMAIN type = "POINT" 
+				x0 = "0.0"
+				z0 = "0.0"
+				y0 = "0.5" />
+		</GRAVITY>
+
+		<KILLOLDALPHA age_limit = "0.7" scale = "1.0" />
+		<FUNCTIONSIZE>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "1.0" />
+				<SAMPLE t = "0.3" v = "0.7" />
+				<SAMPLE t = "0.5" v = "0.5" />
+				<SAMPLE t = "1.2" v = "0.2" />
+			</FUNCTION>
+		</FUNCTIONSIZE>
+		<!--
+		<FUNCTIONCOLOR>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "1.0" />
+				<SAMPLE t = "1.0" v = "1.0" />
+			</FUNCTION>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v =  "0.0" />
+				<SAMPLE t = "0.4" v =  "1.0" />
+				<SAMPLE t = "0.5" v =  "0.5" />
+			</FUNCTION>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "0.0" />
+				<SAMPLE t = "1.0" v = "0.0" />
+			</FUNCTION>
+		</FUNCTIONCOLOR>
+		-->
+		<MOVE move_velocity = "true" move_rotational_velocity = "false" />
+	</SUBSYSTEM>
+</SYSTEM_DEFINITION>

@@ -1,0 +1,97 @@
+<SYSTEM_DEFINITION name = "expender_overheat">
+	<SUBSYSTEM max = "50" particleColorFactor = "1.0">
+		<TEXTURE diffuse = "humo.dds" />
+		<SOURCE particle_rate = "100">
+			<DOMAIN type = "DISC" 
+				x0 = "0.0"
+				y0 = "2.0"
+				z0 = "0.0"
+				normalx = "0.0"
+				normaly = "1.0" 
+				normalz = "0.0"
+
+				OuterRadius = "0.7"
+				InnerRadius = "0.4" />
+		
+			<VELOCITY>
+				<DOMAIN type = "CONE"
+					x0 = "0.0"
+					y0 = "0.0"
+					z0 = "0.0"
+					x1 = "0.0"
+					y1 = "2.0"				
+					z1 = "0.0"
+					OuterRadius = "0.4"
+				    InnerRadius = "0.0"	/>	       
+			</VELOCITY>
+			<COLOR>
+				<DOMAIN type = "POINT" 
+					x0 = "0.588"
+					z0 = "0.588" 
+					y0 = "0.588"/>
+				<DOMAIN type = "POINT" 
+					x0 = "0.588"
+					z0 = "0.588"
+					y0 = "0.588" />
+			</COLOR>
+			<SIZE>
+				<DOMAIN type = "POINT" 
+					x0 = "0.1"
+					z0 = "0.1"
+					y0 = "0.1" />
+			</SIZE>
+		</SOURCE>
+		
+		<GRAVITY>
+			<DOMAIN type = "POINT" 
+				x0 = "0.0"
+				z0 = "0.0"
+				y0 = "1.0" />
+		</GRAVITY>
+		
+		<RANDOMACCEL>
+			<DOMAIN type = "SPHERE"
+				x0 = "0.0"
+				z0 = "0.0"
+				y0 = "0.0"
+				x1 = "0.0"
+				z1 = "-3.0"
+				y1 = "0.0"					
+				OuterRadius = "6.0"
+				InnerRadius = "2.5"	/>	       
+		</RANDOMACCEL>
+			
+		<KILLOLDALPHA age_limit = "0.6" scale = "1.0" />
+		<FUNCTIONSIZE>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "0.01" />
+				<SAMPLE t = "0.2" v = "0.3" />
+				<SAMPLE t = "0.6" v = "0.01" />
+			</FUNCTION>
+		</FUNCTIONSIZE>
+		<FUNCTIONALPHA>
+			<FUNCTION>
+				<SAMPLE t = "0.3" v = "1.0" />
+				<SAMPLE t = "0.5" v = "0.0" />
+			</FUNCTION>
+		</FUNCTIONALPHA>
+		<!--
+		<FUNCTIONCOLOR>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "0.7" />
+				<SAMPLE t = "0.3" v = "0.7" />
+			</FUNCTION>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v =  "0.7" />
+				<SAMPLE t = "0.3" v =  "0.78" />
+			</FUNCTION>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "0.7" />
+				<SAMPLE t = "0.3" v = "0.78" />
+			</FUNCTION>
+		</FUNCTIONCOLOR>
+		-->
+		<MOVE move_velocity = "true" move_rotational_velocity = "true" />
+	</SUBSYSTEM>
+</SYSTEM_DEFINITION>
+

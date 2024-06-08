@@ -1,0 +1,86 @@
+<SYSTEM_DEFINITION name = "twister_death">
+	<SUBSYSTEM max = "50" particleColorFactor = "1.0" >
+		<TEXTURE diffuse = "soft_clumpy.dds" />
+		<BEHAVIOUR initTime = "0.0" finishTime = "0.4" >
+			<SOURCE particle_rate = "5000">
+				<DOMAIN type = "DISC" 
+					x0 = "0.0"
+					z0 = "0.0"
+					y0 = "0.2"
+					normalx = "0.0"
+				    normaly = "1.0" 
+					normalz = "0.0"
+
+					OuterRadius = "0.4"
+					InnerRadius = "0.0" />
+	
+				<VELOCITY>
+					<DOMAIN type = "SPHERE"
+						x0 = "0.0"
+						z0 = "0.0"
+						y0 = "0.0"
+						x1 = "0.0"
+						z1 = "0.0"
+						y1 = "0.3"					
+						OuterRadius = "0.4"
+					    InnerRadius = "0.2"	/>	       
+				</VELOCITY>
+				<COLOR>
+					<DOMAIN type = "POINT" 
+						x0 = "0.4"
+						z0 = "1.0"
+						y0 = "1.0"/>
+					<DOMAIN type = "POINT" 
+						x0 = "0.2"
+						z0 = "1.0"
+						y0 = "1.0" />
+				</COLOR>
+				<SIZE>
+					<DOMAIN type = "POINT" 
+						x0 = "1.0"
+						z0 = "1.0"
+						y0 = "1.0" />
+				</SIZE>
+			</SOURCE>
+			
+			<GRAVITY>
+				<DOMAIN type = "POINT" 
+					x0 = "0.0"
+					z0 = "0.0"
+					y0 = "0.5" />
+			</GRAVITY>
+		
+			<KILLOLDALPHA age_limit = "0.4" scale = "1.0" />
+		
+			<FUNCTIONSIZE>
+				<FUNCTION>
+					<SAMPLE t = "0.0" v = "0.6" />
+					<SAMPLE t = "0.2" v = "0.2" />
+					<SAMPLE t = "0.4" v = "0.1" />
+				</FUNCTION>
+			</FUNCTIONSIZE>
+			<FUNCTIONALPHA>
+				<FUNCTION>
+					<SAMPLE t = "0.3" v = "1.0" />
+					<SAMPLE t = "0.4" v = "0.0" />
+				</FUNCTION>
+			</FUNCTIONALPHA>
+			<FUNCTIONCOLOR>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "0.0" />
+				<SAMPLE t = "0.4" v = "0.0" />
+			</FUNCTION>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v =  "0.0" />
+				<SAMPLE t = "0.2" v =  "1.0" />
+				<SAMPLE t = "0.4" v =  "0.2" />
+			</FUNCTION>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "0.0" />
+				<SAMPLE t = "0.4" v = "1.0" />
+			</FUNCTION>
+		</FUNCTIONCOLOR>
+		<MOVE move_velocity = "true" move_rotational_velocity = "true" />
+		</BEHAVIOUR>
+	</SUBSYSTEM>
+</SYSTEM_DEFINITION>

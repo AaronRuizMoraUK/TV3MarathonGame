@@ -1,0 +1,154 @@
+<SYSTEM_DEFINITION name = "twister_particles">
+	<SUBSYSTEM max = "50" particleColorFactor = "1.0" >
+		<TEXTURE diffuse = "estela.dds" />
+		<SOURCE particle_rate = "30">
+			<DOMAIN type = "DISC" 
+				x0 = "0.0"
+				y0 = "0.2"
+				z0 = "0.0"
+				normalx = "0.0"
+			    normaly = "1.0" 
+				normalz = "0.0"
+
+				OuterRadius = "0.4"
+				InnerRadius = "0.4"
+				rangAngle = "6.28"
+				phase = "3.14" />
+			<COLOR>
+				<DOMAIN type = "POINT" 
+					x0 = "0.5"
+					z0 = "0.6"
+					y0 = "0.5" />
+				<DOMAIN type = "POINT" 
+					x0 = "0.5"
+					z0 = "0.5"
+					y0 = "0.5" />
+			</COLOR>
+
+			<VELOCITY>
+				<DOMAIN type = "POINT" 
+					x0 = "0.0"
+					z0 = "0.0"
+					y0 = "0.0" />
+			</VELOCITY>
+
+			<SIZE>
+				<DOMAIN type = "POINT" 
+					x0 = "1.4"
+					z0 = "1.4"
+					y0 = "1.4" />
+			</SIZE>
+		</SOURCE>
+
+		<GRAVITY>
+			<DOMAIN type = "POINT" 
+				x0 = "0.0"
+				z0 = "0.0"
+				y0 = "3.0" />
+		</GRAVITY>
+
+
+		<AIRTUBE vRot = "2.0" vIn = "1.0">
+			<DOMAIN type = "POINT" 
+				x0 = "0.0"
+				z0 = "0.0"
+				y0 = "0.0" />
+		</AIRTUBE>
+
+		<KILLOLDALPHA age_limit = "1.0" scale = "1.0" />
+
+		<MOVE move_velocity = "true" move_rotational_velocity = "true" />
+	</SUBSYSTEM>
+	<SUBSYSTEM max = "20" particleColorFactor = "1.0" >
+		<TEXTURE diffuse = "soft_clumpy.dds" />
+		<SOURCE particle_rate = "300">
+			<DOMAIN type = "DISC" 
+				x0 = "0.0"
+				y0 = "0.2"
+				z0 = "0.0"
+				normalx = "0.0"
+			    normaly = "1.0" 
+				normalz = "0.0"
+
+				OuterRadius = "0.6"
+				InnerRadius = "0.0"
+				rangAngle = "6.28"
+				phase = "3.14" />
+
+			<COLOR>
+				<DOMAIN type = "POINT" 
+					x0 = "0.4"
+					z0 = "0.4"
+					y0 = "0.4" />
+				<DOMAIN type = "POINT" 
+					x0 = "0.4"
+					z0 = "0.4"
+					y0 = "0.4" />
+			</COLOR>
+
+			<VELOCITY>
+				<DOMAIN type = "CONE"
+					x0 = "0.0"
+					y0 = "0.0"
+					z0 = "0.0"
+					x1 = "0.0"
+					y1 = "0.0"				
+					z1 = "-2.0"
+					OuterRadius = "0.4"
+				    InnerRadius = "0.0"	/>	    	       
+			</VELOCITY>
+
+			<SIZE>
+				<DOMAIN type = "POINT" 
+					x0 = "0.3"
+					z0 = "0.3"
+					y0 = "0.4" />
+			</SIZE>
+		</SOURCE>
+		<RANDOMACCEL>
+			<DOMAIN type = "SPHERE"
+				x0 = "0.0"
+				z0 = "0.0"
+				y0 = "0.0"
+				x1 = "0.0"
+				z1 = "-3.0"
+				y1 = "0.0"					
+				OuterRadius = "6.0"
+				InnerRadius = "2.5"	/>	       
+		</RANDOMACCEL>
+		<FUNCTIONSIZE>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "0.01" />
+				<SAMPLE t = "0.2" v = "0.35" />
+				<SAMPLE t = "0.4" v = "0.01" />
+			</FUNCTION>
+		</FUNCTIONSIZE>
+		<FUNCTIONALPHA>
+			<FUNCTION>
+				<SAMPLE t = "0.3" v = "1.0" />
+				<SAMPLE t = "0.4" v = "0.0" />
+			</FUNCTION>
+		</FUNCTIONALPHA>
+
+
+		<!--
+		<GRAVITY>
+			<DOMAIN type = "POINT" 
+				x0 = "0.0"
+				z0 = "0.0"
+				y0 = "3.0" />
+		</GRAVITY>
+-->
+<!--
+		<AIRTUBE vRot = "0.0" vIn = "0.0">
+			<DOMAIN type = "POINT" 
+				x0 = "0.0"
+				z0 = "0.0"
+				y0 = "0.0" />
+		</AIRTUBE>
+-->
+		<KILLOLDALPHA age_limit = "0.4" scale = "1.0" />
+
+		<MOVE move_velocity = "true" move_rotational_velocity = "true" />
+	</SUBSYSTEM>
+</SYSTEM_DEFINITION>

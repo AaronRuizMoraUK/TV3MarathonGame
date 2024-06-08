@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<core_model>
+  <skeleton filename="player.csf" />
+
+  Los def_time_factor solo afectan a las acciones
+  <animation name="idle" filename="cafs/player_idle.caf" def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+  <animation name="ok"   filename="cafs/player_kick.caf" def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+
+  <mesh filename="player.cmf" />
+ 
+</core_model>

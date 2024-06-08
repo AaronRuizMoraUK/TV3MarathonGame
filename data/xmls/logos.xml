@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<credits>
+
+  <image texture="logo_tv3.dds"	fade_time="1.4" duration="5.0" />
+  <image texture="logo_tvc.dds"	fade_time="1.4" duration="5.0" />
+  <image texture="logo_upf.dds" fade_time="1.4" duration="5.0" />
+  <image texture="logo_groundnet.dds" fade_time="1.4" duration="5.0" />
+
+</credits>

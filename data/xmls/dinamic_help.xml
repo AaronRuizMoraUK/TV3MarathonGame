@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<dinamic_helps>
+
+  <comic_text_window style="dinamic_help_style"/>
+
+  Queda bien con 42 letras
+  Separación con "\ "
+  El "%" se escribe "%%"
+
+  PLANET 1 -------------------------------------------------------------
+  <dinamic_help id="PLANET1_FIRST_MESSAGE"
+                text="L'esquizofrènia apareix, entre\ altres motius, quan hi ha un\ excés de dopamina al cervell.\ Has d’eliminar-la.\ Dóna puntades de peu a les\ molècules de dopamina per eliminar-les.\ Per xutar, clica amb el botó esquerre\ del ratolí. Et pots moure en qualsevol\ direcció amb les tecles “W-A-S-D”.\ Per caminar, prem la tecla de Majúscules\ a la vegada que et mous.\ Vigila l'energia del vestit. Es va\ consumint a poc a poc. Si es gastés,\ hauries de tornar a entrar al cervell,\ però tindries un intent menys."
+                />
+
+  <dinamic_help id="PLANET1_PLAYER_IS_HIT_BY_ALUCINACION"
+                text="Compte! Vés alerta! és una al·lucinació.\ El cervell d'aquest\ pacient està pitjor del que em pensava.\ No les podràs eliminar de cap manera.\ Que no et toquin! Si et toquen,\ baixarà l'energia del vestit."
+                />
+
+  <dinamic_help id="PLANET1_KILL_DOPAMINA"
+                text="Has eliminat una molècula de dopamina.\ Has de fer arribar el marcador de\ l'esquerra de la pantalla al punt\ vermell. Així faràs que el cervell tingui\ el nivell correcte de dopamina. Quan ho\ facis, t’hauràs d'escapar del cervell.\ Ja et diré com pots fer-ho, llavors."
+                />
+
+  <dinamic_help id="PLANET1_ENTER_RIGHT_DOP_LEVEL"
+                text="Ja està! Has deixat el nivell correcte de\ dopamina. Ara has de sortir del cervell.\ Corre cap al punt de sortida abans que\ neixi més dopamina. Corre!!"
+                />
+
+  <dinamic_help id="PLANET1_EXIT_RIGHT_DOP_LEVEL"
+                text="Ei! S'ha desnivellat el cervell un\ altre cop. Curra-t'ho per portar\ l'indicador al punt vermell de la barra."
+                />
+
+  PLANET 2 -------------------------------------------------------------
+  <dinamic_help id="PLANET2_FIRST_MESSAGE"
+                text="Aquest cervell té depressió.\ Aquesta malaltia es produeix quan hi ha\ poca serotonina i poca noradrenalina.\ No sé com fer-ho, però hauríem de buscar\ alguna manera per alliberar aquests dos\ neurotransmissors. Potser\ si busquem alguna cosa pel cervell..."
+                />
+
+  <dinamic_help id="PLANET2_PLAYER_GETS_BOMB"
+                text="Sí! Una bomba de neurotransmissors!\ Porta-la a la part contrària del cervell.\ Deixa-la dins del receptor del seu color.\ I fes-ho ràpid o explotarà!"
+                />
+
+  <dinamic_help id="PLANET2_PLAYER_LEAVES_BOMB"
+                text="Ben fet!\ Hauràs de repetir això 6 cops per\ alliberar tots els neurotransmissors."
+                />
+
+  PLANET 3 -------------------------------------------------------------
+  <dinamic_help id="PLANET3_FIRST_MESSAGE"
+                text="Aquest cervell té\ un trastorn obsessiu compulsiu.\ Veus el ”riu” de molècules verdes?\ Va més ràpid que un cotxe de Fórmula 1!\ Has de fer que vagi més lent.\ Al camí hi ha quatre vàlvules que estan\ de color vermell. Això vol dir que\ funcionen malament. Hauries de xutar-les\ fins que es posessin verdes. Quan totes\ quatre estiguin bé,\ hauràs aconseguit el teu objectiu."
+		            />
+
+  <dinamic_help id="PLANET3_VALVE1_HIT"
+                text="Aquesta és la vàlvula que regula\ el glutamat."
+		            />
+
+  <dinamic_help id="PLANET3_VALVE2_HIT"
+                text="Aquesta regula la serotonina."
+		            />
+
+  <dinamic_help id="PLANET3_VALVE3_HIT"
+                text="Aquí es regula la psicoteràpia."
+		            />
+
+  <dinamic_help id="PLANET3_VALVE4_HIT"
+                text="Aquesta és la vàlvula de les\ relacions socials sanes."
+		            />
+
+  PLANET 4 -------------------------------------------------------------
+  <dinamic_help id="PLANET4_FIRST_MESSAGE"
+                text="Aquest cervell té hiperactivitat.\ és una malaltia complicada per que\ com que falta dopamina i noradrenalina,\ hi ha massa activitat al cervell.\ Prova d'arribar als punts correctes\ de la barra d'aquestes dues molècules\ alliberant-les com puguis!"
+		            />
+
+  <dinamic_help id="PLANET4_PLAYER_IS_HIT_BY_TWISTER"
+                text="Compte amb allò! És un tornado!!\ Aquest cervell està del tot hiperactiu...."
+                />
+
+  <dinamic_help id="PLANET4_EXPENDER_HIT"
+                text="Per cada puntada de peu que li dónes a\ aquest dispositiu, surten més molècules.\ Les verdes fan pujar l'indicador verd de\ la barra. Les vermelles ho fan amb\ l'altre. Deixa-les al nivell correcte."
+                />
+
+  <dinamic_help id="PLANET4_ENTER_RIGHT_LEVELS"
+                text="Perfecte! Ara tot està al seu lloc.\ Ara has de sortir del cervell.\ Corre cap al punt de sortida abans que\ torni a posar-se malalt... Corre!!"
+                />
+
+  <dinamic_help id="PLANET4_EXIT_RIGHT_LEVELS"
+                text="Ei! Tenim problemes!\ Has de fer un esforç i fer arribar\ l'indicador al punt vermell de la barra."
+                />
+  
+</dinamic_helps>

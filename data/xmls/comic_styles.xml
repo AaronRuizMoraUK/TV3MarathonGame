@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<comic_styles>
+
+  <explanation_style comic_window_texture="comic_window.dds"
+                     comic_window_scale_x="0.6"
+                     comic_window_scale_y="0.6"
+                     comic_window_pos_x="0.4"
+                     comic_window_pos_y="0.4"
+                     
+                     Xcomic_text_type="static_text"
+                     comic_text_type="dinamic_text"
+         
+                     x="0.522"
+                     y="0.841"
+                     xl="0.04"
+                     yl="0.04"
+                     dist="0.048"
+                     num_lines="6"
+                     time_per_letter="0.05"
+                     />
+
+  <dinamic_help_style comic_window_texture="comic_window_dh.dds"
+                      comic_window_scale_x="1.322"
+                      comic_window_scale_y="1.617"
+                      comic_window_pos_x="0.0"
+                      comic_window_pos_y="-0.587"
+                      
+                      comic_text_type="dinamic_text"
+                  
+                      x="0.089"
+                      y="0.308"
+                      xl="0.04"
+                      yl="0.04"
+                      dist="0.042"
+                      num_lines="6"
+                      time_per_letter="0.03"
+                      />
+
+</comic_styles>

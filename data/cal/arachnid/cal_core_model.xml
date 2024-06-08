@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<core_model>
+  <skeleton filename="bicho.csf" />
+
+  Los def_time_factor solo afectan a las acciones
+  <animation name="idle"           filename="cafs/bicho_idle.caf"                def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+  <animation name="emerge"         filename="cafs/bicho_emerge1.caf"             def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+  <animation name="together"       filename="cafs/bicho_together_1.caf"          def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+  <animation name="walk"           filename="cafs/bicho_walk.caf"                def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+  <animation name="fly_downwards"  filename="cafs/bicho_fly.caf"                 def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+  <animation name="foolished"      filename="cafs/bicho_foolished.caf"           def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+  <animation name="hit"            filename="cafs/bicho_hit_received.caf"        def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+  <animation name="attack_failed"  filename="cafs/bicho_attack_no_hit.caf"       def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+  <animation name="attack_ok"      filename="cafs/bicho_hit.caf"                 def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+  <animation name="prepare_attack" filename="cafs/bicho_prepare.caf"             def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+  <animation name="enemy_victory"  filename="cafs/bicho_saltitos_de_alegria.caf" def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+
+  <mesh filename="bicho.cmf" />
+ 
+</core_model>

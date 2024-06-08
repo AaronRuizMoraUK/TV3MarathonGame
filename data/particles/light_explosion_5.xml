@@ -1,0 +1,91 @@
+<SYSTEM_DEFINITION name = "light_explosion_5">
+	<SUBSYSTEM max = "20" particleColorFactor = "1.0" >
+		<TEXTURE diffuse = "estela.dds" />
+		<BEHAVIOUR initTime = "0.0" finishTime = "0.7" >
+			<SOURCE particle_rate = "200">
+				<DOMAIN type = "DISC" 
+					x0 = "0.0"
+					y0 = "0.2"
+					z0 = "0.0"
+					normalx = "0.0"
+				    normaly = "1.0" 
+					normalz = "0.0"
+
+					OuterRadius = "0.3"
+					InnerRadius = "0.0" />
+	
+				<VELOCITY>
+					<DOMAIN type = "SPHERE"
+						x0 = "0.0"
+						z0 = "0.0"
+						y0 = "0.0"
+						x1 = "0.0"
+						z1 = "0.0"
+						y1 = "0.0"					
+						OuterRadius = "0.3"
+					    InnerRadius = "0.0"	/>	       
+				</VELOCITY>
+				<COLOR>
+					<DOMAIN type = "POINT" 
+						x0 = "1.0"
+						y0 = "1.0"
+						z0 = "1.0" />
+					<DOMAIN type = "POINT" 
+						x0 = "0.5"
+						z0 = "0.0"
+						y0 = "0.0" />
+				</COLOR>
+				<SIZE>
+					<DOMAIN type = "POINT" 
+						x0 = "0.01"
+						z0 = "0.01"
+						y0 = "0.01" />
+				</SIZE>
+			</SOURCE>
+			<RANDOMACCEL>
+				<DOMAIN type = "DISC"
+					x0 = "0.0"
+					z0 = "0.0"
+					y0 = "0.0"
+					normalx = "0.0"
+					normaly = "1.0"
+					normalz = "0.0"					
+					OuterRadius = "25.0"
+				  	InnerRadius = "23.0"	/>	       
+			</RANDOMACCEL>
+
+			<FUNCTIONSIZE>
+				<FUNCTION>
+					<SAMPLE t = "0.0" v = "0.01" />
+					<SAMPLE t = "0.4" v = "2.0" />
+					<SAMPLE t = "0.6" v = "0.6" />
+				</FUNCTION>
+			</FUNCTIONSIZE>
+			<FUNCTIONALPHA>
+				<FUNCTION>
+					<SAMPLE t = "0.5" v = "1.0" />
+					<SAMPLE t = "0.7" v = "0.0" />
+				</FUNCTION>
+			</FUNCTIONALPHA>
+
+		<FUNCTIONCOLOR>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "1.0" />
+				<SAMPLE t = "0.6" v = "1.0" />
+			</FUNCTION>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v =  "0.0" />
+				<SAMPLE t = "0.3" v =  "1.0" />
+				<SAMPLE t = "0.4" v =  "0.5" />
+			</FUNCTION>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "0.0" />
+				<SAMPLE t = "0.6" v = "0.0" />
+			</FUNCTION>
+		</FUNCTIONCOLOR>
+	
+
+			<MOVE move_velocity = "true" move_rotational_velocity = "true" />
+		</BEHAVIOUR>
+	</SUBSYSTEM>
+</SYSTEM_DEFINITION>

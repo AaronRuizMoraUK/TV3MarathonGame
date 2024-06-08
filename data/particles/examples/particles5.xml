@@ -1,0 +1,67 @@
+<SYSTEM_DEFINITION name = "SParticles5">
+	<SUBSYSTEM max = "30" particleColorFactor = "1.0" >
+		<TEXTURE diffuse = "particula2.dds" />
+		<SOURCE particle_rate = "30">
+			<DOMAIN type = "SPHERE" 
+				x0 = "0.0"
+				z0 = "0.0"
+				y0 = "1.0"
+				normalx = "0.0"
+			    normaly = "1.0" 
+				normalz = "0.0"
+
+				OuterRadius = "0.2"
+			       	InnerRadius = "0.1"	/>
+
+			<VELOCITY>
+				<DOMAIN type = "SPHERE"
+					x0 = "0.0"
+					z0 = "0.0"
+					y0 = "0.0"
+					x1 = "0.0"
+					z1 = "0.0"
+					y1 = "0.0"					
+					OuterRadius = "0.2"
+				       	InnerRadius = "0.1"	/>	       
+			</VELOCITY>
+			<COLOR>
+				<DOMAIN type = "POINT" 
+					x0 = "0.2"
+					z0 = "1.0"
+					y0 = "0.3" />
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+			</COLOR>
+			<SIZE>
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+			</SIZE>
+		</SOURCE>
+		<VORTEX tightnessExponent = "1.0" max_radius = "0.2" inSpeed = "0.0" upSpeed = "-0.8"  aroundSpeed = "10.0">
+			<DOMAIN type = "POINT" 
+				x0 = "0.0"
+				z0 = "0.0"
+				y0 = "0.0" />
+			<DOMAIN type = "POINT" 
+				x0 = "0.0"
+				z0 = "0.0"
+				y0 = "1.0" />
+		</VORTEX>
+		
+
+		<KILLOLDALPHA age_limit = "0.7" scale = "1.0" />
+		<FUNCTIONSIZE>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "0.2" />
+				<SAMPLE t = "0.3" v = "1.0" />
+				<SAMPLE t = "0.5" v = "0.5" />
+			</FUNCTION>
+		</FUNCTIONSIZE>
+
+		<MOVE move_velocity = "true" move_rotational_velocity = "true" />
+	</SUBSYSTEM>
+</SYSTEM_DEFINITION>

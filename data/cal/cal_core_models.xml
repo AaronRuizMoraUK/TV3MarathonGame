@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<core_models>
+  <core_model name="player" />
+  <core_model name="instructor" />
+  <core_model name="alucinacion" />
+  <core_model name="arachnid" />
+</core_models>

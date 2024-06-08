@@ -1,0 +1,63 @@
+<SYSTEM_DEFINITION name = "Polvo">
+	<SUBSYSTEM max = "10" particleColorFactor = "0.0" effect = "MODULATE">
+		<TEXTURE diffuse = "particulaPolvo.dds" />
+		<SOURCE particle_rate = "3">
+			<DOMAIN type = "RECTANGLE" 
+				x0 = "4.0"
+				z0 = "4.0"
+				y0 = "3.5"
+
+				x1 = "-4.0"
+				z1 = "-4.0"
+				y1 = "0.01" 
+
+				x2 = "0.0"
+				z2 = "0.0"
+				y2 = "0.0" />
+
+			<VELOCITY>
+				<DOMAIN type = "LINE"
+					x0 = "0.0"
+					z0 = "0.0"
+					y0 = "0.0"
+					x1 = "0.0"
+					z1 = "0.0"
+					y1 = "0.2" />
+			</VELOCITY>
+			<COLOR>
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "0.0"
+					y0 = "0.5" />
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "0.0" />
+			</COLOR>
+			<SIZE>
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+			</SIZE>
+		</SOURCE>
+		<GRAVITY>
+			<DOMAIN type = "POINT" 
+				x0 = "0.00"
+				z0 = "0.00"
+				y0 = "-0.02" />
+		</GRAVITY>
+		 
+
+	       	<ALPHASTART age_limit = "6.0" scale = "0.1" limit = "0.7" />
+		<KILLOLDALPHA age_limit = "6.0" scale = "5.0" />
+		<FUNCTIONSIZE>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "1.0f" />
+				<SAMPLE t = "1.0" v = "1.0f" />
+			</FUNCTION>
+		</FUNCTIONSIZE>
+
+		<MOVE move_velocity = "true" move_rotational_velocity = "true" />
+	</SUBSYSTEM>
+</SYSTEM_DEFINITION>

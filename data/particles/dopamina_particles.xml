@@ -1,0 +1,63 @@
+<SYSTEM_DEFINITION name = "dopamina_particles">
+	<SUBSYSTEM max = "30" particleColorFactor = "1.0" >
+		<TEXTURE diffuse = "estela.dds" />
+		<SOURCE particle_rate = "10">
+			<DOMAIN type = "DISC" 
+				x0 = "0.0"
+				z0 = "0.0"
+				y0 = "0.3"
+				normalx = "0.0"
+				normaly = "1.0"
+				normalz = "0.0"					
+
+				OuterRadius = "0.3"
+			    InnerRadius = "0.3"	/>
+
+			<VELOCITY>
+				<DOMAIN type = "CYLINDER"
+					x0 = "0.0"
+					z0 = "0.0"
+					y0 = "0.5"
+					x1 = "0.0"
+					z1 = "0.0"
+					y1 = "1.0"					
+					OuterRadius = "0.0"
+				    InnerRadius = "0.0"	/>	       
+			</VELOCITY>
+			
+			<COLOR>
+				<DOMAIN type = "POINT" 
+					x0 = "0.0"
+					y0 = "1.0" 
+					z0 = "1.0" />
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+			</COLOR>
+			<SIZE>
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+			</SIZE>
+		</SOURCE>
+		<GRAVITY>
+			<DOMAIN type = "POINT" 
+				x0 = "0.0"
+				z0 = "0.0"
+				y0 = "0.0" />
+		</GRAVITY>
+
+		<KILLOLDALPHA age_limit = "1.0" scale = "0.5" />
+		<FUNCTIONSIZE>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "0.3" />
+				<SAMPLE t = "0.5" v = "0.07" />
+				<SAMPLE t = "1.0" v = "0.05" />
+			</FUNCTION>
+		</FUNCTIONSIZE>
+		
+		<MOVE move_velocity = "true" move_rotational_velocity = "false" />
+	</SUBSYSTEM>
+</SYSTEM_DEFINITION>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<menu>
+  <planet>
+    <localization transform="-0.642788 0.0 0.766044 0.0 1.0 0.0 -0.766044 0.0 -0.642788 475.0 28.0 394.0" />
+    <mesh name="menu_planet.mesh" />
+    <material name="brain_red.dds" shader="shader.fx" technique="basic_tech" />
+  </planet>
+
+  <start_action>
+    <localization transform="1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 17.0 0.0 0.0" />
+    <mesh name="start_cartel.mesh" />
+    <material name="start_cartel.dds" shader="shader.fx" technique="basic_tech" />
+  </start_action>
+
+  <options_action>
+    <localization transform="-0.309017 -0.951056 0.0 0.951056 -0.309017 0.0 0.0 0.0 1.0 5.25329 16.168 -7.06724e-007" />
+    <mesh name="cartel.mesh" />
+    <material name="options_cartel.dds" shader="shader.fx" technique="basic_tech" />
+  </options_action>
+
+  <credits_action>
+    <localization transform="0.809017 -0.587785 0.0 0.587785 0.809017 0.0 0.0 0.0 1.0 -13.7533 9.99235 -4.36779e-007" />
+    <mesh name="cartel.mesh" />
+    <material name="credits_cartel.dds" shader="shader.fx" technique="basic_tech" />
+  </credits_action>
+  
+  <scores_action>
+    <localization transform="0.788011 0.615661 0.0 -0.615661 0.788011 0.0 0.0 0.0 1.0 -13.3962 -10.4662 4.57494e-007" />
+    <mesh name="cartel.mesh" />
+    <material name="scores_cartel.dds" shader="shader.fx" technique="basic_tech" />
+  </scores_action>
+  
+  <exit_action>
+    <localization transform="-0.309017 0.951057 0.0 -0.951057 -0.309017 0.0 0.0 0.0 1.0 5.25329 -16.168 7.06724e-007" />
+    <mesh name="cartel.mesh" />
+    <material name="exit_cartel.dds" shader="shader.fx" technique="basic_tech" />
+  </exit_action>
+
+  <title>
+    <localization transform="1 0 0 0 1 0 0 0 1 0.4 0.52 0" />
+    <material name="title.dds" shader="shader.fx" technique="title_tech" />
+  </title>
+</menu>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<logic lifes="3">
+
+  <first_level_logic init_player_sync="300.0"
+                     init_num_alucinaciones="12"
+                     max_num_alucinaciones="20"
+                     init_num_dopaminas="80"
+                     min_num_dopaminas="50"
+                     max_num_dopaminas="100"
+                     max_time_dopamina_born="5.0"
+                     syn_player_lose_per_second="1.0"
+                     start_right_percentage="23.0"
+                     end_right_percentage="28.0"
+                     portal_particle_name="level_1_exit"
+                     time_to_show_planet_gameplay_msg="1.0"
+                     max_time_to_born_powerup="3.0"
+                     powerups_positions_xml="powerups_level1.xml"
+                     portal_radius="1.1"
+                     />
+
+  <second_level_logic init_player_sync="300.0"
+                      syn_player_lose_per_second="1.0"
+                      init_noradrenalinaRemaining="3"
+                      init_serotoninaRemaining="3"
+                      radius_zona_plantar="1.0"
+                      alpha_nacimiento="0.0"
+                      delta_nacimiento="1.0"
+                      tiempo_rayos="-0.2"
+                      minRandomLeft="-3.0"
+                      maxRandomLeft="4.0"
+                      minRandomFront="-3.0"
+                      maxRandomFront="18.0"
+                      time_to_show_planet_gameplay_msg="1.0"
+                      max_time_to_born_powerup="5.0"
+                      powerups_positions_xml="powerups_level1.xml"
+                      />
+
+  <third_level_logic init_player_sync="240.0"
+                     syn_player_lose_per_second_on_safe="2.0"
+                     syn_player_lose_per_second_on_damage="25.0"
+                     time_to_show_planet_gameplay_msg="1.0"
+                     max_time_to_born_powerup="2.0"
+                     powerups_positions_xml="powerups_level3.xml"
+                     />
+
+  <fourth_level_logic init_player_sync="200.0"
+                      init_num_dopaminas="10"
+                      init_num_noradrenalinas="10"
+                      init_num_twisters="8"
+                      min_num_dopaminas="10"
+                      max_num_dopaminas="50"
+                      min_num_noradrenalinas="10"
+                      max_num_noradrenalinas="50"
+                      max_num_twisters="16"
+                      max_time_twister_born="10.0"
+                      syn_player_lose_per_second="1.0"
+                      time_to_show_planet_gameplay_msg="1.0"
+                      dopamina_start_right_percentage="80.0"
+                      dopamina_end_right_percentage="84.0"
+                      noradrenalina_start_right_percentage="52.0"
+                      noradrenalina_end_right_percentage="56.0"
+                      portal_particle_name="level_1_exit"
+                      max_time_to_born_powerup="4.0"
+                      powerups_positions_xml="powerups_level4.xml"
+                      portal_radius="1.1"
+                      />
+
+</logic>

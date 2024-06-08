@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<powerups max_powerups_same_time="10">
+
+  NOTE: "max_powerups_same_time" TIENE QUE SER MENOR O IGUAL QUE EL NUMERO DE "powerups"
+
+  <powerup position="9.70577 5.59699 20.3695"
+           powerup_life_probability="20.0"
+           powerup_score_probability="80.0"
+           />
+
+  <powerup position="15.6225 5.59699 10.9517"
+           powerup_life_probability="20.0"
+           powerup_score_probability="80.0"
+           />
+
+  <powerup position="17.0228 2.84702 -5.8743"
+           powerup_life_probability="20.0"
+           powerup_score_probability="80.0"
+           />
+
+  <powerup position="17.5535 -7.35771 4.00746"
+           powerup_life_probability="20.0"
+           powerup_score_probability="80.0"
+           />
+
+  <powerup position="2.63572 9.38425 -18.2634"
+           powerup_life_probability="20.0"
+           powerup_score_probability="80.0"
+           />
+
+  <powerup position="-11.5287 12.861 -2.11713"
+           powerup_life_probability="20.0"
+           powerup_score_probability="80.0"
+           />
+
+  <powerup position="-11.3069 9.34257 -14.1711"
+           powerup_life_probability="20.0"
+           powerup_score_probability="80.0"
+           />
+
+  <powerup position="-17.9569 -0.370593 0.829343"
+           powerup_life_probability="20.0"
+           powerup_score_probability="80.0"
+           />
+
+  <powerup position="-15.8764 6.22135 7.13056"
+           powerup_life_probability="20.0"
+           powerup_score_probability="80.0"
+           />
+
+  <powerup position="-9.63353 6.22135 19.7698"
+           powerup_life_probability="20.0"
+           powerup_score_probability="80.0"
+           />
+
+  <powerup position="-7.72518 10.1474 17.3601"
+           powerup_life_probability="20.0"
+           powerup_score_probability="80.0"
+           />
+
+  <powerup position="7.67536 14.0165 10.0067"
+           powerup_life_probability="20.0"
+           powerup_score_probability="80.0"
+           />
+
+  <powerup position="6.42486 15.3965 -9.56127"
+           powerup_life_probability="20.0"
+           powerup_score_probability="80.0"
+           />
+
+  <powerup position="-10.821 12.861 5.97031"
+           powerup_life_probability="20.0"
+           powerup_score_probability="80.0"
+           />
+
+</powerups>

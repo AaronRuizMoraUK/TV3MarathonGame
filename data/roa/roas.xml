@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<ROAS>
+
+  <ROA file="menu_next.xml"/>
+  <ROA file="menu_previous.xml"/>
+  <ROA file="river_way.xml"/>
+  <ROA file="valve_hit.xml"/>
+  <ROA file="powerup.xml"/>
+
+</ROAS>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<planetmaps>
+
+  Heightmaps
+  <heightmap file="brain_heightmap.bin"/>
+  <heightmap file="brain3_heightmap.bin"/>
+
+  Normalmaps
+  <normalmap file="brain_normalmap.bin"/>
+
+  Texturemaps
+  <texturemap file="brain3_texturemap.bin"/>
+
+</planetmaps>

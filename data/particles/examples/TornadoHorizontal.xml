@@ -1,0 +1,96 @@
+<SYSTEM_DEFINITION name = "TornadoHorizontal">
+	<SUBSYSTEM max = "20" particleColorFactor = "1.0" >
+		<TEXTURE diffuse = "particula2.dds" />
+		<SOURCE particle_rate = "10">
+			<DOMAIN type = "DISC" 
+				x0 = "0.0"
+				y0 = "0.0"
+				z0 = "76.5"
+				normalx = "0.0"
+			        normaly = "0.0" 
+				normalz = "1.0"
+
+				OuterRadius = "0.0"
+				InnerRadius = "2.5"
+				rangAngle = "6.28"
+				phase = "0.0" />
+
+			<COLOR>
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+			</COLOR>
+
+			<SIZE>
+				<DOMAIN type = "POINT" 
+					x0 = "4.0"
+					z0 = "4.0"
+					y0 = "4.0" />
+			</SIZE>
+		</SOURCE>
+
+
+		<KILLOLDALPHA age_limit = "2.0" scale = "1.0" />
+	       	<ALPHASTART age_limit = "0.5" scale = "1.0" limit = "0.7" />
+
+		<MOVE move_velocity = "true" move_rotational_velocity = "true" />
+	</SUBSYSTEM>
+
+	<SUBSYSTEM max = "300" particleColorFactor = "1.0" >
+		<TEXTURE diffuse = "particula2.dds" />
+		<SOURCE particle_rate = "80">
+			<DOMAIN type = "DISC" 
+				x0 = "0.0"
+				y0 = "0.0"
+				z0 = "100.0"
+				normalx = "0.0"
+			        normaly = "0.0" 
+				normalz = "1.0"
+
+				OuterRadius = "4.0"
+				InnerRadius = "3.0"
+				rangAngle = "6.28"
+				phase = "0.0" />
+
+			<COLOR>
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+				<DOMAIN type = "POINT" 
+					x0 = "1.0"
+					z0 = "1.0"
+					y0 = "1.0" />
+			</COLOR>
+
+			<VELOCITY>
+				<DOMAIN type = "POINT" 
+					x0 = "0.0"
+					z0 = "0.0"
+					y0 = "0.0" />
+			</VELOCITY>
+
+			<SIZE>
+				<DOMAIN type = "POINT" 
+					x0 = "0.5"
+					z0 = "0.5"
+					y0 = "0.5" />
+			</SIZE>
+		</SOURCE>
+
+		<GRAVITY>
+			<DOMAIN type = "POINT" 
+				x0 = "0.0"
+				z0 = "-20.0"
+				y0 = "0.0" />
+		</GRAVITY>
+		<KILLOLDALPHA age_limit = "2.0" scale = "1.0" />
+
+		<MOVE move_velocity = "true" move_rotational_velocity = "true" />
+	</SUBSYSTEM>
+</SYSTEM_DEFINITION>

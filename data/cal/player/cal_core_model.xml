@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<core_model>
+  <skeleton filename="player.csf" />
+
+  Los def_time_factor solo afectan a las acciones
+  <animation name="jog"          filename="cafs/player_run.caf"        def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+  <animation name="walk"         filename="cafs/player_walk.caf"       def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+  <animation name="idle"         filename="cafs/player_idle.caf"       def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+  <animation name="kick"         filename="cafs/player_kick.caf"       def_delay_in="0.1" def_delay_out="0.1" def_time_factor="2.0" />
+  <animation name="hit"          filename="cafs/player_hit.caf"        def_delay_in="0.1" def_delay_out="0.1" def_time_factor="2.0" />
+  <animation name="prepare_jump" filename="cafs/player_takeoff.caf"    def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+  <animation name="jumping"      filename="cafs/player_jumping.caf"    def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+  <animation name="finish_jump"  filename="cafs/player_land.caf"       def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+  <animation name="thrown"       filename="cafs/player_thrown.caf"     def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+  <animation name="transition"   filename="cafs/player_transition.caf" def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+  <animation name="burn"         filename="cafs/player_burned.caf"     def_delay_in="0.1" def_delay_out="0.1" def_time_factor="1.0" />
+
+  <mesh filename="player.cmf" />
+ 
+</core_model>

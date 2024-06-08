@@ -1,0 +1,77 @@
+<SYSTEM_DEFINITION name = "warning_rayo">
+	<SUBSYSTEM max = "20" particleColorFactor = "1.0" >
+		<TEXTURE diffuse = "estela.dds" />
+		<SOURCE particle_rate = "20">
+			<DOMAIN type = "DISC" 
+				x0 = "0.0"
+				y0 = "0.2"
+				z0 = "0.0"
+				normalx = "0.0"
+			    	normaly = "1.0" 
+				normalz = "0.0"
+
+				OuterRadius = "1.0"
+				InnerRadius = "0"
+				rangAngle = "6.28"
+				phase = "0" />
+			<COLOR>
+				<DOMAIN type = "POINT" 
+					x0 = "0.8"
+					z0 = "0.8"
+					y0 = "0.8" />
+				<DOMAIN type = "POINT" 
+					x0 = "0.8"
+					z0 = "0.8"
+					y0 = "0.8" />
+			</COLOR>
+
+			<VELOCITY>
+				<DOMAIN type = "POINT" 
+					x0 = "0.0"
+					z0 = "0.0"
+					y0 = "0.0" />
+			</VELOCITY>
+
+			<SIZE>
+				<DOMAIN type = "POINT" 
+					x0 = "0.3"
+					z0 = "0.2"
+					y0 = "0.6" />
+			</SIZE>
+		</SOURCE>
+		
+			<FUNCTIONSIZE>
+				<FUNCTION>
+					<SAMPLE t = "0.0" v = "0.01" />
+					<SAMPLE t = "0.4" v = "0.4" />
+					<SAMPLE t = "0.8" v = "0.01" />
+				</FUNCTION>
+			</FUNCTIONSIZE>
+			<FUNCTIONALPHA>
+				<FUNCTION>
+					<SAMPLE t = "0.7" v = "1.0" />
+					<SAMPLE t = "1.0" v = "0.0" />
+				</FUNCTION>
+			</FUNCTIONALPHA>
+
+		<FUNCTIONCOLOR>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "0.8" />
+				<SAMPLE t = "1.0" v = "0.4" />
+			</FUNCTION>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "0.8" />
+				<SAMPLE t = "1.0" v = "0.4" />
+			</FUNCTION>
+			<FUNCTION>
+				<SAMPLE t = "0.0" v = "0.8" />
+				<SAMPLE t = "1.0" v = "0.4" />
+			</FUNCTION>
+		</FUNCTIONCOLOR>
+	
+		
+		<KILLOLDALPHA age_limit = "20.0" scale = "10.0" /> 
+
+		<MOVE move_velocity = "true" move_rotational_velocity = "true" />
+	</SUBSYSTEM>	
+</SYSTEM_DEFINITION>

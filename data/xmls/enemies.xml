@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<enemies>
+  
+  <enemy name="dopamina">
+    <mesh type="custom"  name="dopamina.mesh" />
+    <material texture="dopamina.dds" shader="shader.fx" technique="basic_tech" />
+    <AI name="dopamina_sphere_random_walk" />
+    <collision shape="CYLINDER" bias="0.2" />
+  </enemy>
+
+  <enemy name="alucinacion">
+    <mesh type="cal"  name="alucinacion" />
+    <material texture="alucinacion_skin.dds" shader="shader.fx" technique="skinning_tech" />
+    <AI name="alucinacion_sphere_chase" />
+    <collision shape="CYLINDER" bias="1.0" />
+  </enemy>
+
+  <enemy name="bomba_noradrenalina">
+	  <mesh type="custom" name="bomba.mesh" />
+	  <material texture="bomb_texture_roja.dds" shader="shader.fx" technique="basic_tech"/>
+	  <AI name = "follower" />
+	  <collision shape="CYLINDER" bias="1.0" />
+  </enemy>
+
+  <enemy name="bomba_serotonina">
+	  <mesh type="custom" name="bomba.mesh" />
+	  <material texture="bomb_texture_azul.dds" shader="shader.fx" technique="basic_tech"/>
+	  <AI name = "follower" />
+	  <collision shape="CYLINDER" bias="1.0" />
+  </enemy>
+
+  <enemy name="dopamina_brain4">
+    <mesh type="custom"  name="dopamina.mesh" />
+    <material texture="dopamina.dds" shader="shader.fx" technique="basic_tech" />
+    <AI name="dopamina_brain4" />
+    <collision shape="CYLINDER" bias="0.2" />
+  </enemy>
+  
+  <enemy name="noradrenalina_brain4">
+    <mesh type="custom"  name="dopamina.mesh" />
+    <material texture="dopamina_red.dds" shader="shader.fx" technique="basic_tech" />
+    <AI name="noradrenalina_brain4" />
+    <collision shape="CYLINDER" bias="0.2" />
+  </enemy>
+
+  <enemy name="powerup_life">
+    <mesh type="custom"  name="powerup_life.mesh" />
+    <material texture="powerup_life.dds" shader="shader.fx" technique="basic_tech" />
+    <AI name="powerup_life" />
+  </enemy>
+
+  <enemy name="powerup_score">
+    <mesh type="custom"  name="powerup_score.mesh" />
+    <material texture="powerup_score.dds" shader="shader.fx" technique="basic_tech" />
+    <AI name="powerup_score" />
+  </enemy>
+
+</enemies>

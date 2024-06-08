@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<instructions>
+
+  <comic_text_window style="explanation_style"/>
+  <instructor cal_model="instructor"
+              
+              texture="instructor.dds"
+              shader="shader.fx"
+              technique="skinning_tech"
+              
+              idle_anim="idle"
+              ok_anim="ok"/>
+
+  Queda bien con 19 letras
+  Separación con "\ "
+  Tiempos al principio de la cadena, separado por espacios, siempre ascendentes, finaliza con "/ "
+  El "%" se escribe "%%"
+  
+  <instruction id="INIT_FIRST_LEVEL"
+               text="No et creuràs el\ que he inventat!\ Imagina't un vestit\ especial que et\ deixés fer-te prou\ petit per\ caminar per sobre\ d'un cervell.\ Així es podrien\ tractar les\ malalties mentals\ dels pacients!\ Oh! No m'he\ presentat encara.\ Em dic\ Doc\ i sóc psiquiatre.\ Tinc un pacient\ amb esquizofrènia.\ i el vull ajudar \ fent servir el meu\ invent. Però\ tinc un problema:\ no l'he provat,\ encara... Fas cara\ de ser valent,\ vols ajudar-me a\ provar-lo? Som-hi!"
+               Xtext="7.0 13.0 19.0 25.5 30.0/ No et creuràs el\ que he inventat!\ Imagina't un vestit\ especial que et\ deixés fer-te tan\ petit com per\ caminar per sobre\ d'un cervell.\ Així es podrien\ tractar les\ malalties mentals\ dels pacients!\ Oh! No m'he\ presentat encara.\ Em dic\ Doctor Scraper\ i sóc psiquiatre.\ Tinc un pacient\ amb esquizofrènia.\ i vull guarir-lo\ utilitzant el meu\ nou invent. Però\ tinc un problema:\ no l'he provat\ encara... Fas cara\ de ser valent,\ vols ajudar-me a\ provar-lo? Som-hi!"
+               />
+
+  <instruction id="LOSE_FIRST_LEVEL"
+               text="Grrrr! Hem esgotat\ l'energia del\ vestit especial.\ Tornem-ho a\ intentar! Haurem\ de fer-ho més\ ràpid, aquest cop."
+               Xtext="7.5 9.0/ Grrrr! Hem esgotat\ l'energia del\ vestit especial.\ Tornem-ho a\ intentar! Haurem\ de fer-ho més\ ràpid aquest cop."
+               />
+  
+  <instruction id="INIT_SECOND_LEVEL"
+               text="Ei! No ets cap\ mindundi, tu...\ Hem millorat la\ malaltia del\ nostre pacient.\ Ets una canya!\ Vols ajudar-me a\ tractar un altre\ cervell?"
+               Xtext="6.0 9.0/ Ei! No ets cap\ mindundi tu...\ Hem millorat la\ malaltia del\ nostre pacient.\ Ets la canya!\ Vols ajudar-me a\ tractar un altre\ cervell?"
+               />
+
+  <instruction id="LOSE_SECOND_LEVEL"
+               text="Grrrr! Hem esgotat\ l'energia del\ vestit especial.\ Tornem-ho a\ intentar! Haurem\ de fer-ho més\ ràpid aquest cop."
+               Xtext="7.5 9.0/ Grrrr! Hem esgotat\ l'energia del\ vestit especial.\ Tornem-ho a\ intentar! Haurem\ de fer-ho més\ ràpid aquest cop."
+               />
+
+  <instruction id="INIT_THIRD_LEVEL"
+               text="Sí senyor!\ Ets l'amo!!\ A partir d'ara\ hauràs de ser\ molt i molt bo.\ Crec que s'està\ espatllant el\ vestit. Cada cop\ té menys\ energia inicial...\ Vés amb compte."
+               Xtext="6.5 11.0/ Sí!  Ets l'amo!!\ A partir d'ara\ hauràs de ser\ realment bo.\ Crec que s'està\ espatllant el\ vestit. Cada cop\ té menys\ energia inicial...\ Vés amb compte."
+               />
+
+  <instruction id="LOSE_THIRD_LEVEL"
+               text="No pot ser!\ El vestit especial\ s’ha quedat\ sense energia!\ Hem d’anar\ mes de pressa\ perquè no ens\ torni a passar."
+               Xtext="7.5 9.0/ Grrrr! Hem esgotat\ l'energia del\ vestit especial.\ Tornem-ho a\ intentar! Haurem\ de fer-ho més\ ràpid aquest cop."
+               />
+
+  <instruction id="INIT_FOURTH_LEVEL"
+               text="Molt bé!\ Ets un crac!\ Gràcies a tu\ el nostre pacient\ ha millorat.\ Hauries\ d’ajudar-me un\ altre cop.\ Hi ha mes cervells\ malalts!"
+               Xtext="6.0 9.0/ Ei! No ets cap\ mindundi tu...\ Hem millorat la\ malaltia del\ nostre pacient.\ Ets la canya!\ Vols ajudar-me a\ tractar un altre\ cervell?"
+               />
+
+  <instruction id="LOSE_FOURTH_LEVEL"
+               text="No ho hem fet\ gaire bé, això...\ No tenim energia\ al vestit especial.\ És necessari\ tornar a començar\ i anar mes ràpid!"
+               Xtext="7.5 9.0/ Grrrr! Hem esgotat\ l'energia del\ vestit especial.\ Tornem-ho a\ intentar! Haurem\ de fer-ho més\ ràpid aquest cop."
+               />
+
+  <instruction id="GAME_WON"
+               text="Fantàstic!\ Ets un geni.\ Espero que t'ho\ hagis passat molt\ bé destruint\ malalties. Adéu,\ fins a la pròxima!"
+               Xtext="7.0/ Fantàstic!\ Ets un geni.\ Espero que t'ho\ hagis passat molt\ bé destruint\ malalties. Adéu."
+               />
+  
+</instructions>

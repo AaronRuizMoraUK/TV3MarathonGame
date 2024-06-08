@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<particle_groups>
+
+	<!-- PLAYER -->
+	<particle_group filename="player_run.xml" />
+
+	<!-- FIRST LEVEL -->
+	<particle_group filename="level_1_exit.xml" />
+	<particle_group filename="dopamina_particles.xml" />
+	<particle_group filename="dopamine_born.xml" />
+	<particle_group filename="dopamine_death.xml" />
+	<particle_group filename="hallucination_born.xml" />
+	<particle_group filename="hallucination_death.xml" />
+	
+	<!-- SECOND LEVEL -->
+	<particle_group filename="red_bomb_explosion.xml" />
+	<particle_group filename="blue_bomb_explosion.xml" />
+	<particle_group filename="bomb_fuse.xml" />
+	<particle_group filename="red_bomb_place.xml" />
+	<particle_group filename="blue_bomb_place.xml" />
+	<particle_group filename="light_explosion_1.xml" />
+	<particle_group filename="light_explosion_2.xml" />
+	<particle_group filename="light_explosion_3.xml" />
+	<particle_group filename="light_explosion_4.xml" />
+	<particle_group filename="light_explosion_5.xml" />
+	<particle_group filename="warning_rayo.xml" />
+	<particle_group filename="after_rayo.xml" />
+	
+	<!-- THIRD LEVEL -->
+	<particle_group filename="valve_hit.xml" />
+	<particle_group filename="river_particles.xml" />
+	
+	<!-- FORTH LEVEL -->
+	<particle_group filename="twister_particles.xml" />
+	<particle_group filename="twister_born.xml" />
+	<particle_group filename="twister_death.xml" />
+	<particle_group filename="expender_overheat.xml" />
+	<particle_group filename="dopamine4brain_born.xml" />
+	<particle_group filename="dopamine4brain_death.xml" />
+	<particle_group filename="noradrenaline4brain_born.xml" />
+	<particle_group filename="noradrenaline4brain_death.xml" />
+  
+	<!-- EXTRAS -->
+	<particle_group filename="powerup.xml" />
+	<particle_group filename="powerup_born.xml" />
+	<particle_group filename="powerup_picked_up.xml" />
+	
+</particle_groups>
