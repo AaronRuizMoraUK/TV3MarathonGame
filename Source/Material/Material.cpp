@@ -249,8 +249,10 @@ void Material::activate() const {
 			formatColorDWordToVector4(statusColor, additionalColor.color);
 			shader_fx->SetVector( handleParam, &statusColor );
 		}
-		else
-			shader_fx->SetVector( handleParam, &D3DXVECTOR4(0,0,0,1) );
+		else {
+			const D3DXVECTOR4 black(0, 0, 0, 1);
+			shader_fx->SetVector(handleParam, &black);
+		}
 	}
 #endif
 

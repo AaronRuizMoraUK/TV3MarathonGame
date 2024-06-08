@@ -77,7 +77,7 @@ int CalCoreSubmesh::getCoreMaterialThreadId()
   * @return The number of faces.
   *****************************************************************************/
 
-int CalCoreSubmesh::getFaceCount()
+int CalCoreSubmesh::getFaceCount() const
 {
   return m_vectorFace.size();
 }
@@ -220,6 +220,11 @@ bool CalCoreSubmesh::enableTangents(int mapId, bool enabled)
   * @return A reference to the face vector.
   *****************************************************************************/
 
+const std::vector<CalCoreSubmesh::Face>& CalCoreSubmesh::getVectorFace() const
+{
+  return m_vectorFace;
+}
+
 std::vector<CalCoreSubmesh::Face>& CalCoreSubmesh::getVectorFace()
 {
   return m_vectorFace;
@@ -263,6 +268,11 @@ std::vector<CalCoreSubmesh::Spring>& CalCoreSubmesh::getVectorSpring()
   * @return A reference to the texture coordinate vector-vector.
   *****************************************************************************/
 
+const std::vector<std::vector<CalCoreSubmesh::TextureCoordinate> > & CalCoreSubmesh::getVectorVectorTextureCoordinate() const
+{
+  return m_vectorvectorTextureCoordinate;
+}
+
 std::vector<std::vector<CalCoreSubmesh::TextureCoordinate> > & CalCoreSubmesh::getVectorVectorTextureCoordinate()
 {
   return m_vectorvectorTextureCoordinate;
@@ -293,6 +303,11 @@ std::vector<std::vector<CalCoreSubmesh::TangentSpace> >& CalCoreSubmesh::getVect
   * @return A reference to the vertex vector.
   *****************************************************************************/
 
+const std::vector<CalCoreSubmesh::Vertex>& CalCoreSubmesh::getVectorVertex() const
+{
+  return m_vectorVertex;
+}
+
 std::vector<CalCoreSubmesh::Vertex>& CalCoreSubmesh::getVectorVertex()
 {
   return m_vectorVertex;
@@ -306,7 +321,7 @@ std::vector<CalCoreSubmesh::Vertex>& CalCoreSubmesh::getVectorVertex()
   * @return The number of vertices.
   *****************************************************************************/
 
-int CalCoreSubmesh::getVertexCount()
+int CalCoreSubmesh::getVertexCount() const
 {
   return m_vectorVertex.size();
 }

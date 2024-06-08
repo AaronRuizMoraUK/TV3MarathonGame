@@ -71,16 +71,19 @@ public:
   ~CalCoreSubmesh();
 
   int getCoreMaterialThreadId();
-  int getFaceCount();
+  int getFaceCount() const;
   int getLodCount();
   int getSpringCount();
+  const std::vector<Face>& getVectorFace() const;
   std::vector<Face>& getVectorFace();
   std::vector<PhysicalProperty>& getVectorPhysicalProperty();
   std::vector<Spring>& getVectorSpring();
   std::vector<std::vector<TangentSpace> >& getVectorVectorTangentSpace();
+  const std::vector<std::vector<TextureCoordinate> >& getVectorVectorTextureCoordinate() const;
   std::vector<std::vector<TextureCoordinate> >& getVectorVectorTextureCoordinate();
+  const std::vector<Vertex>& getVectorVertex() const;
   std::vector<Vertex>& getVectorVertex();
-  int getVertexCount();
+  int getVertexCount() const;
   bool isTangentsEnabled(int mapId);
   bool enableTangents(int mapId, bool enabled);
   bool reserve(int vertexCount, int textureCoordinateCount, int faceCount, int springCount);

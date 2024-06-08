@@ -166,6 +166,18 @@ namespace PAPI {
         }
     }
 
+	void PContextActionList_t::setDomainOffset(const int action_list_num, const std::string &name, const PAPI::pVec &v) {
+		std::map<string, PAPI::pDomain *>::iterator it = PS->ALists[action_list_num].publicDomains.find(name);
+		if (it != PS->ALists[action_list_num].publicDomains.end()) 
+			it->second->setOffset(v);
+	}
+
+	void PContextActionList_t::setDomainTransform(const int action_list_num, const std::string &name, const PAPI::pMatrix &t) {
+		std::map<string, PAPI::pDomain *>::iterator it = PS->ALists[action_list_num].publicDomains.find(name);
+		if (it != PS->ALists[action_list_num].publicDomains.end()) 
+			it->second->setTransform(t);
+	}
+
     void PContextActionList_t::CallActionList(const int action_list_num)
     {
         if(action_list_num < 0 || action_list_num >= (int)PS->ALists.size()) throw PErrActionList("Invalid action list number.");
@@ -336,7 +348,7 @@ namespace PAPI {
     // by the Particle API. Don't do anything stupid with this power or you will regret it.
     size_t PContextParticleGroup_t::GetParticlePointer(float *&ptr, size_t &stride, size_t &pos3Ofs, size_t &posB3Ofs,
         size_t &size3Ofs, size_t &vel3Ofs, size_t &velB3Ofs, size_t &color3Ofs, size_t &alpha1Ofs, size_t &age1Ofs,
-        size_t &up3Ofs, size_t &rvel3Ofs, size_t &upB3Ofs, size_t &mass1Ofs, size_t &data1Ofs) const
+        size_t &up3Ofs, size_t &rvel3Ofs, size_t &upB3Ofs, size_t &mass1Ofs, size_t &data1Ofs)
     {
         ParticleGroup &pg = PS->PGroups[PS->pgroup_id];
 
@@ -373,7 +385,7 @@ namespace PAPI {
     }
 
     // Returns the number of particles currently in the group.
-    size_t PContextParticleGroup_t::GetGroupCount() const
+    size_t PContextParticleGroup_t::GetGroupCount()
     {
         if(PS->pgroup_id < 0 || PS->pgroup_id >= (int)PS->PGroups.size()) throw PErrParticleGroup("GetGroupCount: Invalid particle group number");
 
@@ -381,7 +393,7 @@ namespace PAPI {
     }
 
     // Returns the maximum number of allowed particles
-    size_t PContextParticleGroup_t::GetMaxParticles() const
+    size_t PContextParticleGroup_t::GetMaxParticles()
     {
         if(PS->pgroup_id < 0 || PS->pgroup_id >= (int)PS->PGroups.size()) throw PErrParticleGroup("GetMaxParticles: Invalid particle group number");
 

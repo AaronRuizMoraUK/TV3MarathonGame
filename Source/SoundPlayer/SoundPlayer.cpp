@@ -105,14 +105,14 @@ DWORD SoundPlayer::playStream( const char *name, bool loop ) {
 	if( current_stream == 0 ) {
 		assert( old_stream == 0 );
 		channel = current_stream = stream->handle;
-		BASS_ChannelSlideAttributes( channel, -1, 100, -101, FADE_TIME_STREAMS );
+		BASS_ChannelSlideAttribute( channel, BASS_ATTRIB_VOL, 1.0f, FADE_TIME_STREAMS );
 	}
 	// Hay algo sonando
 	else {
 		old_stream = current_stream;
 		channel = current_stream = stream->handle;
-		BASS_ChannelSlideAttributes( old_stream, -1, -2, -101, FADE_TIME_STREAMS );
-		BASS_ChannelSlideAttributes( channel, -1, 100, -101, FADE_TIME_STREAMS );
+		BASS_ChannelSlideAttribute( old_stream, BASS_ATTRIB_VOL, 0.0f, FADE_TIME_STREAMS );
+		BASS_ChannelSlideAttribute( channel, BASS_ATTRIB_VOL, 1.0f, FADE_TIME_STREAMS );
 		old_stream = 0;
 	}
 
@@ -126,7 +126,7 @@ DWORD SoundPlayer::playStream( const char *name, bool loop ) {
 	if( !loop ) {
 		BASS_CHANNELINFO channel_info;
 		BASS_ChannelGetInfo( channel, &channel_info );
-		BASS_ChannelSetFlags( channel, channel_info.flags & ~BASS_SAMPLE_LOOP );
+		BASS_ChannelFlags(channel, 0, BASS_SAMPLE_LOOP); // remove the LOOP flag
 	}
 
 	// Play Channel
@@ -152,7 +152,7 @@ DWORD SoundPlayer::playSample( const char *name, bool loop ) {
 	if( loop ) {
 		BASS_CHANNELINFO channel_info;
 		BASS_ChannelGetInfo( channel, &channel_info );
-		BASS_ChannelSetFlags( channel, channel_info.flags | BASS_SAMPLE_LOOP );
+		BASS_ChannelFlags(channel, BASS_SAMPLE_LOOP, BASS_SAMPLE_LOOP); // set the LOOP flag
 	}
 
 	// Play Channel
@@ -170,7 +170,7 @@ void SoundPlayer::stopStream( bool fading ) {
 		return;
 
 	if( fading )
-		BASS_ChannelSlideAttributes( current_stream, -1, -2, -101, FADE_TIME_STREAMS );
+		BASS_ChannelSlideAttribute( current_stream, BASS_ATTRIB_VOL, 0, FADE_TIME_STREAMS );
 	else
 		BASS_ChannelStop( current_stream );
 	current_stream = 0;
@@ -181,7 +181,7 @@ void SoundPlayer::stopSample( DWORD channel, bool fading ) {
 		return;
 
 	if( fading )
-		BASS_ChannelSlideAttributes( channel, -1, -2, -101, FADE_TIME_SAMPLES );
+		BASS_ChannelSlideAttribute( channel, BASS_ATTRIB_VOL, 0, FADE_TIME_SAMPLES );
 	else
 		BASS_ChannelStop( channel );
 }
@@ -284,11 +284,14 @@ void SoundPlayer::threatError()
 	case BASS_ERROR_START:	// BASS_Start has not been successfully called
 		printDebugString("BASS ERROR: BASS_Start has not been successfully called\n");
 		break;
+	case BASS_ERROR_SSL:	// SSL/HTTPS support isn't available
+		printDebugString("BASS ERROR: SSL/HTTPS support isn't available\n");
+		break;
 	case BASS_ERROR_ALREADY:	// already initialized/paused/whatever
 		printDebugString("BASS ERROR: already initialized/paused/whatever\n");
 		break;
-	case BASS_ERROR_NOPAUSE:	// not paused
-		printDebugString("BASS ERROR: not paused\n");
+	case BASS_ERROR_NOTAUDIO:	// file does not contain audio
+		printDebugString("BASS ERROR: file does not contain audio\n");
 		break;
 	case BASS_ERROR_NOCHAN:	// can't get a free channel
 		printDebugString("BASS ERROR: can't get a free channel\n");
@@ -332,9 +335,6 @@ void SoundPlayer::threatError()
 	case BASS_ERROR_NOFX:	// effects are not available
 		printDebugString("BASS ERROR: effects are not available\n");
 		break;
-	case BASS_ERROR_PLAYING:	// the channel is playing
-		printDebugString("BASS ERROR: the channel is playing\n");
-		break;
 	case BASS_ERROR_NOTAVAIL:	// requested data is not available
 		printDebugString("BASS ERROR: requested data is not available\n");
 		break;
@@ -359,8 +359,14 @@ void SoundPlayer::threatError()
 	case BASS_ERROR_CODEC:	// codec is not available/supported
 		printDebugString("BASS ERROR: codec is not available/supported\n");
 		break;
-	case BASS_ERROR_UNKNOWN:	// some other mystery error
-		printDebugString("BASS ERROR: some other mystery error\n");
+	case BASS_ERROR_ENDED:	// the channel/file has ended
+		printDebugString("BASS ERROR: the channel/file has ended\n");
+		break;
+	case BASS_ERROR_BUSY:	// the device is busy
+		printDebugString("BASS ERROR: the device is busyd\n");
+		break;
+	case BASS_ERROR_UNSTREAMABLE:	// unstreamable file
+		printDebugString("BASS ERROR: unstreamable file\n");
 		break;
 	default:	// some other mystery error
 		printDebugString("BASS ERROR: some other mystery error\n");

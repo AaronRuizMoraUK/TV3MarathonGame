@@ -11,6 +11,34 @@
 
 namespace PAPI {
 
+void PContextActions_t::AirTube(const pVec &point, const float vRot, const float vIn) {
+    //PAAlphaStart *A = new PAAlphaStart;
+	PAAirTube *A = new PAAirTube;
+	A->p = point;
+	A->vrot = vRot;
+	A->vin = vIn;
+
+	A->SetKillsParticles(false);
+    A->SetDoNotSegment(false);
+
+    PS->SendAction(A);
+}
+
+void PContextActions_t::AlphaStart(const float age_limit, const float scale,const float limit)
+{
+    PAAlphaStart *A = new PAAlphaStart;
+
+    A->age_limit = age_limit;
+	A->scale = scale;
+	A->limit = limit;
+
+    A->SetKillsParticles(false);
+    A->SetDoNotSegment(false);
+
+    PS->SendAction(A);
+}
+
+
 void PContextActions_t::Avoid(const float magnitude, const float epsilon, const float look_ahead, const pDomain &dom)
 {
     PAAvoid *A = new PAAvoid;
@@ -118,24 +146,58 @@ void PContextActions_t::Follow(const float magnitude, const float epsilon, const
     PS->SendAction(A);
 }
 
-void PContextActions_t::ChangeSize(const pVec &magnitude)
-{
-    PAChangeSize *A = new PAChangeSize;
-
-    A->magnitude = magnitude;
-   
-    A->SetKillsParticles(false);
-    A->SetDoNotSegment(true);
-
-    PS->SendAction(A);
-}
-
 void PContextActions_t::Fountain()
 {
     PAFollow *A = new PAFollow;
 
     A->SetKillsParticles(true);
     A->SetDoNotSegment(true);
+
+    PS->SendAction(A);
+}
+
+void PContextActions_t::FunctionColor(queue<float> * rr, queue<float> * gg, queue<float> * bb)
+{
+    PAFunctionColor *A = new PAFunctionColor;
+
+	A->r.add(rr);
+	A->g.add(gg);
+	A->b.add(bb);
+
+	delete rr;
+	delete gg;
+	delete bb;
+	
+    A->SetKillsParticles(false);
+    A->SetDoNotSegment(false);
+
+    PS->SendAction(A);
+}
+
+void PContextActions_t::FunctionAlpha(queue<float> * ff)
+{
+    PAFunctionAlpha *A = new PAFunctionAlpha;
+
+	A->f.add(ff);
+	
+	delete ff;
+	
+    A->SetKillsParticles(false);
+    A->SetDoNotSegment(false);
+
+    PS->SendAction(A);
+}
+
+void PContextActions_t::FunctionSize(queue<float> * ff)
+{
+    PAFunctionSize *A = new PAFunctionSize;
+
+	A->f.add(ff);
+	
+	delete ff;
+	
+    A->SetKillsParticles(false);
+    A->SetDoNotSegment(false);
 
     PS->SendAction(A);
 }
@@ -185,6 +247,19 @@ void PContextActions_t::KillOld(const float age_limit, const bool kill_less_than
 
     A->age_limit = age_limit;
     A->kill_less_than = kill_less_than;
+
+    A->SetKillsParticles(true);
+    A->SetDoNotSegment(false);
+
+    PS->SendAction(A);
+}
+
+void PContextActions_t::KillOldAlpha(const float age_limit, const float scale)
+{
+    PAKillOldAlpha *A = new PAKillOldAlpha;
+
+    A->age_limit = age_limit;
+	A->scale = scale;
 
     A->SetKillsParticles(true);
     A->SetDoNotSegment(false);
@@ -375,7 +450,7 @@ void PContextActions_t::Source(const float particle_rate, const pDomain &dom)
 
     A->SetKillsParticles(false);
     A->SetDoNotSegment(true); // WARNING: Particles aren't a function of other particles, but does affect the working sets optimizations
-
+	PS->PublishDomain("SourceDomain", A->position);
     PS->SendAction(A);
 }
 

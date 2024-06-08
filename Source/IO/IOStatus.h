@@ -2,7 +2,7 @@
 #define IO_STATUS_H
 
 #include <sstream>
-#include "Expat\XMLParser.h"
+#include "XMLParser\XMLParser.h"
 #include "DigitalAction\DigitalAction.h"
 #include "AnalogAction\AnalogAction.h"
 #include "Directx\DirectInput.h"

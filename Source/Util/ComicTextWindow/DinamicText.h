@@ -2,6 +2,7 @@
 #define DINAMIC_TEXT_H
 
 #include <vector>
+#include <string>
 
 class IComicText {
 public:

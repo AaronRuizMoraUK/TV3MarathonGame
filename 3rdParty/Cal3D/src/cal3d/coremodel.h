@@ -67,6 +67,7 @@ public:
 
   // meshes
   int addCoreMesh(CalCoreMesh *pCoreMesh);
+  const CalCoreMesh *getCoreMesh(int coreMeshId) const;
   CalCoreMesh *getCoreMesh(int coreMeshId);
   int getCoreMeshCount();
   int loadCoreMesh(const std::string& strFilename);

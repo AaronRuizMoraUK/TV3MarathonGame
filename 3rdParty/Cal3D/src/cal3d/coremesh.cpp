@@ -84,6 +84,17 @@ int CalCoreMesh::addCoreSubmesh(CalCoreSubmesh *pCoreSubmesh)
   *         \li \b 0 if an error happend
   *****************************************************************************/
 
+const CalCoreSubmesh *CalCoreMesh::getCoreSubmesh(int id) const
+{
+  if((id < 0) || (id >= (int)m_vectorCoreSubmesh.size()))
+  {
+    CalError::setLastError(CalError::INVALID_HANDLE, __FILE__, __LINE__);
+    return 0;
+  }
+
+  return m_vectorCoreSubmesh[id];
+}
+
 CalCoreSubmesh *CalCoreMesh::getCoreSubmesh(int id)
 {
   if((id < 0) || (id >= (int)m_vectorCoreSubmesh.size()))
@@ -117,6 +128,11 @@ int CalCoreMesh::getCoreSubmeshCount()
   *
   * @return A reference to the core submesh vector.
   *****************************************************************************/
+
+const std::vector<CalCoreSubmesh *>& CalCoreMesh::getVectorCoreSubmesh() const
+{
+  return m_vectorCoreSubmesh;
+}
 
 std::vector<CalCoreSubmesh *>& CalCoreMesh::getVectorCoreSubmesh()
 {

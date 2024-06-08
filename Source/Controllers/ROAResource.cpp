@@ -74,7 +74,7 @@ bool RigidAnimationResource::initFromFile( const char *file )
 	float pDuration;
 
 	fscanf_s( pf, "<RigidAnimation>\n" );
-	fscanf_s( pf, "<Name> %s </Name>\n", nodeName, sizeof(nodeName) );
+	fscanf_s( pf, "<Name> %s </Name>\n", nodeName, (unsigned int)sizeof(nodeName) );
 	fscanf_s( pf, "<NumSamples> %d </NumSamples>\n", &numSamples );
 	fscanf_s( pf, "<Duration> %f </Duration>\n", &pDuration );
 

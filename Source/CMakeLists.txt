@@ -1,13 +1,13 @@
 ﻿cmake_minimum_required(VERSION 3.28)
 
-file(GLOB_RECURSE TV3_SCRAPER_SOURCE_FILES
+file(GLOB_RECURSE TV3_SOURCE_FILES
     "${CMAKE_SOURCE_DIR}/Source/*.*")
 
 source_group(TREE "${CMAKE_SOURCE_DIR}" FILES 
-    ${TV3_SCRAPER_SOURCE_FILES})
+    ${TV3_SOURCE_FILES})
 
 add_executable(TV3MarathonGame
-    ${TV3_SCRAPER_SOURCE_FILES})
+    ${TV3_SOURCE_FILES})
 
 # Includes
 target_include_directories(TV3MarathonGame PRIVATE "${CMAKE_SOURCE_DIR}/Source")

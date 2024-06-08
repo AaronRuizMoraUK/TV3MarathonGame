@@ -17,6 +17,19 @@ namespace PAPI
 {
     const float P_PLANAR_EPSILON = 1e-3f; ///< How small the dot product must be to declare that a point is in a plane for Within().
 
+    struct pMatrix
+    {
+        float m00 = 1.0f, m01 = 0.0f, m02 = 0.0f, m03 = 0.0f;
+        float m10 = 0.0f, m11 = 1.0f, m12 = 0.0f, m13 = 0.0f;
+        float m20 = 0.0f, m21 = 0.0f, m22 = 1.0f, m23 = 0.0f;
+        float m30 = 0.0f, m31 = 0.0f, m32 = 0.0f, m33 = 1.0f;
+
+        pVec Transform(const pVec& point) const
+        {
+            return point; // TODO!
+        }
+    };
+
     /// A representation of a region of space.
     ///
     /// A Domain is a representation of a region of space. For example, the Source action uses a domain to describe the volume in which a particle will be created. A random point within the domain is chosen as the initial position of the particle. The Avoid, Sink and Bounce actions, for example, use domains to describe a volume in space for particles to steer around, die when they enter, or bounce off, respectively.
@@ -34,11 +47,24 @@ namespace PAPI
     {
     public:
         virtual bool Within(const pVec &) const = 0; ///< Returns true if the given point is within the domain.
-        virtual pVec Generate() const = 0; ///< Returns a random point in the domain.
+
+		pVec Generate() const {
+			const pVec &point_local = GenerateLocal( );
+            pVec point_world = transform.Transform(point_local);
+			return point_world;
+		}
+
+        virtual pVec GenerateLocal() const = 0; ///< Returns a random point in the domain.
         virtual float Size() const = 0; ///< Returns the size of the domain (length, area, or volume).
+		virtual void setOffset(const pVec &e0) { ; };
+
+        pMatrix transform;
+		void setTransform( const pMatrix &atransform ) { transform = atransform; }
 
         virtual pDomain *copy() const = 0; // Returns a pointer to a heap-allocated copy of the derived class
 
+		pDomain( ) {
+		}
         virtual ~pDomain() {}
     };
 
@@ -120,7 +146,7 @@ namespace PAPI
             return false;
         }
 
-        pVec Generate() const /// Generate a point in any subdomain, chosen by the ratio of their sizes.
+        pVec GenerateLocal() const /// Generate a point in any subdomain, chosen by the ratio of their sizes.
         {
             float Choose = pRandf() * TotalSize, PastProb = 0.0f;
             for(std::vector<pDomain *>::const_iterator it = Doms.begin(); it != Doms.end(); it++) {
@@ -167,7 +193,7 @@ namespace PAPI
             return p == pos;
         }
 
-        pVec Generate() const /// Returns true if the point is exactly equal.
+        pVec GenerateLocal() const /// Returns true if the point is exactly equal.
         {
             return p;
         }
@@ -217,7 +243,7 @@ namespace PAPI
             return dif < 1e-7f; // It's inaccurate, so we need this epsilon.
         }
 
-        pVec Generate() const /// Returns a random point on this segment.
+        pVec GenerateLocal() const /// Returns a random point on this segment.
         {
             return p0 + vec * pRandf();
         }
@@ -246,6 +272,63 @@ namespace PAPI
         s2 = pVec((u.y()*w.z() - u.z()*w.y()), (u.z()*w.x() - u.x()*w.z()), (u.x()*w.y() - u.y()*w.x()));
         s2 *= -det;
     }
+
+    /// A line segment with dinamic position.
+    ///
+    /// e0 is the source of the segment and e1 is the vector.
+    ///
+    /// Generate returns a random point on this segment. Within returns true for points within epsilon of the line segment.
+    class PDDinamicLine : public pDomain
+    {
+    public:
+        pVec p0, vec, vecNrm;
+        float len;
+
+    public:
+        PDDinamicLine(const pVec &e0, const pVec &e1)
+        {
+           /* p0 = e0;
+            vec = e1 - e0;
+            vecNrm = vec;
+            vecNrm.normalize();
+            len = vec.length(); */
+			p0 = e0;
+            vec = e1;
+            vecNrm = vec;
+            vecNrm.normalize();
+            len = vec.length(); 
+        }
+
+        ~PDDinamicLine()
+        {
+        }
+
+		void setOffset(const pVec &e0) { p0 = e0; };
+
+        bool Within(const pVec &pos) const /// Returns true for points within epsilon of the line segment.
+        {
+            pVec to = pos - p0;
+            float d = dot(vecNrm, to);
+            float dif = fabs(d - to.length()) / len; // Has a sqrt(). Kind of slow.
+            return dif < 1e-7f; // It's inaccurate, so we need this epsilon.
+        }
+
+        pVec GenerateLocal() const /// Returns a random point on this segment.
+        {
+            return p0 + vec * pRandf();
+        }
+
+        float Size() const
+        {
+            return len;
+        }
+
+        pDomain *copy() const
+        {
+            PDDinamicLine *P = new PDDinamicLine(*this);
+            return P;
+        }
+    };
 
     /// A Triangle.
     ///
@@ -303,7 +386,7 @@ namespace PAPI
             return !(upos < 0 || vpos < 0 || (upos + vpos) > 1);
         }
 
-        pVec Generate() const /// Returns a random point in the triangle.
+        pVec GenerateLocal() const /// Returns a random point in the triangle.
         {
             float r1 = pRandf();
             float r2 = pRandf();
@@ -385,7 +468,7 @@ namespace PAPI
             return !(upos < 0 || upos > 1 || vpos < 0 || vpos > 1);
         }
 
-        pVec Generate() const /// Returns a random point in the diamond-shaped patch whose corners are o, o+u, o+u+v, and o+v.
+        pVec GenerateLocal() const /// Returns a random point in the diamond-shaped patch whose corners are o, o+u, o+u+v, and o+v.
         {
             pVec pos = p + u * pRandf() + v * pRandf();
             return pos;
@@ -412,14 +495,17 @@ namespace PAPI
     {
     public:
         pVec p, nrm, u, v;
-        float radIn, radOut, radInSqr, radOutSqr, dif, D, area;
+        float radIn, radOut, radInSqr, radOutSqr, dif, D, area, rangAngle, phase;
 
     public:
-        PDDisc(const pVec &Center, const pVec Normal, const float OuterRadius, const float InnerRadius = 0.0f)
+        PDDisc(const pVec &Center, const pVec Normal, const float OuterRadius, const float InnerRadius = 0.0f, const float rAngle = 6.28f, const float ph = 0.0f)
         {
             p = Center;
             nrm = Normal;
             nrm.normalize();
+
+			rangAngle = rAngle;
+			phase = ph;
 
             if(InnerRadius < 0) throw PErrInvalidValue("Can't have negative radius.");
             if(OuterRadius < 0) throw PErrInvalidValue("Can't have negative radius.");
@@ -467,10 +553,11 @@ namespace PAPI
             return len >= radInSqr && len <= radOutSqr;
         }
 
-        pVec Generate() const /// Returns a point inside the disc shell.
+        pVec GenerateLocal() const /// Returns a point inside the disc shell.
         {
             // Might be faster to generate a point in a square and reject if outside the circle
-            float theta = pRandf() * 2.0f * float(M_PI); // Angle around normal
+            //float theta = pRandf() * 2.0f * float(M_PI); // Angle around normal
+			float theta = pRandf() * rangAngle + phase; // Angle around normal
             // Distance from center
             float r = radIn + pRandf() * dif;
 
@@ -525,7 +612,7 @@ namespace PAPI
         }
 
         // How do I sensibly make a point on an infinite plane?
-        pVec Generate() const /// Returns the point p0.
+        pVec GenerateLocal() const /// Returns the point p0.
         {
             return p;
         }
@@ -580,7 +667,7 @@ namespace PAPI
                 (pos.z() < p0.z()) || (pos.z() > p1.z()));
         }
 
-        pVec Generate() const /// Returns a random point in this box.
+        pVec GenerateLocal() const /// Returns a random point in this box.
         {
             // Scale and translate [0,1] random to fit box
             return p0 + CompMult(pRandVec(), dif);
@@ -686,7 +773,7 @@ namespace PAPI
             return (rSqr >= radInSqr && rSqr <= radOutSqr);
         }
 
-        pVec Generate() const /// Returns a random point in the cylindrical shell.
+        pVec GenerateLocal() const /// Returns a random point in the cylindrical shell.
         {
             float dist = pRandf(); // Distance between base and tip
             float theta = pRandf() * 2.0f * float(M_PI); // Angle around axis
@@ -805,7 +892,7 @@ namespace PAPI
             return (rSqr >= fsqr(dist * radIn) && rSqr <= fsqr(dist * radOut));
         }
 
-        pVec Generate() const /// Returns a random point in the conical shell.
+        pVec GenerateLocal() const /// Returns a random point in the conical shell.
         {
             float dist = pRandf(); // Distance between base and tip
             float theta = pRandf() * 2.0f * float(M_PI); // Angle around axis
@@ -888,7 +975,7 @@ namespace PAPI
             return rSqr <= radOutSqr && rSqr >= radInSqr;
         }
 
-        pVec Generate() const /// Returns a random point in the thick spherical shell.
+        pVec GenerateLocal() const /// Returns a random point in the thick spherical shell.
         {
             pVec pos;
 
@@ -950,7 +1037,7 @@ namespace PAPI
             return (pRandf() < Gx);
         }
 
-        pVec Generate() const /// Returns a point with normal probability density.
+        pVec GenerateLocal() const /// Returns a point with normal probability density.
         {
             return ctr + pNRandVec(stdev);
         }

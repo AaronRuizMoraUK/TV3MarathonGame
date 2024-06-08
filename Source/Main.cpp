@@ -9,11 +9,8 @@
 
 /**
 * The application's entry point
-*
-* @param HINSTANCE HINSTANCE LPSTR INT Application's entry parameters
-* @return INT Return value of the application
 */
-INT WINAPI WinMain( HINSTANCE hInst, HINSTANCE, LPSTR, INT )
+int main()
 {
 	// Create game
 	Game game;
@@ -22,14 +19,13 @@ INT WINAPI WinMain( HINSTANCE hInst, HINSTANCE, LPSTR, INT )
 	if( game.initiate() ) {
 		// Run game
 		game.run();
+
+		// Clean game
+		game.clean();
 	}
 	else {
 		assert( !"Not initiated" );
-		return 0;
 	}
-
-	// Clean game
-	game.clean();
 
 	return 0;
 }

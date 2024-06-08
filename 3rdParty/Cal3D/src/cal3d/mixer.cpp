@@ -143,7 +143,7 @@ static void addExtraKeyframeForLoopedAnim(CalCoreAnimation* pCoreAnimation)
   *         \li \b false if an error happend
   *****************************************************************************/
 
-bool CalMixer::blendCycle(int id, float weight, float delay)
+bool CalMixer::blendCycle(int id, float time_factor, float weight, float delay)
 {
   if((id < 0) || (id >= (int)m_vectorAnimation.size()))
   {
@@ -202,6 +202,7 @@ bool CalMixer::blendCycle(int id, float weight, float delay)
   pAnimationCycle = (CalAnimationCycle *)pAnimation;
 
   // blend the animation cycle
+	pAnimationCycle->setTimeFactor( time_factor );
   pAnimationCycle->blend(weight, delay);
   pAnimationCycle->checkCallbacks(0,m_pModel);
   return true;
@@ -278,7 +279,7 @@ bool CalMixer::clearCycle(int id, float delay)
   *         \li \b true if successful
   *         \li \b false if an error happend
   *****************************************************************************/
-bool CalMixer::executeAction(int id, float delayIn, float delayOut, float weightTarget, bool autoLock)
+bool CalMixer::executeAction(int id, float time_factor, float delayIn, float delayOut, float weightTarget, bool autoLock)
 {
   // get the core animation
   CalCoreAnimation *pCoreAnimation;
@@ -296,6 +297,7 @@ bool CalMixer::executeAction(int id, float delayIn, float delayOut, float weight
     return false;
   }
 
+	pAnimationAction->setTimeFactor( time_factor );
   // insert new animation into the table
   m_listAnimationAction.push_front(pAnimationAction);
 

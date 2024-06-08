@@ -50,7 +50,7 @@ void CoreMesh<VertexType,IndexType>::constructBoundingSphere()
 }
 
 template<class VertexType, class IndexType>
-void CoreMesh<VertexType,IndexType>::render(int firstVertex=0, int numTriangles=-1) const {
+void CoreMesh<VertexType,IndexType>::render(int firstVertex, int numTriangles) const {
 	assert( vertexBuffer && indexBuffer );
 
 	// Set index buffer in device

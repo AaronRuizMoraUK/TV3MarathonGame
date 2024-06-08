@@ -1003,9 +1003,9 @@ void CalMesh_SetModel(CalMesh *self, CalModel *pModel)
 // CalMixer wrapper functions definition                                      //
 //****************************************************************************//
 
-Boolean CalMixer_BlendCycle(CalMixer *self, int id, float weight, float delay)
+Boolean CalMixer_BlendCycle(CalMixer *self, int id, float time_factor, float weight, float delay)
 {
-  return self->blendCycle(id, weight, delay) ? True : False;
+	return self->blendCycle(id, time_factor, weight, delay) ? True : False;
 }
 
 Boolean CalMixer_ClearCycle(CalMixer *self, int id, float delay)

@@ -156,9 +156,9 @@ public:
   virtual ~CalMixer();
 
   virtual bool isDefaultMixer() { return true; }
-  bool blendCycle(int id, float weight, float delay);
+  bool blendCycle(int id, float time_factor, float weight, float delay);
   bool clearCycle(int id, float delay);
-  bool executeAction(int id, float delayIn, float delayOut, float weightTarget = 1.0f, bool autoLock=false);
+  bool executeAction(int id, float time_factor, float delayIn, float delayOut, float weightTarget = 1.0f, bool autoLock=false);
   bool removeAction(int id);
   virtual void updateAnimation(float deltaTime);
   virtual void updateSkeleton();

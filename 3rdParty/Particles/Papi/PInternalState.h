@@ -12,13 +12,19 @@
 #include "ParticleGroup.h"
 
 #include <vector>
+#include <map>
 #include <string>
 
 #define PASSERT(x,msg) {if(!(x)) { throw PErrInternalError(msg); }}
 
 namespace PAPI {
 
-    typedef std::vector<PActionBase *> ActionList;
+	class ActionList : public std::vector<PActionBase *> {
+		public:	
+			std::map<string, PAPI::pDomain *> publicDomains;
+	};
+
+//    typedef std::vector<PActionBase *> ActionList;
 
     // This is the per-thread state of the API.
     // All API calls get their data from here.
@@ -48,9 +54,12 @@ namespace PAPI {
 
         // Action API entry points call this to either store the action in a list or execute and delete it.
         void SendAction(PActionBase *S);
+		void PublishDomain(const std::string &name, pDomain * dom);
 
         // Execute an action list
         void ExecuteActionList(ActionList &AList);
+
+		//map<string, PAPI::pDomain *> publicDomains;
     };
 
 };

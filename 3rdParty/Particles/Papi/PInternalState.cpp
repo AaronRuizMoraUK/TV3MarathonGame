@@ -82,6 +82,14 @@ namespace PAPI {
         return old_size;
     }
 
+	void PInternalState_t::PublishDomain(const std::string &name, pDomain * dom) {
+	    if(in_new_list) {
+            // Add action S to the end of the current action list.
+            ActionList &AList = ALists[alist_id];
+			AList.publicDomains[name] = dom;
+        }
+	}
+
     // Action API entry points call this to either store the action in a list or execute and delete it.
     void PInternalState_t::SendAction(PActionBase *S)
     {

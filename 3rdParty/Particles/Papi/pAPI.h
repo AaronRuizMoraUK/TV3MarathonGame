@@ -10,6 +10,7 @@
 #define _particle_api_h
 
 #include "pDomain.h"
+#include <queue>
 
 namespace PAPI {
     /// This is the major and minor version number of this release of the API.
@@ -245,6 +246,9 @@ namespace PAPI {
         /// If called on an action list that has previously been defined, the previous contents of the action list are destroyed and the action list will be created anew. This is as with glNewActionList() in OpenGL.
         void NewActionList(const int action_list_num);
 
+		void setDomainOffset(const int action_list_num, const std::string &name, const PAPI::pVec &v);
+		void setDomainTransform(const int action_list_num, const std::string &name, const PAPI::pMatrix &t);
+
     protected:
         PInternalState_t *PS; // The internal API data for this context is stored here.
         void InternalSetup(PInternalState_t *Sr); // Calls this after construction to set up the PS pointer
@@ -300,12 +304,12 @@ namespace PAPI {
         /// Returns the number of particles existing in the current group.
         ///
         /// The number returned is less than or equal to the group's max_particles.
-        size_t GetGroupCount() const;
+        size_t GetGroupCount();
 
         /// Return the maximum number of particles allowed in the current group.
         ///
         /// This can be changed with SetMaxParticles().
-        size_t GetMaxParticles() const;
+        size_t GetMaxParticles();
 
         /// Copy particles from the current group to application memory.
         ///
@@ -349,7 +353,7 @@ namespace PAPI {
             size_t &upB3Ofs, ///< the number of floats from returned ptr to the first particle's upB parameter
             size_t &mass1Ofs, ///< the number of floats from returned ptr to the first particle's mass parameter
             size_t &data1Ofs ///< the number of floats from returned ptr to the first particle's data parameter, which is a 32-bit integer, not a float
-        ) const;
+        );
 
         /// Change the maximum number of particles in the current group.
         ///
@@ -413,6 +417,9 @@ namespace PAPI {
         ///
         /// Particles are tested to see whether they will pass from being outside the specified domain to being inside it within look_ahead time units from now if the next Move() action were to occur now. The specific direction and amount of turn is dependent on the kind of domain being avoided.
         ///
+		void AirTube(const pVec &point, const float vRot = 1.0f, const float vIn = 1.0f);
+
+		void AlphaStart(const float age_limit, const float scale, const float limit);
         /// At present the only domains for which Avoid() is implemented are PDSphere, PDRectangle, PDTriangle, PDDisc and PDPlane.
         void Avoid(float magnitude, ///< how drastically the particle velocities are modified to avoid the obstacle at each time step.
             const float epsilon, ///< The amount of acceleration falls off inversely with the squared distance to the edge of the domain. But when that distance is small, the acceleration would be infinite, so epsilon is always added to the distance.
@@ -469,9 +476,6 @@ namespace PAPI {
             const float epsilon = P_EPS ///< The amount of acceleration falls off inversely with the squared distance to the edge of the domain. But when that distance is small, the acceleration would be infinite, so epsilon is always added to the distance.
             );
 
-		// Change particles size
-		void ChangeSize(const pVec &magnitude);
-
         /// Accelerate toward the next particle in the list.
         ///
         /// This allows snaky effects where the particles follow each other. Each particle is accelerated toward the next particle in the group.
@@ -480,6 +484,10 @@ namespace PAPI {
             const float epsilon = P_EPS, ///< The amount of acceleration falls off inversely with the squared distance to the edge of the domain. But when that distance is small, the acceleration would be infinite, so epsilon is always added to the distance.
             const float max_radius = P_MAXFLOAT ///< defines the sphere of influence of this action. No particle further than max_radius from its predecessor is affected.
             );
+
+		void FunctionColor(std::queue<float> * r, std::queue<float> * g, std::queue<float> * b);
+		void FunctionAlpha(std::queue<float> * ff);
+		void FunctionSize(std::queue<float> * ff);
 
         /// EXPERIMENTAL. DO NOT USE!
         void Fountain();
@@ -513,6 +521,9 @@ namespace PAPI {
             const bool kill_less_than = false ///< true to kill particles younger than age_limit
             );
 
+		void KillOldAlpha(const float age_limit,
+						  const float scale
+            );
         /// Modify each particle’s velocity to be similar to that of its neighbors.
         ///
         /// Each particle is accelerated toward the weighted mean of the velocities of the other particles in the group.

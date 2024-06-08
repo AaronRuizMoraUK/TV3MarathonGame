@@ -1,6 +1,10 @@
 #ifndef PLANET_MAP_IMPL_H
 #define PLANET_MAP_IMPL_H
 
+#include "Global/Variables.h"
+#include "Global/Geometry.h"
+#include "Global/Rendering.h"
+
 template<class Type>
 std::string PlanetMap<Type>::pathToPlanetMaps = "";
 

@@ -12,6 +12,8 @@
 #include "pDomain.h"
 #include "PInternalSourceState.h"
 #include "ParticleGroup.h"
+#include "SpliceFunction.h"
+#include <queue>
 
 namespace PAPI {
 
@@ -51,6 +53,25 @@ protected:
 
 ///////////////////////////////////////////////////////////////////////////
 // Data types derived from PActionBase.
+
+struct PAAirTube : public PActionBase
+{
+    pVec p;		
+    float vrot;			// Speed of transition
+	float vin;
+
+    EXEC_METHOD;
+};
+
+
+struct PAAlphaStart : public PActionBase
+{
+    float age_limit;		// Exact age at which to start to kill particles.
+    float scale;			// Speed of transition
+	float limit;
+
+    EXEC_METHOD;
+};
 
 struct PAAvoid : public PActionBase
 {
@@ -132,13 +153,6 @@ struct PAExplosion : public PActionBase
     EXEC_METHOD;
 };
 
-struct PAChangeSize : public PActionBase
-{
-	pVec magnitude;
-
-	EXEC_METHOD;	
-};
-
 struct PAFollow : public PActionBase
 {
     float magnitude;	// The grav of each particle
@@ -153,6 +167,26 @@ struct PAFountain : public PActionBase
     PActionBase *AL;    // A pointer to the data for all the actions.
 
     EXEC_METHOD;
+};
+
+struct PAFunctionColor : public PActionBase {
+	SpliceFunction r;
+	SpliceFunction g;
+	SpliceFunction b;
+
+	EXEC_METHOD;
+};
+
+struct PAFunctionAlpha : public PActionBase {
+	SpliceFunction f;
+
+	EXEC_METHOD;
+};
+
+struct PAFunctionSize : public PActionBase {
+	SpliceFunction f;
+
+	EXEC_METHOD;
 };
 
 struct PAGravitate : public PActionBase
@@ -185,6 +219,14 @@ struct PAKillOld : public PActionBase
 {
     float age_limit;		// Exact age at which to kill particles.
     bool kill_less_than;	// True to kill particles less than limit.
+
+    EXEC_METHOD;
+};
+
+struct PAKillOldAlpha : public PActionBase
+{
+    float age_limit;		// Exact age at which to start to kill particles.
+    float scale;			// Speed of the murder
 
     EXEC_METHOD;
 };

@@ -9,13 +9,57 @@
 
 #include "Actions.h"
 #include "PInternalState.h"
-#include "Windows.h" 
+
 #include <algorithm>
 #include <typeinfo>
 // For dumping errors
 #include <sstream>
 
 namespace PAPI {
+
+	void PAAirTube::Execute(ParticleGroup &group, ParticleList::iterator ibegin, ParticleList::iterator iend)
+    {
+        float iVrot = vrot * dt;
+		float iVin = vin * dt;
+		pVec xzP = p;
+		xzP.y() = 0.0f;
+
+		pVec up(0.0f, 1.0f, 0.0f);
+
+        for (ParticleList::iterator it = ibegin; it != iend; it++) {
+            Particle_t &m = (*it);
+            
+			pVec xzPos = m.pos;
+			xzPos.y() = 0.0f;
+
+            pVec d = xzPos - xzP;
+			pVec nd = d;
+
+			nd.normalize();
+            
+            pVec left = Cross(up, nd);
+			pVec vel = left * iVrot;
+			vel += -nd * iVin;
+			
+            m.vel += vel;
+        }
+    }
+
+
+    void PAAlphaStart::Execute(ParticleGroup &group, ParticleList::iterator ibegin, ParticleList::iterator iend)
+    {
+        PASSERT(ibegin == group.begin() && iend == group.end(), "Can only be done on whole list");
+
+		float value = scale * dt;
+        // Must traverse list carefully so Remove will work
+        for (ParticleList::iterator it = ibegin; it != iend; ) {
+            Particle_t &m = (*it);
+			if ((m.age < age_limit) && (m.alpha < limit)){
+				m.alpha += value;
+			}
+			it++;
+        }
+    }
 
     void PAAvoid::Exec(const PDTriangle &dom, ParticleGroup &group, ParticleList::iterator ibegin, ParticleList::iterator iend)
     {
@@ -151,24 +195,6 @@ namespace PAPI {
             m.vel = dir * (vlen / dir.length()); // Speed of m.vel, but in direction dir.
         }
     }
-
-	void PAChangeSize::Execute(ParticleGroup &group, ParticleList::iterator ibegin, ParticleList::iterator iend)
-	{
-		for (ParticleList::iterator it = ibegin; it != iend; it++) {
-			
-            Particle_t &m = (*it);
-
-			m.size+=magnitude;
-			
-
-		//*	if (s.x < 0.1f || s.y < 0.1f || s.z < 0.1f)
-		//		s = pVec(0.10f, 0.10f, 0.10f);
-
-	//		m.size = s;
-
-					// m.size = 0.1f;
-		}
-	}
 
     void PAAvoid::Exec(const PDPlane &dom, ParticleGroup &group, ParticleList::iterator ibegin, ParticleList::iterator iend)
     {
@@ -678,17 +704,13 @@ namespace PAPI {
             return;
 
         ParticleList::iterator end = iend;
+        end--;
 
-		/*
-       // if(max_radiusSqr < P_MAXFLOAT) {
-            for (ParticleList::iterator it = ibegin; it != end;) {
+        if(max_radiusSqr < P_MAXFLOAT) {
+            for (ParticleList::iterator it = ibegin; it != end; it++) {
                 Particle_t &m = (*it);
                 ParticleList::iterator next = it;
-
-				next++;
-
-				if (next == iend)
-					next = ibegin;
+                next++;
 
                 // Accelerate toward the particle after me in the list.
                 pVec tohim((*next).pos - m.pos); // tohim = p1 - p0
@@ -698,20 +720,13 @@ namespace PAPI {
                     // Compute force exerted between the two bodies
                     m.vel += tohim * (magdt / (sqrtf(tohimlenSqr) * (tohimlenSqr + epsilon)));
                 }
-
-				++it;
             }
-      /*  } else {
-	  */
+        } else {
             // If not using radius cutoff, avoid the if().
-            for (ParticleList::iterator it = ibegin; it != end;) {
+            for (ParticleList::iterator it = ibegin; it != end; it++) {
                 Particle_t &m = (*it);
                 ParticleList::iterator next = it;
-               
-				next++;
-
-				if (next == iend)
-					next = ibegin;
+                next++;
 
                 // Accelerate toward the particle after me in the list.
                 pVec tohim((*next).pos - m.pos); // tohim = p1 - p0
@@ -719,10 +734,48 @@ namespace PAPI {
 
                 // Compute force exerted between the two bodies
                 m.vel += tohim * (magdt / (sqrtf(tohimlenSqr) * (tohimlenSqr + epsilon)));
-
-				++it;
             }
-        //}*
+        }
+    }
+
+    void PAFunctionColor::Execute(ParticleGroup &group, ParticleList::iterator ibegin, ParticleList::iterator iend)
+    {
+        PASSERT(ibegin == group.begin() && iend == group.end(), "Can only be done on whole list");
+
+        for (ParticleList::iterator it = ibegin; it != iend; ) {
+            Particle_t &m = (*it);
+			float rr = r.eval(m.age);
+			float gg = g.eval(m.age);
+			float bb = b.eval(m.age);
+			m.color = pVec(rr, gg, bb);
+
+			it++;
+        }
+    }
+
+	void PAFunctionAlpha::Execute(ParticleGroup &group, ParticleList::iterator ibegin, ParticleList::iterator iend)
+    {
+        PASSERT(ibegin == group.begin() && iend == group.end(), "Can only be done on whole list");
+
+        for (ParticleList::iterator it = ibegin; it != iend; ) {
+            Particle_t &m = (*it);
+			m.alpha = f.eval(m.age);
+	
+			it++;
+        }
+    }
+
+	void PAFunctionSize::Execute(ParticleGroup &group, ParticleList::iterator ibegin, ParticleList::iterator iend)
+    {
+        PASSERT(ibegin == group.begin() && iend == group.end(), "Can only be done on whole list");
+
+        for (ParticleList::iterator it = ibegin; it != iend; ) {
+            Particle_t &m = (*it);
+			float value = f.eval(m.age);
+			m.size = pVec(value, value, value);
+	
+			it++;
+        }
     }
 
     // Inter-particle gravitation
@@ -822,6 +875,31 @@ namespace PAPI {
                 iend = group.end();
             } else
                 it++;
+        }
+    }
+
+    // Get rid of older particles by alpha effect
+    void PAKillOldAlpha::Execute(ParticleGroup &group, ParticleList::iterator ibegin, ParticleList::iterator iend)
+    {
+        PASSERT(ibegin == group.begin() && iend == group.end(), "Can only be done on whole list");
+
+		float value = scale * dt;
+        // Must traverse list carefully so Remove will work
+        for (ParticleList::iterator it = ibegin; it != iend; ) {
+			bool killed = false;
+            Particle_t &m = (*it);
+			if (m.age > age_limit) {
+				m.alpha -= value;
+				if (m.alpha < 0.0f) {
+					it = group.Remove(it);
+					iend = group.end();
+					killed = true;
+					if (it == iend)
+						killed = true;
+				} 
+			}
+			if (!killed)
+				it++;
         }
     }
 

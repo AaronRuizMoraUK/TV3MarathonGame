@@ -326,6 +326,17 @@ int CalCoreModel::getCoreMaterialId(int coreMaterialThreadId, int coreMaterialSe
   *         \li \b 0 if an error happend
   *****************************************************************************/
 
+const CalCoreMesh *CalCoreModel::getCoreMesh(int coreMeshId) const
+{
+  if((coreMeshId < 0) || (coreMeshId >= (int)m_vectorCoreMesh.size()))
+  {
+    CalError::setLastError(CalError::INVALID_HANDLE, __FILE__, __LINE__);
+    return 0;
+  }
+
+  return m_vectorCoreMesh[coreMeshId].get();
+}
+
 CalCoreMesh *CalCoreModel::getCoreMesh(int coreMeshId)
 {
   if((coreMeshId < 0) || (coreMeshId >= (int)m_vectorCoreMesh.size()))

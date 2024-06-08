@@ -5,6 +5,52 @@
 #include "Global/Geometry.h"
 #include <fstream>
 
+// ------------------------------------------------------------//
+// CALLBACK Functions for create device input gamepad function //
+// ------------------------------------------------------------//
+
+BOOL CALLBACK EnumGamePadsCallback(const DIDEVICEINSTANCE* pdidInstance, VOID* pContext) {
+
+	HRESULT hr;
+
+	// Obtain an interface to the enumerated joystick.
+	hr = IOStatus::deviceInputCreator->CreateDevice(pdidInstance->guidInstance,
+		&(IOStatus::gamePad), NULL);
+
+	// If it failed, then we can't use this joystick. (Maybe the user unplugged
+	// it while we were in the middle of enumerating it.)
+	if (FAILED(hr))
+		return DIENUM_CONTINUE;
+
+	// Stop enumeration. Note: we're just taking the first joystick we get. You
+	// could store all the enumerated joysticks and let the user pick.
+	return DIENUM_STOP;
+}
+
+BOOL CALLBACK ScaleAxisGamePadsCallback(const DIDEVICEOBJECTINSTANCE* pdidoi, VOID* pContext) {
+
+	// For axes that are returned, set the DIPROP_RANGE property for the
+	// enumerated axis in order to scale THUMB_MIN_VALUE/THUMB_MAX_VALUE values.
+	if (pdidoi->dwType & DIDFT_AXIS)
+	{
+		DIPROPRANGE diprg;
+		diprg.diph.dwSize = sizeof(DIPROPRANGE);
+		diprg.diph.dwHeaderSize = sizeof(DIPROPHEADER);
+		diprg.diph.dwHow = DIPH_BYID;
+		diprg.diph.dwObj = pdidoi->dwType; // Specify the enumerated axis
+		diprg.lMin = THUMB_MIN_VALUE;
+		diprg.lMax = THUMB_MAX_VALUE;
+
+		// Set the range for the axis
+		if (FAILED(IOStatus::gamePad->SetProperty(DIPROP_RANGE, &diprg.diph)))
+			return DIENUM_STOP;
+	}
+
+	return DIENUM_CONTINUE;
+}
+
+// ------------------------------------------------------------//
+
 std::string IOStatus::pathToXMLs = "";
 DeviceInputCreator IOStatus::deviceInputCreator = NULL;
 DeviceInput IOStatus::gamePad = NULL;
@@ -656,50 +702,6 @@ void IOStatus::releaseDirectInput() {
 
 	if( deviceInputCreator )
 		deviceInputCreator->Release(), deviceInputCreator=NULL;
-}
-
-// ------------------------------------------------------------//
-// CALLBACK Functions for create device input gamepad function //
-// ------------------------------------------------------------//
-
-BOOL CALLBACK EnumGamePadsCallback( const DIDEVICEINSTANCE* pdidInstance, VOID* pContext ) {
-
-	HRESULT hr;
-
-	// Obtain an interface to the enumerated joystick.
-	hr = IOStatus::deviceInputCreator->CreateDevice( pdidInstance->guidInstance, 
-		&(IOStatus::gamePad), NULL );
-
-	// If it failed, then we can't use this joystick. (Maybe the user unplugged
-	// it while we were in the middle of enumerating it.)
-	if( FAILED(hr) ) 
-		return DIENUM_CONTINUE;
-
-	// Stop enumeration. Note: we're just taking the first joystick we get. You
-	// could store all the enumerated joysticks and let the user pick.
-	return DIENUM_STOP;
-}
-
-BOOL CALLBACK ScaleAxisGamePadsCallback( const DIDEVICEOBJECTINSTANCE* pdidoi, VOID* pContext ) {
-
-	// For axes that are returned, set the DIPROP_RANGE property for the
-	// enumerated axis in order to scale THUMB_MIN_VALUE/THUMB_MAX_VALUE values.
-	if( pdidoi->dwType & DIDFT_AXIS )
-	{
-		DIPROPRANGE diprg; 
-		diprg.diph.dwSize       = sizeof(DIPROPRANGE); 
-		diprg.diph.dwHeaderSize = sizeof(DIPROPHEADER); 
-		diprg.diph.dwHow        = DIPH_BYID;
-		diprg.diph.dwObj        = pdidoi->dwType; // Specify the enumerated axis
-		diprg.lMin              = THUMB_MIN_VALUE; 
-		diprg.lMax              = THUMB_MAX_VALUE; 
-
-		// Set the range for the axis
-		if( FAILED( IOStatus::gamePad->SetProperty( DIPROP_RANGE, &diprg.diph ) ) ) 
-			return DIENUM_STOP;
-	}
-
-	return DIENUM_CONTINUE;
 }
 
 void IOStatus::enableInput( ) {
