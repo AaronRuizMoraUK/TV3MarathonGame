@@ -6,12 +6,12 @@
 #include "Global/Variables.h"
 #include "IO/IOStatus.h"
 #include "Camera/Camera3D.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 #include "Particles/PSManager.h"
 #include "Managers/BrainManager.h"
 #include "Factories/MeshFactory.h"
 #include "Factories/QuadFactory.h"
-#include "Bass/SoundPlayer.h"
+#include "SoundPlayer/SoundPlayer.h"
 
 const float ThirdLevelState::max_hurt_time = 0.5f;
 

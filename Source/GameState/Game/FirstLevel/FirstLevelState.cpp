@@ -5,7 +5,7 @@
 #include "Camera/Camera3D.h"
 #include "Global/Variables.h"
 #include "Global/Rendering.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 #include "Logic/FirstLevelLogic.h"
 #include "Particles/PSManager.h"
 #include "Managers/BrainManager.h"

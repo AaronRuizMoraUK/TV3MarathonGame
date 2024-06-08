@@ -2,7 +2,7 @@
 #include <sstream>
 #include "DigitalAction.h"
 #include "Global/Rendering.h"
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 #include "Directx/DirectXInput.h"
 
 int getKeyboardBitMask(const std::string &key);

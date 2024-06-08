@@ -4,7 +4,7 @@
 #include "Factories/QuadFactory.h"
 #include "Factories/EffectFactory.h"
 #include "Factories/TextureFactory.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 #include "Camera/ICamera.h"
 #include "Mesh/IMesh.h"
 

@@ -1,6 +1,6 @@
 #include <cassert>
 #include "DomainGenerator.h"
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 
 using namespace std;
 

@@ -1,6 +1,6 @@
 #include "TestControllerState.h"
-#include "Source/Game.h"
-#include "Bass/SoundPlayer.h"
+#include "Game/Game.h"
+#include "SoundPlayer/SoundPlayer.h"
 #include "Camera/Camera3D.h"
 #include "PlayerControllers/PlaneController/PlaneController.h"
 #include "Global/Rendering.h"

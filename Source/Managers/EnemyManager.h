@@ -1,7 +1,7 @@
 #ifndef ENEMY_MANAGER_H
 #define ENEMY_MANAGER_H
 
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 #include "Object/AnimatedObject/IntelligentObject/IntelligentObject.h"
 
 /**

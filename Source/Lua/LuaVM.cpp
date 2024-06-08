@@ -9,8 +9,8 @@
 
 extern "C"
 {
-#include "lua/lua.h"
-#include "lua/lauxlib.h"
+#include "lua.h"
+#include "lauxlib.h"
 }
 
 //#define WARN_NO_SCRIPT

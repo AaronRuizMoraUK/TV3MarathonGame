@@ -2,7 +2,7 @@
 #define OPTIONS_H
 
 #include <set>
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 
 struct Resolution {
 	int   width;

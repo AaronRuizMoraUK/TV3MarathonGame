@@ -6,7 +6,7 @@
 #include "Global/Variables.h"
 #include "IO/IOStatus.h"
 #include "Camera/Camera3D.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 #include "Particles/PSManager.h"
 #include "Managers/BrainManager.h"
 #include "Object/AnimatedObject/IntelligentObject/IntelligentObject.h"

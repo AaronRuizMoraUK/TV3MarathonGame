@@ -1,10 +1,10 @@
 #include <cassert>
 #include "SoundPlayer.h"
-#include "Bass/bass.h"
+#include "bass.h"
 #include "Global/Rendering.h"
 #include "Global/Variables.h"
 #include "Global/Geometry.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 
 #define FADE_TIME_STREAMS 2000
 #define FADE_TIME_SAMPLES 800

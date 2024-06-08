@@ -2,7 +2,7 @@
 #include "Global/Rendering.h"
 #include "Global/Variables.h"
 #include "Global/Geometry.h"
-#include "Bass/SoundPlayer.h"
+#include "SoundPlayer/SoundPlayer.h"
 #include "Particles/PSManager.h"
 #include "Managers/BrainManager.h"
 #include "Managers/EnemyManager.h"

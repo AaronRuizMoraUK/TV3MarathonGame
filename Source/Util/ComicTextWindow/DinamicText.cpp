@@ -2,7 +2,7 @@
 #include "DinamicText.h"
 #include "Global/Rendering.h"
 #include "IO/IOStatus.h"
-#include "Bass/SoundPlayer.h"
+#include "SoundPlayer/SoundPlayer.h"
 
 // ----------------------------------------------------------------
 DinamicText::DinamicText( )

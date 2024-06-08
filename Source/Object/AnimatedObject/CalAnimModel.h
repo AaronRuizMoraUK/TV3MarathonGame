@@ -2,7 +2,7 @@
 #define CAL_ANIM_MODEL_H
 
 #include "cal3d/cal3d.h"
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 
 /**
 * This struct has cal3d core information and all the ids

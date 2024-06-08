@@ -3,7 +3,7 @@
 
 #include <Windows.h>
 #include <map>
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 
 /**
 * Manager of sounds.

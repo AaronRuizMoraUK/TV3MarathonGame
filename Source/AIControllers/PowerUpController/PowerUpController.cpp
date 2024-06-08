@@ -3,7 +3,7 @@
 #include "Global/Rendering.h"
 #include "Global/Variables.h"
 #include "Logic/Logic.h"
-#include "Bass/SoundPlayer.h"
+#include "SoundPlayer/SoundPlayer.h"
 #include "Managers/BrainManager.h"
 
 const char *PowerUpController::types_chars[ NUM_TYPES ] = {

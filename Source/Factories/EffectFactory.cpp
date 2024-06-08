@@ -2,7 +2,7 @@
 #include "EffectFactory.h"
 #include "Global/Rendering.h"
 #include "Global/Variables.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 
 std::string EffectFactory::pathToShaders = "";
 EffectFactory * EffectFactory::effectFactory = NULL;

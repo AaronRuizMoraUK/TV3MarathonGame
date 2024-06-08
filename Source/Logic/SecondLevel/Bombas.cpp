@@ -9,7 +9,7 @@
 #include "Util/Tracker/Tracker.h"
 #include "Logic/SecondLevelLogic.h"
 #include "Particles/ParticleGroup.h"
-#include "Bass/SoundPlayer.h"
+#include "SoundPlayer/SoundPlayer.h"
 
 Rayo::Rayo(float aminRandomLeft, float amaxRandomLeft, float aminRandomFront, float amaxRandomFront) 
 : status(WARNING),

@@ -1,5 +1,5 @@
 #include "Camera3D.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 #include "Global/Rendering.h"
 #include "CameraControllers/ICameraController.h"
 #include "Global/Geometry.h"

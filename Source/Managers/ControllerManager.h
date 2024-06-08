@@ -2,7 +2,7 @@
 #define CONTROLLER_MANAGER_H
 
 #include <cassert>
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 #include "AIControllers/IAIController.h"
 #include "AnimationControllers/IAnimationController.h"
 #include "PlayerControllers/IPlayerController.h"

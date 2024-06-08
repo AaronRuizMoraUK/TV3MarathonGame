@@ -3,7 +3,7 @@
 #include "Global/Rendering.h"
 #include "Global/Variables.h"
 #include "Global/Geometry.h"
-#include "Bass/SoundPlayer.h"
+#include "SoundPlayer/SoundPlayer.h"
 #include "Object/AnimatedObject/IntelligentObject/IntelligentObject.h"
 #include "Logic/ThirdLevelLogic.h"
 #include "Particles/PSManager.h"

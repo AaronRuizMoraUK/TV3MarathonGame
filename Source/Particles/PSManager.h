@@ -5,7 +5,7 @@
 #include "Papi/pAPI.h"
 #include "DomainGenerator.h"
 #include "ActionPSManager.h"
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 
 struct CoreParticleGroup;
 class ParticleGroup;

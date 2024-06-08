@@ -3,7 +3,7 @@
 
 #include <vector>
 #include "TextureFade.h"
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 
 class TextureSequencer : public CXMLParser
 {

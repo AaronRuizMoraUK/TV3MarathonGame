@@ -3,7 +3,7 @@
 
 #include <vector>
 #include "Directx/Directx.h"
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 #include "Util/Tracker/Tracker.h"
 
 class AnimatedObject;

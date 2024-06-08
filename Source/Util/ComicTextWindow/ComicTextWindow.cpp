@@ -2,7 +2,7 @@
 #include "ComicTextWindow.h"
 #include "Global/Rendering.h"
 #include "Global/Variables.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 #include "IO/IOStatus.h"
 
 std::string ComicTextWindow::pathToXml = "";

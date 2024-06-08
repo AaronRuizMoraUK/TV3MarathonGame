@@ -1,7 +1,7 @@
 #ifndef BRAIN_MANAGER_H
 #define BRAIN_MANAGER_H
 
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 #include "Object/Planet/Planet.h"
 
 /**

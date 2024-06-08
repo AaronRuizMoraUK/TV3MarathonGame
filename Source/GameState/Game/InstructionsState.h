@@ -3,7 +3,7 @@
 
 #include "GameState/IGameState.h"
 #include "Util/ComicTextWindow/ComicTextWindow.h"
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 #include "Object/AnimatedObject/CalAnimatedObject.h"
 
 class InstructionsState : public IGameState, public CXMLParser

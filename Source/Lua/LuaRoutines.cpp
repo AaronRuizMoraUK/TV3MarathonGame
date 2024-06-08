@@ -4,7 +4,7 @@
 #include "Global/Rendering.h"
 #include "GameState/IGameState.h"
 #include "Global/Variables.h"
-#include "Bass/SoundPlayer.h"
+#include "SoundPlayer/SoundPlayer.h"
 #include "Logic/Logic.h"
 #include "Particles/PSManager.h"
 
@@ -24,8 +24,8 @@
 
 extern "C"
 {
-#include "lua/lua.h"
-#include "lua/lauxlib.h"
+#include "lua.h"
+#include "lauxlib.h"
 }
 
 // --------------------------------------------------------------------------

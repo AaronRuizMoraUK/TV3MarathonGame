@@ -4,11 +4,11 @@
 #include "Global/Rendering.h"
 #include "Global/Variables.h"
 #include "Camera/ICamera.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 #include "Factories/QuadFactory.h"
 #include "IO/IOStatus.h"
 #include "Logic/Logic.h"
-#include "Bass/SoundPlayer.h"
+#include "SoundPlayer/SoundPlayer.h"
 
 const float ScoreRecountState::print_enter_time              = 0.2f;
 const float ScoreRecountState::time_one_point_score_up       = 0.01f;

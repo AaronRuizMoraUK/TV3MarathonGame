@@ -3,7 +3,7 @@
 #include "Global/Rendering.h"
 #include "Global/Geometry.h"
 #include "Factories/QuadFactory.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 #include "Logic/Logic.h"
 #include "Logic/FirstLevelLogic.h"
 #include "IO/IOStatus.h"

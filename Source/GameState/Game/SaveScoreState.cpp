@@ -3,10 +3,10 @@
 #include "Global/Variables.h"
 #include "IO/IOStatus.h"
 #include "Camera/ICamera.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 #include "Factories/QuadFactory.h"
 #include "Logic/Logic.h"
-#include "Bass/SoundPlayer.h"
+#include "SoundPlayer/SoundPlayer.h"
 
 int last_letter_idx = 43;
 const char SaveScoreState::letters[] = {

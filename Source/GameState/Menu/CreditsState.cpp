@@ -4,7 +4,7 @@
 #include "Global/Variables.h"
 #include "IO/IOStatus.h"
 #include "Camera/ICamera.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 
 CreditsState::CreditsState()
 : enter_credits(true)

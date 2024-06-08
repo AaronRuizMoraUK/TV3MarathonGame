@@ -2,9 +2,9 @@
 #include "Global/Rendering.h"
 #include "Global/Variables.h"
 #include "IO/IOStatus.h"
-#include "Bass/SoundPlayer.h"
+#include "SoundPlayer/SoundPlayer.h"
 #include "Camera/ICamera.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 #include "Factories/QuadFactory.h"
 
 //#define THIS_IS_DEMO

@@ -2,7 +2,7 @@
 #include "Material.h"
 #include "Factories/TextureFactory.h"
 #include "Factories/EffectFactory.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 #include "Camera/ICamera.h"
 #include "Global/Geometry.h"
 #include "Global/Rendering.h"

@@ -12,7 +12,7 @@
 #include "IO/IOStatus.h"
 #include "Mesh/VertexTypes.h"
 #include "Lua/LuaVM.h"
-#include "Bass/SoundPlayer.h"
+#include "SoundPlayer/SoundPlayer.h"
 
 //#define DEBUG_NVPERFHUD;
 

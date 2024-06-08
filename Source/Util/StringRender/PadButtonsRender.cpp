@@ -2,7 +2,7 @@
 #include "PadButtonsRender.h"
 #include "Global/Rendering.h"
 #include "Global/Geometry.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 #include "Camera/ICamera.h"
 #include "Mesh/IMesh.h"
 

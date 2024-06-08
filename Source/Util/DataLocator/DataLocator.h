@@ -2,7 +2,7 @@
 #define DATA_LOCATOR_MANAGER_H
 
 #include <map>
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 
 /**
 * Manager with information about data paths.

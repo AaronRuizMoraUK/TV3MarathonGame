@@ -5,7 +5,7 @@
 #include "Object/AnimatedObject/IntelligentObject/IntelligentObject.h"
 #include "PlayerControllers/SpherePlayerController/SpherePlayerController.h"
 #include "Managers/BrainManager.h"
-#include "Bass/SoundPlayer.h"
+#include "SoundPlayer/SoundPlayer.h"
 #include "Logic/Logic.h"
 #include "Logic/SecondLevelLogic.h"
 

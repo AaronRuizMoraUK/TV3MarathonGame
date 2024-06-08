@@ -2,7 +2,7 @@
 #include "Global/Variables.h"
 #include "IO/IOStatus.h"
 #include "Object/AnimatedObject/Player/Player.h"
-#include "Bass/SoundPlayer.h"
+#include "SoundPlayer/SoundPlayer.h"
 #include "Global/Rendering.h"
 #include "Managers/BrainManager.h"
 #include "Particles/ParticleGroup.h"

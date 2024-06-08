@@ -7,18 +7,8 @@
 #include "XMLParser.h"
 #include <sstream>
 #include <fstream>
-#define _STATIC
-#include "Expat-2.0.0/Source/lib/expat.h"
 
-// snprintf in win32
-//#include "Types.h"
-
-//#ifdef _DEBUG
-//#pragma comment (lib, "libexpatd.lib")
-//#else
-#pragma comment (lib, "libexpat.lib")
-//#endif
-
+#include "expat.h"
 
 /*------------------------------------------------------------------
 | 

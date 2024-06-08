@@ -1,7 +1,7 @@
 #ifndef DINAMIC_HELP_H
 #define DINAMIC_HELP_H
 
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 #include "Util/ComicTextWindow/ComicTextWindow.h"
 
 class DinamicHelp : public CXMLParser {

@@ -2,7 +2,7 @@
 #define COLLISION_SHAPE_FACTORY_H
 
 #include <map>
-#include "Solid/SOLID.h"
+#include "SOLID.h"
 
 class IMesh;
 

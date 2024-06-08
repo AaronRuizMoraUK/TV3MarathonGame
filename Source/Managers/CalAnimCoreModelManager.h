@@ -1,7 +1,7 @@
 #ifndef CAL_CORE_ANIM_MODEL_MANAGER_H
 #define CAL_CORE_ANIM_MODEL_MANAGER_H
 
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 #include "Object/AnimatedObject/CalAnimModel.h"
 
 /**

@@ -4,7 +4,7 @@
 #include "DinamicText.h"
 #include "Util/Fade/TextureFade.h"
 #include "Util/StringRender/AlphabetRender.h"
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 
 class ComicTextWindow : public CXMLParser {
 public:

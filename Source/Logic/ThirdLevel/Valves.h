@@ -2,7 +2,7 @@
 #define VALVES_H
 
 #include <vector>
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 #include "Object/AnimatedObject/IntelligentObject/IntelligentObject.h"
 #include "AIControllers/ValveController/ValveController.h"
 

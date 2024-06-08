@@ -1,6 +1,6 @@
 #include "EmptyState.h"
 #include "Global/Rendering.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 
 EmptyState::EmptyState( ) {
 }

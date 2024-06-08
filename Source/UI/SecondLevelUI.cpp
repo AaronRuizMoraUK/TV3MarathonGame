@@ -4,7 +4,7 @@
 #include "Global/Geometry.h"
 #include "Logic/SecondLevelLogic.h"
 #include "Factories/QuadFactory.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 #include "Logic/Logic.h"
 
 const float SecondLevelUI::showWelcomeMsgTime = 4.0f;

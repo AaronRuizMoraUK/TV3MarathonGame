@@ -1,7 +1,7 @@
 #ifndef TRIGGER_MANAGER_H
 #define TRIGGER_MANAGER_H
 
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 #include "Logic/Triggers/LogicTimer/LogicTimerManager.h"
 #include "Logic/Triggers/LogicVolume/LogicVolumeManager.h"
 

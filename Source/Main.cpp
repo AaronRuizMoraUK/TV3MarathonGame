@@ -5,7 +5,7 @@
 //- ACORDARSE DE QUITAR LOS RENDERS DE LOS VOLUMENES LÓGICOS (SI LOS HAY)
 
 #include <cassert>
-#include "Game.h"
+#include "Game/Game.h"
 
 /**
 * The application's entry point

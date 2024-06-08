@@ -3,7 +3,7 @@
 #include "Global/Variables.h"
 #include "Global/Geometry.h"
 #include "Object/AnimatedObject/IntelligentObject/IntelligentObject.h"
-#include "Bass/SoundPlayer.h"
+#include "SoundPlayer/SoundPlayer.h"
 #include "Logic/Logic.h"
 #include "Logic/FourthLevelLogic.h"
 #include "GameState/IGameState.h"

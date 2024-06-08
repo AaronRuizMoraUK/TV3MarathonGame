@@ -2,7 +2,7 @@
 #define MENU_STATE_H
 
 #include "GameState/IGameState.h"
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 #include "Object/AnimatedObject/AnimatedObject.h"
 
 /**

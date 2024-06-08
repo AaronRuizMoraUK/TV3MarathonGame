@@ -1,7 +1,7 @@
 #include "LogosState.h"
 #include "Global/Rendering.h"
 #include "IO/IOStatus.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 
 LogosState::LogosState()
 {

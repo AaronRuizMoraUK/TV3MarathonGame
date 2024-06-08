@@ -1,7 +1,7 @@
 #ifndef ROA_RESOURCE_MANAGER_H
 #define ROA_RESOURCE_MANAGER_H
 
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 #include "Controllers/ROAResource.h"
 
 /**

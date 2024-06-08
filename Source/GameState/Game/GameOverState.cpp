@@ -3,10 +3,10 @@
 #include "Global/Rendering.h"
 #include "Global/Variables.h"
 #include "Camera/ICamera.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 #include "Factories/QuadFactory.h"
 #include "IO/IOStatus.h"
-#include "Bass/SoundPlayer.h"
+#include "SoundPlayer/SoundPlayer.h"
 
 const float GameOverState::print_enter_time = 0.2f;
 

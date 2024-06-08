@@ -3,7 +3,7 @@
 
 #include <cassert>
 #include "Object/Planet/PlanetMap.h"
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 #include "Global/Rendering.h"
 
 /**

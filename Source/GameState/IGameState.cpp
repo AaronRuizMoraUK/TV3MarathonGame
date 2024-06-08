@@ -1,6 +1,6 @@
 #include <cassert>
 #include "IGameState.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 #include "Factories/QuadFactory.h"
 #include "Global/Variables.h"
 #include "Global/Rendering.h"

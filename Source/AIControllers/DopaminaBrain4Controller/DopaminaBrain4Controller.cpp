@@ -3,7 +3,7 @@
 #include "Global/Variables.h"
 #include "Global/Geometry.h"
 #include "Object/AnimatedObject/IntelligentObject/IntelligentObject.h"
-#include "Bass/SoundPlayer.h"
+#include "SoundPlayer/SoundPlayer.h"
 #include "Managers/BrainManager.h"
 #include "Particles/PSManager.h"
 #include "Util/Tracker/Tracker.h"

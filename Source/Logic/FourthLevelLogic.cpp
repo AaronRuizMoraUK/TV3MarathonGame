@@ -7,7 +7,7 @@
 #include "Managers/BrainManager.h"
 #include "Util/Tracker/Tracker.h"
 #include "GameState/IGameState.h"
-#include "Bass/SoundPlayer.h"
+#include "SoundPlayer/SoundPlayer.h"
 
 FourthLevelLogic::FourthLevelLogic()
 : must_show_welcome_image( true )

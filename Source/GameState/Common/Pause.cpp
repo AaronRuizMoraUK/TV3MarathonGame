@@ -2,7 +2,7 @@
 #include "Pause.h"
 #include "Global/Rendering.h"
 #include "Global/Variables.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 #include "Factories/QuadFactory.h"
 #include "IO/IOStatus.h"
 #include "GameState/IGameState.h"
@@ -10,7 +10,7 @@
 #include "GameState/Game/SecondLevel/EndSecondLevelState.h"
 #include "GameState/Game/ThirdLevel/EndThirdLevelState.h"
 #include "GameState/Game/FourthLevel/EndFourthLevelState.h"
-#include "Bass/SoundPlayer.h"
+#include "SoundPlayer/SoundPlayer.h"
 
 const D3DXVECTOR3 Pause::onContinuePosition( -0.1f, 0.0f, 0.0f );
 D3DXVECTOR3       Pause::onBackToMenuPosition( -0.1f, -0.2f, 0.0f );

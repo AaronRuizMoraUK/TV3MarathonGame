@@ -2,13 +2,13 @@
 #include "Global/Rendering.h"
 #include "Global/Geometry.h"
 #include "Global/Variables.h"
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 #include "Particles/PSManager.h"
 #include "Particles/ParticleGroup.h"
 #include "Util/Tracker/Tracker.h"
 #include "Managers/BrainManager.h"
 #include "GameState/IGameState.h"
-#include "Bass/SoundPlayer.h"
+#include "SoundPlayer/SoundPlayer.h"
 
 FirstLevelLogic::FirstLevelLogic()
 : must_show_welcome_image( true )

@@ -2,7 +2,7 @@
 #define INC_LOCATION_H_
 
 #include "Directx/Directx.h"
-#include "Solid/SOLID.h"
+#include "SOLID.h"
 
 struct ShapeHandle;
 

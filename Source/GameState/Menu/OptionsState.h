@@ -2,12 +2,12 @@
 #define OPTIONS_STATE_H
 
 #include "GameState/IGameState.h"
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 #include "Util/StringRender/AlphabetRender.h"
 #include "Util/StringRender/XBOXButtonsRender.h"
 #include "Util/StringRender/PadButtonsRender.h"
 #include "Util/Fade/Fade.h"
-#include "Source/GameOptions.h"
+#include "Game/GameOptions.h"
 #include <sstream>
 
 /**

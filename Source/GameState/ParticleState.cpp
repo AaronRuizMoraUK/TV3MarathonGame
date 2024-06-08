@@ -3,10 +3,10 @@
 #include "Global/Variables.h"
 #include "Global/Geometry.h"
 #include "IO/IOStatus.h"
-#include "Source/Game.h"
+#include "Game/Game.h"
 #include "Camera/Camera3D.h"
 #include "Particles/PSManager.h"
-#include "Bass/SoundPlayer.h"
+#include "SoundPlayer/SoundPlayer.h"
 #include "Util/Tracker/Tracker.h"
 
 #include "Factories/MeshFactory.h"

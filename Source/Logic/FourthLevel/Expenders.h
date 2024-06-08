@@ -2,7 +2,7 @@
 #define EXPENDERS_H
 
 #include <vector>
-#include "Expat/XMLParser.h"
+#include "XMLParser/XMLParser.h"
 #include "Object/AnimatedObject/IntelligentObject/IntelligentObject.h"
 
 struct Expender {
