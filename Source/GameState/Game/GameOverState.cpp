@@ -86,7 +86,7 @@ void GameOverState::renderPostProcessed2D( ) {
 
 	//alphabet.print(0.3f, 0.7f, 0.1f, 0.1f, "GAME OVER");
 	if( print_enter )
-		alphabet.print( 0.63f, 0.1f, 0.03f, 0.03f, "ENTRAR - CONTINUAR" );
+		alphabet.print( 0.63f, 0.1f, 0.03f, 0.03f, "ENTER - CONTINUE"/*"ENTRAR - CONTINUAR"*/ );
 
 	renderStateDisableAlphaBlending( );
 }

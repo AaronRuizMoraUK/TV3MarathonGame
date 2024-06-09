@@ -492,9 +492,9 @@ void OptionsState::renderGameUI( ) {
 		flowerChangesUp.render( );
 		flowerChangesDown.render( );
 
-		alphabetRender.print(0.14f, 0.6f, 0.05f, 0.05f, "la resolució canviarà la proxima");
-		alphabetRender.print(0.2f, 0.55f, 0.05f, 0.05f, "vegada que arrenquis el joc");
-		alphabetRender.print(0.38f, 0.4f, 0.05f, 0.05f, "prem entrar");
+		alphabetRender.print(0.14f, 0.6f, 0.05f, 0.05f, "Resolution will change"/*"la resolució canviarà la proxima"*/);
+		alphabetRender.print(0.2f, 0.55f, 0.05f, 0.05f, "when you restart the game"/*"vegada que arrenquis el joc"*/);
+		alphabetRender.print(0.38f, 0.4f, 0.05f, 0.05f, "Press Enter"/*"prem entrar"*/);
 	}
 	// Render options
 	else {
@@ -503,17 +503,17 @@ void OptionsState::renderGameUI( ) {
 		flowerUp.render( );
 		flowerDown.render( );
 
-		alphabetRender.print(0.710f, 0.95f, 0.03f, 0.031f, "entrar-seleccionar");
-		alphabetRender.print(0.710f, 0.91f, 0.03f, 0.031f, "       opció");
-		alphabetRender.print(0.709f, 0.87f, 0.03f, 0.031f, "   esc-sortir");
-		alphabetRender.print(0.709f, 0.83f, 0.03f, 0.031f, "       opció");
+		alphabetRender.print(0.710f, 0.95f, 0.03f, 0.031f, "enter-select"/*"entrar-seleccionar"*/);
+		alphabetRender.print(0.710f, 0.91f, 0.03f, 0.031f, "      option"/*"       opció"*/);
+		alphabetRender.print(0.709f, 0.87f, 0.03f, 0.031f, "    esc-exit"/*"   esc-sortir"*/);
+		alphabetRender.print(0.709f, 0.83f, 0.03f, 0.031f, "      option"/*"       opció"*/);
 
-		alphabetRender.print(0.155f, 0.8f, 0.06f, 0.06f, "sortir");
-		alphabetRender.print(0.155f, 0.7f, 0.06f, 0.06f, "resolució");
-		alphabetRender.print(0.155f, 0.6f, 0.06f, 0.06f, "qualitat");
-		alphabetRender.print(0.155f, 0.5f, 0.06f, 0.06f, "música");
-		alphabetRender.print(0.155f, 0.4f, 0.06f, 0.06f, "SFX");
-		alphabetRender.print(0.155f, 0.3f, 0.06f, 0.06f, "botons");
+		alphabetRender.print(0.155f, 0.8f, 0.06f, 0.06f, "Exit"/*"sortir"*/);
+		alphabetRender.print(0.155f, 0.7f, 0.06f, 0.06f, "Resolution"/*"resolució"*/);
+		alphabetRender.print(0.155f, 0.6f, 0.06f, 0.06f, "Quality"/*"qualitat"*/);
+		alphabetRender.print(0.155f, 0.5f, 0.06f, 0.06f, "Music"/*"música"*/);
+		alphabetRender.print(0.155f, 0.4f, 0.06f, 0.06f, "SFX"/*"SFX"*/);
+		alphabetRender.print(0.155f, 0.3f, 0.06f, 0.06f, "Buttons"/*"botons"*/);
 
 		if( currentOptions.resolution.rate != -1 )
 			alphabetRender.printf(0.6f, 0.7f, 0.05f, 0.05f, "%dx%d:%dHz", currentOptions.resolution.width, currentOptions.resolution.height, currentOptions.resolution.rate);
@@ -523,10 +523,10 @@ void OptionsState::renderGameUI( ) {
 		alphabetRender.printf(0.6f, 0.5f, 0.05f, 0.05f, "%d%%", currentOptions.music);
 		alphabetRender.printf(0.6f, 0.4f, 0.05f, 0.05f, "%d%%", currentOptions.sfx);
 
-		alphabetRender.print(0.43f, 0.3f, 0.035f, 0.035f, "  teclat+ratolí  PAD   XBOX360");
-		alphabetRender.print(0.25f, 0.23f, 0.04f, 0.04f, "patada");
-		alphabetRender.print(0.25f, 0.175f, 0.04f, 0.04f, "caminar");
-		alphabetRender.print(0.25f, 0.12f, 0.04f, 0.04f, "entrar-pausa");
+		alphabetRender.print(0.43f, 0.3f, 0.035f, 0.035f, "  Key+Mouse   PAD    XBOX360"/*"  teclat+ratolí  PAD   XBOX360"*/);
+		alphabetRender.print(0.25f, 0.23f, 0.04f, 0.04f, "Kick"/*"patada"*/);
+		alphabetRender.print(0.25f, 0.175f, 0.04f, 0.04f, "Walk"/*"caminar"*/);
+		alphabetRender.print(0.25f, 0.12f, 0.04f, 0.04f, "Start-Pause"/*"entrar-pausa"*/);
 
 		// Obtain the config keys
 		const DigitalActionConfigKeys & kickConfigKeys = ioStatus.kick.getDigitalActionConfigKeys( );
@@ -551,7 +551,7 @@ void OptionsState::renderGameUI( ) {
 
 		if( pressAButtonNow ) {
 			pressButtonFade.renderMediumFadeOut( 0.001f );
-			alphabetRender.print(0.2f, 0.55f, 0.07f, 0.07f, "prem qualsevol botó\n o esc per sortit" );
+			alphabetRender.print(0.2f, 0.55f, 0.07f, 0.07f, "Press any button or\n  ESCAPE to exit"/*"prem qualsevol botó\n o esc per sortit"*/ );
 		}
 	}
 

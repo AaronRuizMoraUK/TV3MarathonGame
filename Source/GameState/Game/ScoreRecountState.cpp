@@ -132,7 +132,7 @@ void ScoreRecountState::renderPostProcessed2D( ) {
 
 	//alphabet.print(0.43f, 0.665f, 0.08f, 0.08f, "SCORE");
 	if( print_enter )
-		alphabet.print( 0.63f, 0.1f, 0.03f, 0.03f, "ENTRAR - CONTINUAR" );
+		alphabet.print( 0.63f, 0.1f, 0.03f, 0.03f, "ENTER - CONTINUE"/*"ENTRAR - CONTINUAR"*/);
 
 	renderStateDisableAlphaBlending( );
 }

@@ -258,9 +258,9 @@ void InstructionsState::renderPostProcessed2D( ) {
 		if( comic_text_window.getStatus( ) == ComicTextWindow::WRITE_TEXT ) {
 			if( comic_text_window.getComicTextType( ) == "dinamic_text" ) {
 				if( print_enter )
-					comic_text_window.alphabet_renderer.print( 0.63f, 0.54f, 0.03f, 0.03f, "ENTRAR - CONTINUAR" );
+					comic_text_window.alphabet_renderer.print( 0.63f, 0.54f, 0.03f, 0.03f, "ENTER - CONTINUE"/*"ENTRAR - CONTINUAR"*/);
 			}
-			comic_text_window.alphabet_renderer.print( 0.6f, 0.05f, 0.05f, 0.05f, "ESC - SORTIR" );
+			comic_text_window.alphabet_renderer.print( 0.6f, 0.05f, 0.05f, 0.05f, "ESC - EXIT"/*"ESC - SORTIR"*/ );
 		}
 		renderStateDisableAlphaBlending( );
 	}

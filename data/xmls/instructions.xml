@@ -17,47 +17,56 @@
   El "%" se escribe "%%"
   
   <instruction id="INIT_FIRST_LEVEL"
-               text="No et creuràs el\ que he inventat!\ Imagina't un vestit\ especial que et\ deixés fer-te prou\ petit per\ caminar per sobre\ d'un cervell.\ Així es podrien\ tractar les\ malalties mentals\ dels pacients!\ Oh! No m'he\ presentat encara.\ Em dic\ Doc\ i sóc psiquiatre.\ Tinc un pacient\ amb esquizofrènia.\ i el vull ajudar \ fent servir el meu\ invent. Però\ tinc un problema:\ no l'he provat,\ encara... Fas cara\ de ser valent,\ vols ajudar-me a\ provar-lo? Som-hi!"
+               text="You won't believe\ what I have\ invented! Imagine\ a special suit that\ lets you shrink\ enough to walk on\ a brain. This way,\ mental illnesses in\ patients could be\ treated! Oh! I\ haven't introduced\ myself yet. My\ name is Doc and I\ am a psychiatrist.\ I have a patient\ with schizophrenia,\ and I want to help\ him using my\ invention. But I\ have a problem: I\ haven't tested it\ yet... You look\ brave, do you want\ to help me test it?\ Let's go!"
+               Ctext="No et creuràs el\ que he inventat!\ Imagina't un vestit\ especial que et\ deixés fer-te prou\ petit per\ caminar per sobre\ d'un cervell.\ Així es podrien\ tractar les\ malalties mentals\ dels pacients!\ Oh! No m'he\ presentat encara.\ Em dic\ Doc\ i sóc psiquiatre.\ Tinc un pacient\ amb esquizofrènia.\ i el vull ajudar \ fent servir el meu\ invent. Però\ tinc un problema:\ no l'he provat,\ encara... Fas cara\ de ser valent,\ vols ajudar-me a\ provar-lo? Som-hi!"
                Xtext="7.0 13.0 19.0 25.5 30.0/ No et creuràs el\ que he inventat!\ Imagina't un vestit\ especial que et\ deixés fer-te tan\ petit com per\ caminar per sobre\ d'un cervell.\ Així es podrien\ tractar les\ malalties mentals\ dels pacients!\ Oh! No m'he\ presentat encara.\ Em dic\ Doctor Scraper\ i sóc psiquiatre.\ Tinc un pacient\ amb esquizofrènia.\ i vull guarir-lo\ utilitzant el meu\ nou invent. Però\ tinc un problema:\ no l'he provat\ encara... Fas cara\ de ser valent,\ vols ajudar-me a\ provar-lo? Som-hi!"
                />
 
   <instruction id="LOSE_FIRST_LEVEL"
-               text="Grrrr! Hem esgotat\ l'energia del\ vestit especial.\ Tornem-ho a\ intentar! Haurem\ de fer-ho més\ ràpid, aquest cop."
+               text="Grrrr! We have\ exhausted the energy\ of the special\ suit. Let's try\ again! We will\ have to do it\ faster this time."
+               Ctext="Grrrr! Hem esgotat\ l'energia del\ vestit especial.\ Tornem-ho a\ intentar! Haurem\ de fer-ho més\ ràpid, aquest cop."
                Xtext="7.5 9.0/ Grrrr! Hem esgotat\ l'energia del\ vestit especial.\ Tornem-ho a\ intentar! Haurem\ de fer-ho més\ ràpid aquest cop."
                />
   
   <instruction id="INIT_SECOND_LEVEL"
-               text="Ei! No ets cap\ mindundi, tu...\ Hem millorat la\ malaltia del\ nostre pacient.\ Ets una canya!\ Vols ajudar-me a\ tractar un altre\ cervell?"
+               text="Hey! Great job!\ We've improved our\ patient's illness.\ You're awesome!\ Do you want to\ help me treat\ another brain?"
+               Ctext="Ei! No ets cap\ mindundi, tu...\ Hem millorat la\ malaltia del\ nostre pacient.\ Ets una canya!\ Vols ajudar-me a\ tractar un altre\ cervell?"
                Xtext="6.0 9.0/ Ei! No ets cap\ mindundi tu...\ Hem millorat la\ malaltia del\ nostre pacient.\ Ets la canya!\ Vols ajudar-me a\ tractar un altre\ cervell?"
                />
 
   <instruction id="LOSE_SECOND_LEVEL"
-               text="Grrrr! Hem esgotat\ l'energia del\ vestit especial.\ Tornem-ho a\ intentar! Haurem\ de fer-ho més\ ràpid aquest cop."
+               text="Grrrr! We have\ exhausted the energy\ of the special\ suit. Let's try\ again! We will\ have to do it\ faster this time."
+               Ctext="Grrrr! Hem esgotat\ l'energia del\ vestit especial.\ Tornem-ho a\ intentar! Haurem\ de fer-ho més\ ràpid aquest cop."
                Xtext="7.5 9.0/ Grrrr! Hem esgotat\ l'energia del\ vestit especial.\ Tornem-ho a\ intentar! Haurem\ de fer-ho més\ ràpid aquest cop."
                />
 
   <instruction id="INIT_THIRD_LEVEL"
-               text="Sí senyor!\ Ets l'amo!!\ A partir d'ara\ hauràs de ser\ molt i molt bo.\ Crec que s'està\ espatllant el\ vestit. Cada cop\ té menys\ energia inicial...\ Vés amb compte."
+               text="Yes sir! You're\ fantastic!! From\ now on, you will\ have to be very,\ very careful. I think\ the suit is\ breaking down.\ Each time it has\ less initial energy...\ Be careful."
+               Ctext="Sí senyor!\ Ets l'amo!!\ A partir d'ara\ hauràs de ser\ molt i molt bo.\ Crec que s'està\ espatllant el\ vestit. Cada cop\ té menys\ energia inicial...\ Vés amb compte."
                Xtext="6.5 11.0/ Sí!  Ets l'amo!!\ A partir d'ara\ hauràs de ser\ realment bo.\ Crec que s'està\ espatllant el\ vestit. Cada cop\ té menys\ energia inicial...\ Vés amb compte."
                />
 
   <instruction id="LOSE_THIRD_LEVEL"
-               text="No pot ser!\ El vestit especial\ s’ha quedat\ sense energia!\ Hem d’anar\ mes de pressa\ perquè no ens\ torni a passar."
+               text="It can't be! The\ special suit has\ run out of energy!\ We have to go\ faster so it\ doesn't happen\ again."
+               Ctext="No pot ser!\ El vestit especial\ s’ha quedat\ sense energia!\ Hem d’anar\ mes de pressa\ perquè no ens\ torni a passar."
                Xtext="7.5 9.0/ Grrrr! Hem esgotat\ l'energia del\ vestit especial.\ Tornem-ho a\ intentar! Haurem\ de fer-ho més\ ràpid aquest cop."
                />
 
   <instruction id="INIT_FOURTH_LEVEL"
-               text="Molt bé!\ Ets un crac!\ Gràcies a tu\ el nostre pacient\ ha millorat.\ Hauries\ d’ajudar-me un\ altre cop.\ Hi ha mes cervells\ malalts!"
+               text="Very good! You're\ awesome! Thanks\ to you our patient\ has improved. You\ should help me\ again. There are\ more brains to help!"
+               Ctext="Molt bé!\ Ets un crac!\ Gràcies a tu\ el nostre pacient\ ha millorat.\ Hauries\ d’ajudar-me un\ altre cop.\ Hi ha mes cervells\ malalts!"
                Xtext="6.0 9.0/ Ei! No ets cap\ mindundi tu...\ Hem millorat la\ malaltia del\ nostre pacient.\ Ets la canya!\ Vols ajudar-me a\ tractar un altre\ cervell?"
                />
 
   <instruction id="LOSE_FOURTH_LEVEL"
-               text="No ho hem fet\ gaire bé, això...\ No tenim energia\ al vestit especial.\ És necessari\ tornar a començar\ i anar mes ràpid!"
+               text="We didn't do this\ very well... We\ have no energy\ in the special\ suit. We need to\ start over and go\ faster!"
+               Ctext="No ho hem fet\ gaire bé, això...\ No tenim energia\ al vestit especial.\ És necessari\ tornar a començar\ i anar mes ràpid!"
                Xtext="7.5 9.0/ Grrrr! Hem esgotat\ l'energia del\ vestit especial.\ Tornem-ho a\ intentar! Haurem\ de fer-ho més\ ràpid aquest cop."
                />
 
   <instruction id="GAME_WON"
-               text="Fantàstic!\ Ets un geni.\ Espero que t'ho\ hagis passat molt\ bé destruint\ malalties. Adéu,\ fins a la pròxima!"
+               text="Fantastic! You're\ a genius. I hope\ you had a great\ time treating\ diseases. Goodbye,\ until next time!"
+               Ctext="Fantàstic!\ Ets un geni.\ Espero que t'ho\ hagis passat molt\ bé destruint\ malalties. Adéu,\ fins a la pròxima!"
                Xtext="7.0/ Fantàstic!\ Ets un geni.\ Espero que t'ho\ hagis passat molt\ bé destruint\ malalties. Adéu."
                />
   

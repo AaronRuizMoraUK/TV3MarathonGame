@@ -156,9 +156,9 @@ void Pause::render( ) {
 		flowerUp.render( );
 		flowerDown.render( );
 
-		alphabet.print(0.35f, 0.7f, 0.15f, 0.15f, "PAUSA");
-		alphabet.print(0.5f, 0.5f, 0.05f, 0.05f, "Continuar");
-		alphabet.print(0.5f, 0.4f, 0.05f, 0.05f, "Sortir");
+		alphabet.print(0.35f, 0.7f, 0.15f, 0.15f, "PAUSE"/*"PAUSA"*/);
+		alphabet.print(0.5f, 0.5f, 0.05f, 0.05f, "Continue"/*"Continuar"*/);
+		alphabet.print(0.5f, 0.4f, 0.05f, 0.05f, "Exit"/*"Sortir"*/);
 		arrow.render( );
 	}
 }

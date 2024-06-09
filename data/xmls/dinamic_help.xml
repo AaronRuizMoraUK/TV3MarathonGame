@@ -9,78 +9,96 @@
 
   PLANET 1 -------------------------------------------------------------
   <dinamic_help id="PLANET1_FIRST_MESSAGE"
-                text="L'esquizofrènia apareix, entre\ altres motius, quan hi ha un\ excés de dopamina al cervell.\ Has d’eliminar-la.\ Dóna puntades de peu a les\ molècules de dopamina per eliminar-les.\ Per xutar, clica amb el botó esquerre\ del ratolí. Et pots moure en qualsevol\ direcció amb les tecles “W-A-S-D”.\ Per caminar, prem la tecla de Majúscules\ a la vegada que et mous.\ Vigila l'energia del vestit. Es va\ consumint a poc a poc. Si es gastés,\ hauries de tornar a entrar al cervell,\ però tindries un intent menys."
+                text="Schizophrenia occurs, among other\ reasons, when there is an excess of\ dopamine in the brain. You need to\ eliminate it. Kick the dopamine\ molecules to eliminate them. To kick,\ click the left mouse button. You can\ move in any direction with the W-A-S-D\ keys. To walk, hold down the Shift key\ while moving. Watch the suit's energy.\ It depletes slowly. If it runs out, you\ will have to re-enter the brain, but\ you will have one less attempt."
+                Ctext="L'esquizofrènia apareix, entre\ altres motius, quan hi ha un\ excés de dopamina al cervell.\ Has d’eliminar-la.\ Dóna puntades de peu a les\ molècules de dopamina per eliminar-les.\ Per xutar, clica amb el botó esquerre\ del ratolí. Et pots moure en qualsevol\ direcció amb les tecles “W-A-S-D”.\ Per caminar, prem la tecla de Majúscules\ a la vegada que et mous.\ Vigila l'energia del vestit. Es va\ consumint a poc a poc. Si es gastés,\ hauries de tornar a entrar al cervell,\ però tindries un intent menys."
                 />
 
   <dinamic_help id="PLANET1_PLAYER_IS_HIT_BY_ALUCINACION"
-                text="Compte! Vés alerta! és una al·lucinació.\ El cervell d'aquest\ pacient està pitjor del que em pensava.\ No les podràs eliminar de cap manera.\ Que no et toquin! Si et toquen,\ baixarà l'energia del vestit."
+                text="Careful! Watch out! It's a hallucination.\ You won't be able to\ eliminate them at all. Don't let them\ touch you! If they touch you, the\ suit's energy will decrease."
+                Ctext="Compte! Vés alerta! és una al·lucinació.\ El cervell d'aquest\ pacient està pitjor del que em pensava.\ No les podràs eliminar de cap manera.\ Que no et toquin! Si et toquen,\ baixarà l'energia del vestit."
                 />
 
   <dinamic_help id="PLANET1_KILL_DOPAMINA"
-                text="Has eliminat una molècula de dopamina.\ Has de fer arribar el marcador de\ l'esquerra de la pantalla al punt\ vermell. Així faràs que el cervell tingui\ el nivell correcte de dopamina. Quan ho\ facis, t’hauràs d'escapar del cervell.\ Ja et diré com pots fer-ho, llavors."
+                text="You have eliminated a dopamine molecule.\ You need to get the marker on the left\ side of the screen to the red point.\ This will ensure the brain has the\ correct level of dopamine. When you do\ this, you will need to escape from the\ brain. I will tell you how to do that\ then."
+                Ctext="Has eliminat una molècula de dopamina.\ Has de fer arribar el marcador de\ l'esquerra de la pantalla al punt\ vermell. Així faràs que el cervell tingui\ el nivell correcte de dopamina. Quan ho\ facis, t’hauràs d'escapar del cervell.\ Ja et diré com pots fer-ho, llavors."
                 />
 
   <dinamic_help id="PLANET1_ENTER_RIGHT_DOP_LEVEL"
-                text="Ja està! Has deixat el nivell correcte de\ dopamina. Ara has de sortir del cervell.\ Corre cap al punt de sortida abans que\ neixi més dopamina. Corre!!"
+                text="That's it! You have set the correct level\ of dopamine. Now you need to get out of\ the brain. Run to the exit point before\ more dopamine appears. Run!!"
+                Ctext="Ja està! Has deixat el nivell correcte de\ dopamina. Ara has de sortir del cervell.\ Corre cap al punt de sortida abans que\ neixi més dopamina. Corre!!"
                 />
 
   <dinamic_help id="PLANET1_EXIT_RIGHT_DOP_LEVEL"
-                text="Ei! S'ha desnivellat el cervell un\ altre cop. Curra-t'ho per portar\ l'indicador al punt vermell de la barra."
+                text="Hey! The brain has become unbalanced again.\ Bring the indicator to the\ red point on the bar."
+                Ctext="Ei! S'ha desnivellat el cervell un\ altre cop. Curra-t'ho per portar\ l'indicador al punt vermell de la barra."
                 />
 
   PLANET 2 -------------------------------------------------------------
   <dinamic_help id="PLANET2_FIRST_MESSAGE"
-                text="Aquest cervell té depressió.\ Aquesta malaltia es produeix quan hi ha\ poca serotonina i poca noradrenalina.\ No sé com fer-ho, però hauríem de buscar\ alguna manera per alliberar aquests dos\ neurotransmissors. Potser\ si busquem alguna cosa pel cervell..."
+                text="This brain has depression. This illness\ occurs when there is too little\ serotonin and noradrenaline. I don't\ know how to do it, but we should find\ some way to release these two\ neurotransmitters. Maybe if we look for\ something in the brain..."
+                Ctext="Aquest cervell té depressió.\ Aquesta malaltia es produeix quan hi ha\ poca serotonina i poca noradrenalina.\ No sé com fer-ho, però hauríem de buscar\ alguna manera per alliberar aquests dos\ neurotransmissors. Potser\ si busquem alguna cosa pel cervell..."
                 />
 
   <dinamic_help id="PLANET2_PLAYER_GETS_BOMB"
-                text="Sí! Una bomba de neurotransmissors!\ Porta-la a la part contrària del cervell.\ Deixa-la dins del receptor del seu color.\ I fes-ho ràpid o explotarà!"
+                text="Yes! A neurotransmitter bomb! Take it to\ the opposite side of the brain. Leave\ it inside the receptor of its color. And\ do it quickly or it will explode!"
+                Ctext="Sí! Una bomba de neurotransmissors!\ Porta-la a la part contrària del cervell.\ Deixa-la dins del receptor del seu color.\ I fes-ho ràpid o explotarà!"
                 />
 
   <dinamic_help id="PLANET2_PLAYER_LEAVES_BOMB"
-                text="Ben fet!\ Hauràs de repetir això 6 cops per\ alliberar tots els neurotransmissors."
+                text="Well done! You will have to repeat this\ 6 times to release all the neurotransmitters."
+                Ctext="Ben fet!\ Hauràs de repetir això 6 cops per\ alliberar tots els neurotransmissors."
                 />
 
   PLANET 3 -------------------------------------------------------------
   <dinamic_help id="PLANET3_FIRST_MESSAGE"
-                text="Aquest cervell té\ un trastorn obsessiu compulsiu.\ Veus el ”riu” de molècules verdes?\ Va més ràpid que un cotxe de Fórmula 1!\ Has de fer que vagi més lent.\ Al camí hi ha quatre vàlvules que estan\ de color vermell. Això vol dir que\ funcionen malament. Hauries de xutar-les\ fins que es posessin verdes. Quan totes\ quatre estiguin bé,\ hauràs aconseguit el teu objectiu."
+                text="This brain has obsessive-compulsive disorder.\ Do you see the river of green molecules?\ It's faster than a Formula 1 car! You\ need to slow it down. There are four\ valves on the path that are red. This\ means they are malfunctioning. You should\ kick them until they turn green. When all\ four are fixed, you will have achieved\ your goal."
+                Ctext="Aquest cervell té\ un trastorn obsessiu compulsiu.\ Veus el ”riu” de molècules verdes?\ Va més ràpid que un cotxe de Fórmula 1!\ Has de fer que vagi més lent.\ Al camí hi ha quatre vàlvules que estan\ de color vermell. Això vol dir que\ funcionen malament. Hauries de xutar-les\ fins que es posessin verdes. Quan totes\ quatre estiguin bé,\ hauràs aconseguit el teu objectiu."
 		            />
 
   <dinamic_help id="PLANET3_VALVE1_HIT"
-                text="Aquesta és la vàlvula que regula\ el glutamat."
+                text="This is the valve that regulates glutamate."
+                Ctext="Aquesta és la vàlvula que regula\ el glutamat."
 		            />
 
   <dinamic_help id="PLANET3_VALVE2_HIT"
-                text="Aquesta regula la serotonina."
+                text="This one regulates serotonin."
+                Ctext="Aquesta regula la serotonina."
 		            />
 
   <dinamic_help id="PLANET3_VALVE3_HIT"
-                text="Aquí es regula la psicoteràpia."
+                text="Here psychotherapy is regulated."
+                Ctext="Aquí es regula la psicoteràpia."
 		            />
 
   <dinamic_help id="PLANET3_VALVE4_HIT"
-                text="Aquesta és la vàlvula de les\ relacions socials sanes."
+                text="This is the valve of healthy social relationships."
+                Ctext="Aquesta és la vàlvula de les\ relacions socials sanes."
 		            />
 
   PLANET 4 -------------------------------------------------------------
   <dinamic_help id="PLANET4_FIRST_MESSAGE"
-                text="Aquest cervell té hiperactivitat.\ és una malaltia complicada per que\ com que falta dopamina i noradrenalina,\ hi ha massa activitat al cervell.\ Prova d'arribar als punts correctes\ de la barra d'aquestes dues molècules\ alliberant-les com puguis!"
+                text="This brain has hyperactivity. It is a\ complicated disorder because, with a lack\ of dopamine and noradrenaline, there is\ too much activity in the brain. Try to\ reach the correct points on the bar for\ these two molecules by releasing them\ however you can!"
+                Ctext="Aquest cervell té hiperactivitat.\ és una malaltia complicada per que\ com que falta dopamina i noradrenalina,\ hi ha massa activitat al cervell.\ Prova d'arribar als punts correctes\ de la barra d'aquestes dues molècules\ alliberant-les com puguis!"
 		            />
 
   <dinamic_help id="PLANET4_PLAYER_IS_HIT_BY_TWISTER"
-                text="Compte amb allò! És un tornado!!\ Aquest cervell està del tot hiperactiu...."
+                text="Watch out for that! It's a tornado!! This\ brain is completely hyperactive..."
+                Ctext="Compte amb allò! És un tornado!!\ Aquest cervell està del tot hiperactiu..."
                 />
 
   <dinamic_help id="PLANET4_EXPENDER_HIT"
-                text="Per cada puntada de peu que li dónes a\ aquest dispositiu, surten més molècules.\ Les verdes fan pujar l'indicador verd de\ la barra. Les vermelles ho fan amb\ l'altre. Deixa-les al nivell correcte."
+                text="For every kick you give to this device,\ more molecules are released. The green\ ones raise the green indicator on the\ bar. The red ones do the same for the\ other. Leave them at the correct level."
+                Ctext="Per cada puntada de peu que li dónes a\ aquest dispositiu, surten més molècules.\ Les verdes fan pujar l'indicador verd de\ la barra. Les vermelles ho fan amb\ l'altre. Deixa-les al nivell correcte."
                 />
 
   <dinamic_help id="PLANET4_ENTER_RIGHT_LEVELS"
-                text="Perfecte! Ara tot està al seu lloc.\ Ara has de sortir del cervell.\ Corre cap al punt de sortida abans que\ torni a posar-se malalt... Corre!!"
+                text="Perfect! Now everything is in place. Now\ you need to get out of the brain. Run to\ the exit point before it gets sick again...\ Run!!"
+                Ctext="Perfecte! Ara tot està al seu lloc.\ Ara has de sortir del cervell.\ Corre cap al punt de sortida abans que\ torni a posar-se malalt... Corre!!"
                 />
 
   <dinamic_help id="PLANET4_EXIT_RIGHT_LEVELS"
-                text="Ei! Tenim problemes!\ Has de fer un esforç i fer arribar\ l'indicador al punt vermell de la barra."
+                text="Hey! We have problems! You need to\ get the indicator to the red\ point on the bar."
+                Ctext="Ei! Tenim problemes!\ Has de fer un esforç i fer arribar\ l'indicador al punt vermell de la barra."
                 />
   
 </dinamic_helps>

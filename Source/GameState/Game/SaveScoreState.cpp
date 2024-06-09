@@ -117,7 +117,7 @@ void SaveScoreState::renderPostProcessed2D( ) {
 void SaveScoreState::renderGameUI( ) {
 	renderStateEnableAlphaBlending( );
 
-	alphabet.print( 0.22f, 0.7f, 0.07f, 0.07f, "escriu el teu nom" );
+	alphabet.print( 0.22f, 0.7f, 0.07f, 0.07f, "type your name"/*"escriu el teu nom"*/);
 
 	static const float letter_width = 0.1f;
 	for( size_t i=0; i<NUM_CHARS_PER_INITIALS; ++i ) {
