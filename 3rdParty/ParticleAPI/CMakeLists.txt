@@ -1,6 +1,6 @@
 ﻿cmake_minimum_required(VERSION 3.28)
 
-set(papi_folder "3rdParty/Particles")
+set(papi_folder "3rdParty/ParticleAPI")
 set(papi_SOURCE_DIR "${CMAKE_SOURCE_DIR}/${papi_folder}")
 
 file(GLOB_RECURSE PAPI_SOURCE_FILES
