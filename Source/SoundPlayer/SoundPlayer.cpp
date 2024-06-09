@@ -83,12 +83,12 @@ void SoundPlayer::onStartElement (const std::string &elem, MKeyValue &atts)
 
 void SoundPlayer::setStreamsVolume( int pstreams_volume ) {
 	streams_volume = clamp( pstreams_volume, 0, 100 );
-	BASS_SetConfig( BASS_CONFIG_GVOL_STREAM, streams_volume );
+	BASS_SetConfig( BASS_CONFIG_GVOL_STREAM, streams_volume * 100); // BASS_CONFIG_GVOL_STREAM goes from 0 to 10000 
 }
 
 void SoundPlayer::setSamplesVolume( int psamples_volume ) {
 	samples_volume = clamp( psamples_volume, 0, 100 );
-	BASS_SetConfig( BASS_CONFIG_GVOL_SAMPLE, samples_volume );
+	BASS_SetConfig( BASS_CONFIG_GVOL_SAMPLE, samples_volume * 100); // BASS_CONFIG_GVOL_STREAM goes from 0 to 10000 
 }
 
 // ---------------------------------------------------------------------------------------

@@ -37,8 +37,8 @@ protected:
 	typedef std::map<std::string, Sound> Sounds;
 	Sounds sounds;
 
-	int streams_volume;
-	int samples_volume;
+	int streams_volume; // [0, 100]
+	int samples_volume; // [0, 100]
 
 	DWORD old_stream;
 	DWORD current_stream;
