@@ -67,6 +67,7 @@ I made the following enhancements while adapting the project for Github.
 - **[Expat](https://github.com/libexpat/libexpat)**: C library for parsing XML.
 - **[Lua](https://github.com/lua/lua)**: Powerful, efficient, lightweight, embeddable scripting language.
 - **[ParticleAPI](https://github.com/davemc0/Particle)**: Particle system library.
+- **[SOLID](https://github.com/dtecta/solid3)**: Library for performing intersection tests and proximity queries for collision detection.
 
 ## Credits
 
