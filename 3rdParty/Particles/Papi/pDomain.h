@@ -17,7 +17,7 @@ namespace PAPI
 {
     const float P_PLANAR_EPSILON = 1e-3f; ///< How small the dot product must be to declare that a point is in a plane for Within().
 
-    struct pMatrix
+    /*struct pMatrix
     {
         float m00 = 1.0f, m01 = 0.0f, m02 = 0.0f, m03 = 0.0f;
         float m10 = 0.0f, m11 = 1.0f, m12 = 0.0f, m13 = 0.0f;
@@ -28,7 +28,7 @@ namespace PAPI
         {
             return point; // TODO!
         }
-    };
+    };*/
 
     /// A representation of a region of space.
     ///
@@ -50,21 +50,20 @@ namespace PAPI
 
 		pVec Generate() const {
 			const pVec &point_local = GenerateLocal( );
-            pVec point_world = transform.Transform(point_local);
-			return point_world;
+            pVec point_world = point_local;//transform.Transform(point_local);
+			return point_local;
 		}
 
         virtual pVec GenerateLocal() const = 0; ///< Returns a random point in the domain.
         virtual float Size() const = 0; ///< Returns the size of the domain (length, area, or volume).
 		virtual void setOffset(const pVec &e0) { ; };
 
-        pMatrix transform;
-		void setTransform( const pMatrix &atransform ) { transform = atransform; }
+        //pMatrix transform;
+		//void setTransform( const pMatrix &atransform ) { transform = atransform; }
 
         virtual pDomain *copy() const = 0; // Returns a pointer to a heap-allocated copy of the derived class
 
-		pDomain( ) {
-		}
+		pDomain() {}
         virtual ~pDomain() {}
     };
 

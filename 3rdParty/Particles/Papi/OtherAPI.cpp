@@ -172,11 +172,11 @@ namespace PAPI {
 			it->second->setOffset(v);
 	}
 
-	void PContextActionList_t::setDomainTransform(const int action_list_num, const std::string &name, const PAPI::pMatrix &t) {
-		std::map<string, PAPI::pDomain *>::iterator it = PS->ALists[action_list_num].publicDomains.find(name);
-		if (it != PS->ALists[action_list_num].publicDomains.end()) 
-			it->second->setTransform(t);
-	}
+	//void PContextActionList_t::setDomainTransform(const int action_list_num, const std::string &name, const PAPI::pMatrix &t) {
+	//	std::map<string, PAPI::pDomain *>::iterator it = PS->ALists[action_list_num].publicDomains.find(name);
+	//	if (it != PS->ALists[action_list_num].publicDomains.end()) 
+	//		it->second->setTransform(t);
+	//}
 
     void PContextActionList_t::CallActionList(const int action_list_num)
     {

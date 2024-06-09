@@ -247,7 +247,7 @@ namespace PAPI {
         void NewActionList(const int action_list_num);
 
 		void setDomainOffset(const int action_list_num, const std::string &name, const PAPI::pVec &v);
-		void setDomainTransform(const int action_list_num, const std::string &name, const PAPI::pMatrix &t);
+		//void setDomainTransform(const int action_list_num, const std::string &name, const PAPI::pMatrix &t);
 
     protected:
         PInternalState_t *PS; // The internal API data for this context is stored here.
