@@ -9,7 +9,7 @@ protected:
 	TLocation loc;
 	size_t current_core_particle;
 
-    Object sphere;
+    //Object sphere;
 
 public:
 	ParticleState( ) : current_core_particle( 0 ) {}

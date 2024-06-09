@@ -232,9 +232,9 @@ void Material::activateCal(const CalModel &calModel) const
 
 void Material::activate() const {
 
-    static float var = 0.0f;
-    var += 1.0f/60.0f;
-    lightPosition = D3DXVECTOR3( 5.0f*sinf(var), 5, 2.5f*cosf(var) );
+    //static float var = 0.0f;
+    //var += 1.0f/60.0f;
+    //lightPosition = D3DXVECTOR3( 5.0f*sinf(var), 5, 2.5f*cosf(var) );
 
 	D3DXHANDLE handleParam = NULL;
 	EffectDX shader_fx = shader->fx;

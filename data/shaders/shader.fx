@@ -78,9 +78,9 @@ uniform float4 status_color = float4(0.0f,0.0f,0.0f,1.0f);
 uniform float3 camera_pos;
 uniform float3 light_pos = float3(0.0f,40.0f,80.0f);
 uniform float4 light_color = float4(1.0f,0.9f,0.8f,1.0f);
-uniform float ambient_color = 0.2f;
-uniform float specular_alfa = 0.95f;
-uniform float specular_factor = 10.0f;
+uniform float ambient_color = 0.4f;
+uniform float specular_alfa = 0.25f;
+uniform float specular_factor = 20.0f;
 
 uniform float time = 0.0f;
 uniform float texture_speed = 0.0f;

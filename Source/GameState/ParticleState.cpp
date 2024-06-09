@@ -9,7 +9,7 @@
 #include "SoundPlayer/SoundPlayer.h"
 #include "Util/Tracker/Tracker.h"
 
-#include "Factories/MeshFactory.h"
+//#include "Factories/MeshFactory.h"
 
 void ParticleState::updateCamera( float deltaTime ) {
 	static const float speed = 5.0f;
@@ -145,13 +145,13 @@ void ParticleState::preRender( ) {
 }
 
 void ParticleState::renderWorld3D( ) {
-	renderStateEnableZTest( );
-	renderStateEnableZWriting( );
+	//renderStateEnableZTest( );
+	//renderStateEnableZWriting( );
 
-    sphere.render( );
+    //sphere.render( );
 
-	renderStateDisableZWriting( );
-	renderStateDisableZTest( );
+	//renderStateDisableZWriting( );
+	//renderStateDisableZTest( );
 }
 
 void ParticleState::renderWorld2D( ) {
@@ -201,10 +201,10 @@ void ParticleState::onLoad( ) {
 
 	current_core_particle = 0;
 
-    const IMesh *sphere_mesh = MeshFactory::get( )->createMesh( "Plane.mesh" );
-    assert( sphere_mesh );
-    sphere.setMesh( sphere_mesh );
-    sphere.SETMATERIAL( "rock.dds", "shader.fx", "normal_tech" );
+    //const IMesh *sphere_mesh = MeshFactory::get( )->createMesh( "Plane.mesh" );
+    //assert( sphere_mesh );
+    //sphere.setMesh( sphere_mesh );
+    //sphere.SETMATERIAL( "rock.dds", "shader.fx", "normal_tech" );
 }
 
 void ParticleState::onUnload( ) {

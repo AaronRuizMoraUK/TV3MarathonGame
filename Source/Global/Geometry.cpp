@@ -49,12 +49,16 @@ void fixMatrix(D3DXMATRIX &dst, const D3DXMATRIX &src) {
 	normalizeVector3(up, up);
 	normalizeVector3(front, front);
 
-	for(int i=0; i<4; ++i) {
+	for(int i=0; i<3; ++i) {
 		dst(0,i)=left[i];
 		dst(1,i)=up[i];
 		dst(2,i)=front[i];
 		dst(3,i)=src(3,i);
 	}
+	dst(0, 3) = 0.0f;
+	dst(1, 3) = 0.0f;
+	dst(2, 3) = 0.0f;
+	dst(3, 3) = 1.0f;
 }
 
 bool isFixedMatrix(const D3DXMATRIX &matrix) {

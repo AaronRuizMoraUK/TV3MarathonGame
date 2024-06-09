@@ -12,7 +12,7 @@ struct Resolution {
 
 	Resolution();
 
-	void set( int pWidth, int pHeight, int pRate=-1 );
+	void set( int pWidth, int pHeight, int pRate );
 
 	bool operator==( const Resolution &othr ) const;
 	bool operator!=( const Resolution &othr ) const;

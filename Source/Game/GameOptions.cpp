@@ -5,7 +5,7 @@
 Resolution::Resolution()
 : width(800)
 , height(600)
-, rate(-1)
+, rate(60)
 , aspect_ratio(width/(float)height)
 {
 };

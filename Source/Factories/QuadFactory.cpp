@@ -55,8 +55,8 @@ const IMesh * QuadFactory::createQuadMesh(float radiusSideX, float radiusSideY, 
 	int numQuadTriangles = ( numQuadVertexPerAxis - 1 ) * ( numQuadVertexPerAxis - 1 ) * 2;
 
 	// Min and max vertex point
-	D3DXVECTOR3 minPoint(0,0,0);
-	D3DXVECTOR3 maxPoint(0,0,0);
+	D3DXVECTOR3 minPoint(FLT_MAX, FLT_MAX, FLT_MAX);
+	D3DXVECTOR3 maxPoint(-FLT_MAX, -FLT_MAX, -FLT_MAX);
 
 	// Mesh
 	IMesh *mesh = new CoreMeshTextured(numQuadVertices, numQuadTriangles);
@@ -86,7 +86,7 @@ const IMesh * QuadFactory::createQuadMesh(float radiusSideX, float radiusSideY, 
 			for(int i=0; i<3; ++i) {
 				if(vertex[i]<minPoint[i])
 					minPoint[i]=vertex[i];
-				else if(vertex[i]>maxPoint[i])
+				if(vertex[i]>maxPoint[i])
 					maxPoint[i]=vertex[i];
 			}
 		}
