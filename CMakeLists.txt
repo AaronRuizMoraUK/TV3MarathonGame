@@ -52,20 +52,15 @@ set(ROOT_FILES "${CMAKE_SOURCE_DIR}/README.md" "${CMAKE_SOURCE_DIR}/.gitignore")
 file(GLOB_RECURSE ASSET_FILES
     "${CMAKE_SOURCE_DIR}/data/*.*")
     
-file(GLOB_RECURSE 3RDPARTY_FETCH_FILE
-    "${CMAKE_SOURCE_DIR}/3rdParty/FetchLibraries.cmake")
-    
 # Set the Asset files to be treated as non-compilable files
-foreach(ASSET_FILE ${ASSET_FILES} ${3RDPARTY_FETCH_FILE})
+foreach(ASSET_FILE ${ASSET_FILES})
     set_source_files_properties(${ASSET_FILE} PROPERTIES HEADER_FILE_ONLY TRUE)
 endforeach()
 
 source_group(TREE "${CMAKE_SOURCE_DIR}" FILES 
     ${ROOT_FILES}
-    ${ASSET_FILES}
-    ${3RDPARTY_FETCH_FILE})
+    ${ASSET_FILES})
 
 add_library(Content INTERFACE 
     ${ROOT_FILES}
-    ${ASSET_FILES}
-    ${3RDPARTY_FETCH_FILE})
+    ${ASSET_FILES})

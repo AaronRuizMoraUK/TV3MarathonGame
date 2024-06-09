@@ -7,4 +7,4 @@ add_subdirectory(ParticleAPI)
 add_subdirectory(lua)
 add_subdirectory(expat)
 
-include("FetchLibraries.cmake")
+include(dxsdk-d3dx/FetchContent.cmake)
