@@ -88,7 +88,7 @@ void ComicTextWindow::render( ) {
 		for( size_t i=0; i<comic_text->getNumLines( ); i++)
 			alphabet_renderer.print( x, y-i*dist, xl, yl, comic_text->getTextOnLine( i ) );
 		//for( size_t i=0; i<num_lines; i++)
-		//	alphabet_renderer.print( x, y-i*dist, xl, yl, "El perro de mi primo tiene polla, como los demas rabos del norte" );
+		//	alphabet_renderer.print( x, y-i*dist, xl, yl, "El perro de mi primo le gusta dormir, como los demas animales." );
 	}
 }
 
