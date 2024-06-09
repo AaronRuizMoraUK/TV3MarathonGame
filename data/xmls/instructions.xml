@@ -41,7 +41,7 @@
                />
 
   <instruction id="INIT_THIRD_LEVEL"
-               text="Yes sir! You're\ fantastic!! From\ now on, you will\ have to be very,\ very careful. I think\ the suit is\ breaking down.\ Each time it has\ less initial energy...\ Be careful."
+               text="Yes sir! You're\ fantastic!! From\ now on, you will\ have to be very,\ very careful. I\ think the suit is\ breaking down.\ Each time it has\ less initial\ energy... Be\ careful."
                Ctext="Sí senyor!\ Ets l'amo!!\ A partir d'ara\ hauràs de ser\ molt i molt bo.\ Crec que s'està\ espatllant el\ vestit. Cada cop\ té menys\ energia inicial...\ Vés amb compte."
                Xtext="6.5 11.0/ Sí!  Ets l'amo!!\ A partir d'ara\ hauràs de ser\ realment bo.\ Crec que s'està\ espatllant el\ vestit. Cada cop\ té menys\ energia inicial...\ Vés amb compte."
                />
