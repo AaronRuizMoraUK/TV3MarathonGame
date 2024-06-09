@@ -2,7 +2,7 @@
 
 Game developed for the 2008 charity event "La Marató de TV3" focused on mental health, organized by the Barcelona TV3 channel.
 
-This project was an initiative of the Master in Videogame Development of Pompeu Fabra University.
+This game was an initiative of the Master in Videogame Development of Pompeu Fabra University and built on top of the 2007 project [Galaxy Scraper](https://github.com/AaronRuizMoraUK/GalaxyScraper).
 
 ## Game Synopsis
 
