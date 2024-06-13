@@ -12,6 +12,8 @@ Experience Doc's groundbreaking invention: a suit that shrinks you to navigate a
 
 Tackle depression, OCD, and hyperactivity through educational mini-games and puzzles, boosting neurotransmitter levels and restoring brain function in an immersive and scientific adventure.
 
+<img src="./TV3MarathonGame.gif">
+
 ## Build and Run
 
 Requirements
